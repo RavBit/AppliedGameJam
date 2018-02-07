@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
   m_Name: C0
   m_EditorClassIdentifier: 
-  Dilemma: Zou je een slaan robotten?
+  Dilemma: Zou je een robot slaan?
   State: 0
   PositiveDialog: {fileID: 11400000, guid: df83128d237678e46989b5fd4352e0cd, type: 2}
   NegativeDialog: {fileID: 11400000, guid: 7074cffb671b7044d83dd29905c70067, type: 2}

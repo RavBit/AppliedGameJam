@@ -8,13 +8,13 @@ public class EffectsManager : MonoBehaviour {
     //Day States
     public void Change_Day() {
         switch (DayState) {
-            case (Environment_State.Morning):
+            case (Day_State.Morning):
                 //DO UNHEALTHY STUFF
                 break;
-            case (Environment_State.Noon):
+            case (Day_State.Noon):
                 //DO NEUTRAL STUFF
                 break;
-            case (Environment_State.Evening):
+            case (Day_State.Evening):
                 //DO HEALTHY STUFF
                 break;
         }

@@ -13,7 +13,7 @@ public class Choice : ScriptableObject {
     [Header("Positive Dialog")]
     public Dialog PositiveDialog;
 
-    [Header("Positive Dialog")]
+    [Header("Negative Dialog")]
     public Dialog NegativeDialog;
 
 }

@@ -101,10 +101,12 @@ public class ResourceManager : MonoBehaviour {
 [CreateAssetMenu(menuName = "ResourceMessage")]
 public class ResourceMessage : ScriptableObject {
 	public Resources resourceType;
+	public bool isToday = true;
 	public int amount;
-	public ResourceMessage(Resources t, int i) {
+	public ResourceMessage(Resources t, int i, bool b) {
 		resourceType = t;
 		amount = i;
+		isToday = b;
 	}
 
 	public Resources GetResourceType() {
@@ -113,5 +115,9 @@ public class ResourceMessage : ScriptableObject {
 
 	public int GetAmount() {
 		return amount;
+	}
+
+	public bool GetIsToday() {
+		return isToday;
 	}
 }

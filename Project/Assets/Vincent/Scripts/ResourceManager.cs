@@ -7,7 +7,6 @@ public enum Resources { population, currency, happiness, environment}
 
 public class ResourceManager : MonoBehaviour {
 
-	public static ResourceManager instance;
 	private int population, currency, happiness, environment;
 
 	//Properties for the four resources to enable function calls upon change. 
@@ -61,19 +60,9 @@ public class ResourceManager : MonoBehaviour {
 		}
 	}
 
-	private void Awake() {
-		//Lazy singleton init
-		if(instance == null)
-			instance = this;
-		else {
-			Debug.Log("More than one resource manager in scene, destroying this.");
-			DestroyImmediate(this);
-		}
-
-	}
-
 	private void Start() {
-		SendResourceMessage(new ResourceMessage(Resources.currency, 10), new ResourceMessage(Resources.happiness, 50), new ResourceMessage(Resources.environment, 30), new ResourceMessage(Resources.population, 100));
+		EventManager.SendResourceMessage += SendResourceMessage;
+		//SendResourceMessage(new ResourceMessage(Resources.currency, 10), new ResourceMessage(Resources.happiness, 50), new ResourceMessage(Resources.environment, 30), new ResourceMessage(Resources.population, 100));
 	}
 
 	//This function is made to handle all resource change subjects. It accepts both positive and negative values.
@@ -109,9 +98,10 @@ public class ResourceManager : MonoBehaviour {
 	}
 }
 
-public class ResourceMessage {
-	private Resources resourceType;
-	private int amount;
+[CreateAssetMenu(menuName = "ResourceMessage")]
+public class ResourceMessage : ScriptableObject {
+	public Resources resourceType;
+	public int amount;
 	public ResourceMessage(Resources t, int i) {
 		resourceType = t;
 		amount = i;

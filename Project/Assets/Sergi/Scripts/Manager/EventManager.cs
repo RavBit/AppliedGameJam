@@ -8,6 +8,9 @@ public class EventManager : MonoBehaviour {
     public static event ChoiceState DisplayChoice;
     public static event ChoiceState ChoiceUnLoad;
 
+	public delegate void ResourceEvent(params ResourceMessage[] res);
+	public static event ResourceEvent SendResourceMessage;
+
     public delegate void ChooseEvent();
     public static event ChooseEvent ChoosePositive;
     public static event ChooseEvent ChooseNegative;
@@ -31,4 +34,7 @@ public class EventManager : MonoBehaviour {
     public static void Display_Choice(Choice _choice) {
         DisplayChoice(_choice);
     }
+	public static void _SendResourceMessage(params ResourceMessage[] res) {
+		SendResourceMessage(res);
+	}
 }

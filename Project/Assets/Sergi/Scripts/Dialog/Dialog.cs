@@ -1,18 +1,16 @@
 ﻿using UnityEngine;
 
 [System.Serializable]
-public class Dialog {
+[CreateAssetMenu(menuName = "Dialog option")]
+public class Dialog : ScriptableObject{
     [Header("Influence the following items")]
-    [Range(-50, 50)]
-    public int currency;
-    [Range(-50, 50)]
-    public int health;
-    [Range(-50, 50)]
-    public int population;
-    [Range(-50, 50)]
-    public int environment;
+	public ResourceMessage[] messages;
 
     [Header("Dialog:")]
     [TextArea()]
     public string text;
+
+	public void Submit() {
+		EventManager._SendResourceMessage(messages);
+	}
 }

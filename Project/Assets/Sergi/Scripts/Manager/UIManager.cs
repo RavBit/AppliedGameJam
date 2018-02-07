@@ -12,11 +12,13 @@ public class UIManager : MonoBehaviour {
     }
 
     void LoadChoice(Choice _choice) {
+		Debug.Log("Reached");
+		Debug.Log(_choice.Dilemma);
         Textbubble.text = _choice.Dilemma;
     }
 
     void SetChoice(Choice _choice) {
-        Debug.Log("Choice state");
+        //Debug.Log("Choice state");
         switch (_choice.State) {
             case (State.Negative):
                 Textbubble.text = _choice.NegativeDialog.text;

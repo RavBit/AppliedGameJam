@@ -2,7 +2,8 @@
 using UnityEngine;
 
 [System.Serializable]
-public class Choice  {
+[CreateAssetMenu(menuName = "Choice")]
+public class Choice : ScriptableObject {
     [Header("Dilemma: ")]
     [TextArea()]
     public string Dilemma;

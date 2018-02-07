@@ -10,11 +10,14 @@ public class ChoiceManager : MonoBehaviour {
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         //Load Choice for now
-        EventManager.Choice_Load(Choices[0]);
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
         EventManager.DisplayChoice += UnLoadChoice;
+		Invoke("Test", .000001f);
     }
+	void Test() {
+		EventManager.Choice_Load(Choices[0]);
+	}
     void PositiveChoice() {
         curchoice.State = State.Positive;
         EventManager.Display_Choice(curchoice);

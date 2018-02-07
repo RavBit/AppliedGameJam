@@ -13,10 +13,15 @@ public class GameManager : MonoBehaviour {
 	  tomorrow = new
 	 */
 
+	public void Awake() {
+
+	}
+
 	private void NewDay() {
+		ExecuteDay();
 		currentDay = nextDay;
 		nextDay = new Queue<ResourceMessage>();
-		ExecuteDay();
+		
 	}
 
 	private void ExecuteDay() {
@@ -25,5 +30,14 @@ public class GameManager : MonoBehaviour {
 			tempArray[i] = currentDay.Dequeue();
 		}
 		EventManager._SendResourceMessage(tempArray);
+	}
+
+	public void EnqueueMessage(params ResourceMessage[] rs) {
+		foreach(ResourceMessage rm in rs) {
+			if(rm.GetIsToday())
+				currentDay.Enqueue(rm);
+			else
+				nextDay.Enqueue(rm);
+		}
 	}
 }

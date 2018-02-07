@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: Hap30
+  m_Name: Hap-50
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMessage
   resourceType: 2
-  isToday: 1
-  amount: 30
+  isToday: 0
+  amount: -50

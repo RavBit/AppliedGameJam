@@ -808,6 +808,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Choices:
   - {fileID: 11400000, guid: 2a4d3557ef62b0146956a420cd8a1ab1, type: 2}
+  - {fileID: 11400000, guid: 176bb8f1410d0e541bde8f42475142ea, type: 2}
+  - {fileID: 11400000, guid: 4390dcaed8f4cbb459e4c219bd42b3a1, type: 2}
   curchoice: {fileID: 0}
 --- !u!1 &1542613189
 GameObject:

@@ -7,7 +7,10 @@ public enum Resources { population, currency, happiness, environment}
 
 public class ResourceManager : MonoBehaviour {
 
-	private int population, currency, happiness, environment;
+	private int population = 10000;
+	private int currency = 1000000;
+	private int happiness = 70;
+	private int environment = 85;
 
 	//Properties for the four resources to enable function calls upon change. 
 
@@ -109,29 +112,5 @@ public class ResourceManager : MonoBehaviour {
 				}
 			}
 		}
-	}
-}
-
-[CreateAssetMenu(menuName = "ResourceMessage")]
-public class ResourceMessage : ScriptableObject {
-	public Resources resourceType;
-	public bool isToday = true;
-	public int amount;
-	public ResourceMessage(Resources t, int i, bool b) {
-		resourceType = t;
-		amount = i;
-		isToday = b;
-	}
-
-	public Resources GetResourceType() {
-		return resourceType;
-	}
-
-	public int GetAmount() {
-		return amount;
-	}
-
-	public bool GetIsToday() {
-		return isToday;
 	}
 }

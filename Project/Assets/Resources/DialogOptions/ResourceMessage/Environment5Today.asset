@@ -9,8 +9,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b2762d198a7214545bb6612a52ece0ef, type: 3}
-  m_Name: Currency-200000Today
+  m_Name: Environment5Today
   m_EditorClassIdentifier: 
-  resourceType: 1
+  resourceType: 3
   isToday: 1
-  amount: -200000
+  amount: 5

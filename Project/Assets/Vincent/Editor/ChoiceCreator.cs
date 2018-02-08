@@ -65,7 +65,7 @@ public class ChoiceCreator : EditorWindow {
 		negMessage = EditorGUILayout.ObjectField(negMessage, typeof(ResourceMessage), false) as ResourceMessage;
 		if(negMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				posMessages.Add(negMessage);
+				negMessages.Add(negMessage);
 				negMessage = null;
 			}
 		}
@@ -157,5 +157,7 @@ public class ChoiceCreator : EditorWindow {
 		dataPath = "Assets/Resources/DialogOptions/Choices/" + fileName + ".asset";
 		AssetDatabase.CreateAsset(choice, dataPath);
 		InitData();
+		//Close();
+
 	}
 }

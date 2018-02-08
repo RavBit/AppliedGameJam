@@ -14,7 +14,7 @@ public class Choice : ScriptableObject {
     public string Name;
 
     [Header("Character sprite: ")]
-    public Sprite Character;
+    public GameObject Character;
     [Header("State:")]
     public State State;
     [Header("Positive Dialog")]

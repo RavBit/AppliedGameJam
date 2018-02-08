@@ -14,7 +14,7 @@ MonoBehaviour:
   Dilemma: "The lightbulbs we\u2019re currently using are bad for the environment,
     so I\u2019d like to develop a cleaner type. Will you fund me? "
   Name: 
-  Character: {fileID: 21300000, guid: 99fe0daa12923b646b7564ae3afd33c9, type: 3}
-  State: 0
+  Character: {fileID: 1550151765310860, guid: ab19a1bccad50194c9aa963beb5c5a4e, type: 2}
+  State: 1
   PositiveDialog: {fileID: 11400000, guid: 366c8a98bc3792448aafa262f7fa2a76, type: 2}
   NegativeDialog: {fileID: 11400000, guid: 75bcc6a66175fc1468de7eb8560eea56, type: 2}

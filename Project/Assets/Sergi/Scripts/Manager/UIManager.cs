@@ -11,6 +11,8 @@ public class UIManager : MonoBehaviour {
     public Text Textbubble;
     public Image Character;
 
+	private Transform currentChar;
+
     public Text Population;
     public Text Happiness;
     public Text Environment;
@@ -41,10 +43,18 @@ public class UIManager : MonoBehaviour {
     void ContinueUI() {
     }
     void LoadChoice(Choice _choice) {
+		if(currentChar != null)
+			DestroyImmediate(currentChar.gameObject);
         Choice.SetActive(true);
         DesicionButton.SetActive(true);
         ContinueButton.SetActive(false);
-        Character.sprite = _choice.Character;
+		currentChar = Instantiate(_choice.Character).transform;
+		Character.enabled = false;
+		currentChar.parent = Character.transform;
+		Debug.Log(currentChar.localScale);
+		currentChar.localScale = new Vector3(0.02f, 0.036f, 0.02f);
+		Debug.Log(currentChar.localScale);
+		currentChar.localPosition = Vector3.zero;
 		Debug.Log(_choice.Dilemma);
         Textbubble.text = _choice.Dilemma;
     }

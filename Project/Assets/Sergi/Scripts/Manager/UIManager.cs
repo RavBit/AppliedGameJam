@@ -21,8 +21,11 @@ public class UIManager : MonoBehaviour {
 
 
     void EnableUI() {
+        //NACHT
+
     }
     void DisableUI() {
+        //DAG
     }
 
     void ContinueUI() {
@@ -54,6 +57,7 @@ public class UIManager : MonoBehaviour {
     }
     public void Continue() {
         Choice.SetActive(false);
+        EventManager.Day_Cycle();
         EventManager.Choice_Unload();
     }
 }

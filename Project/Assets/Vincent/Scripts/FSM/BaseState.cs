@@ -37,6 +37,7 @@ public class DayState : BaseState {
 
 	public override void Exit(Queue<ResourceMessage> messages) {
 		EventManager.ChoiceUnLoad -= IncreaseCount;
+		Debug.Log("Changing state to Night");
 	}
 
 	public void IncreaseCount() {
@@ -53,14 +54,14 @@ public class NightState : BaseState {
 		for(int i = 0; i < messages.Count; i++) {
 			rm[i] = messages.Dequeue();
 		}
-		EventManager._SendResourceMessage(rm);
+		EventManager._EnqueueMessage(rm);
 		onState(new BetweenState());
 	}
 
 	//Stay not needed here.
 
 	public override void Exit(Queue<ResourceMessage> messages) {
-		
+		Debug.Log("Changing state to Between");
 	}
 }
 
@@ -80,6 +81,7 @@ public class BetweenState : BaseState {
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
 		//unsub from event
+		Debug.Log("Changing state to Day");
 	}
 
 	public void UpdateBetweenState() {

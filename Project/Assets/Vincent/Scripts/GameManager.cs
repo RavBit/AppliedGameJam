@@ -6,15 +6,15 @@ public class GameManager : MonoBehaviour {
 
 	private Queue<ResourceMessage> currentDay = new Queue<ResourceMessage>();
 	private Queue<ResourceMessage> nextDay = new Queue<ResourceMessage>();
-
-	/*
-	 * current -> afhandelen
-	  CURRENT = tomorrow
-	  tomorrow = new
-	 */
+	private GameCycleFSM fsm;
 
 	public void Awake() {
 		EventManager.EnqueueMessageEvent += EnqueueMessage;
+		fsm = new GameCycleFSM(new DayState());
+	}
+
+	private void Update() {
+		fsm.Run();
 	}
 
 	private void NewDay() {

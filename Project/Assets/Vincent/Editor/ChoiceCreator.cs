@@ -132,7 +132,9 @@ public class ChoiceCreator : EditorWindow {
 		negative = new Dialog();
 		positive = new Dialog();
 		fileName = "DefaultName";
-	}
+		negMessage = null;
+		posMessage = null;
+}
 
 	private void SaveChoice() {
 		negative.messages = new ResourceMessage[negMessages.Count];

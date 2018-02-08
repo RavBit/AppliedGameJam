@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Hot Dog ContestPos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: 846f3a0897a5bba42968dc6f915cd8f6, type: 2}
+  - {fileID: 11400000, guid: 922ab743d27a6ab46b24495a738d99be, type: 2}
+  - {fileID: 11400000, guid: 3306e8c0d09bbd94eb66a329d3f7fc8a, type: 2}
+  text: Thank you! This is going to be so much fun!

@@ -5,6 +5,7 @@ using UnityEngine;
 public class ChoiceManager : MonoBehaviour {
     public List<Choice> Choices;
     public Choice curchoice;
+    public int choicecounter = 0;
     public Queue ChoiceQueue = new Queue();
 
     private void Start() {
@@ -16,7 +17,7 @@ public class ChoiceManager : MonoBehaviour {
 		Invoke("Test", .000001f);
     }
 	void Test() {
-		EventManager.Choice_Load(Choices[0]);
+		EventManager.Choice_Load(Choices[choicecounter]);
 	}
     void PositiveChoice() {
         curchoice.State = State.Positive;
@@ -31,7 +32,8 @@ public class ChoiceManager : MonoBehaviour {
     }
 
     void UnLoadChoice() {
-        if(curchoice.State == State.Positive) {
+        choicecounter++;
+        if (curchoice.State == State.Positive) {
             foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {
                 ChoiceQueue.Enqueue(rm);
             }
@@ -40,5 +42,6 @@ public class ChoiceManager : MonoBehaviour {
             foreach (ResourceMessage rm in curchoice.NegativeDialog.messages) {
                 ChoiceQueue.Enqueue(rm);
             }
+        EventManager.Choice_Load(Choices[choicecounter]);
     }
 }

@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
+    public GameObject Choice;
+    public GameObject DesicionButton;
+    public GameObject ContinueButton;
     public Text Textbubble;
     public Image Character;
 
@@ -14,14 +17,17 @@ public class UIManager : MonoBehaviour {
     }
 
     void LoadChoice(Choice _choice) {
-        //Character.Dodis
+        Choice.SetActive(true);
+        DesicionButton.SetActive(true);
+        ContinueButton.SetActive(false);
         Character.sprite = _choice.Character;
 		Debug.Log(_choice.Dilemma);
         Textbubble.text = _choice.Dilemma;
     }
 
     void SetChoice(Choice _choice) {
-        //Debug.Log("Choice state");
+        DesicionButton.SetActive(false);
+        ContinueButton.SetActive(true);
         switch (_choice.State) {
             case (State.Negative):
                 Textbubble.text = _choice.NegativeDialog.text;
@@ -36,6 +42,7 @@ public class UIManager : MonoBehaviour {
         EventManager.Choose_Choice(state);
     }
     public void Continue() {
+        Choice.SetActive(false);
         EventManager.Choice_Unload();
     }
 }

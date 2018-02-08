@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChoiceManager : MonoBehaviour {
     public List<Choice> Choices;
     public Choice curchoice;
-    public int choicecounter = -1;
-    public Queue<ResourceMessage> ChoiceQueue = new Queue<ResourceMessage>();
+    public int choicecounter = 0;
+    public Queue ChoiceQueue = new Queue();
 
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
@@ -14,13 +14,8 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
         EventManager.ChoiceUnLoad += UnLoadChoice;
-		EventManager.GetQueue += Get_Queue;
-		EventManager.NextDay += ResetQueue;
 		Invoke("Test", .000001f);
     }
-	Queue<ResourceMessage> Get_Queue() {
-		return ChoiceQueue;
-	}
 	void Test() {
 		EventManager.Choice_Load(Choices[choicecounter]);
 	}
@@ -35,22 +30,20 @@ public class ChoiceManager : MonoBehaviour {
     void LoadChoice(Choice _choice) {
         curchoice = _choice;
     }
-	private void ResetQueue() {
-		ChoiceQueue = new Queue<ResourceMessage>();
-	}
 
-	void UnLoadChoice() {
+    void UnLoadChoice() {
         choicecounter++;
         if (curchoice.State == State.Positive) {
             foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {
                 ChoiceQueue.Enqueue(rm);
             }
         }
-		if(curchoice.State == State.Negative) {
-			foreach(ResourceMessage rm in curchoice.NegativeDialog.messages) {
-				ChoiceQueue.Enqueue(rm);
-			}
-		}
+        if (curchoice.State == State.Negative) {
+            foreach (ResourceMessage rm in curchoice.NegativeDialog.messages) {
+                ChoiceQueue.Enqueue(rm);
+            }
+
+        }
 
         EventManager.Choice_Load(Choices[choicecounter]);
     }

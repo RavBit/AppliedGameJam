@@ -100,7 +100,7 @@ MonoBehaviour:
     m_Enabled: 1
     m_Settings:
       bloom:
-        intensity: 3
+        intensity: 4
         threshold: 1.1
         softKnee: 0.5
         radius: 4.58
@@ -127,7 +127,7 @@ MonoBehaviour:
         saturation: 1.14
         contrast: 1
       channelMixer:
-        red: {x: 1, y: 0, z: 0}
+        red: {x: 2, y: 0, z: 0}
         green: {x: 0, y: 1, z: 0}
         blue: {x: 0, y: 0, z: 1}
         currentEditingChannel: 0

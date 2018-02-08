@@ -25,6 +25,11 @@ public class EventManager : MonoBehaviour {
     public static event ChooseEvent UIDisable;
     public static event ChooseEvent UIContinue;
 	public static event ChooseEvent EmptyQueue;
+
+    public static event ChooseEvent DayCycle;
+    public static void Day_Cycle() {
+        DayCycle();
+    }
     public static void Choice_Load(Choice _choice) {
         ChoiceLoad(_choice);
     }

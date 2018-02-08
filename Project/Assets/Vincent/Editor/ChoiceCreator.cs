@@ -128,6 +128,8 @@ public class ChoiceCreator : EditorWindow {
 	}
 
 	public void InitData() {
+		negMessages = new List<ResourceMessage>();
+		posMessages = new List<ResourceMessage>();
 		choice = new Choice();
 		negative = new Dialog();
 		positive = new Dialog();

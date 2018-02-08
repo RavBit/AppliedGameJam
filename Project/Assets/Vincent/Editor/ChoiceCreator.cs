@@ -20,7 +20,7 @@ public class ChoiceCreator : EditorWindow {
 	static public void OpenWindow() {
 		ChoiceCreator window = (ChoiceCreator)GetWindow(typeof(ChoiceCreator));
 		window.minSize = new Vector2(400, 350);
-		window.maxSize = new Vector2(400, 400);
+		window.maxSize = new Vector2(400, 800);
 		window.Show();
 	}
 
@@ -36,6 +36,19 @@ public class ChoiceCreator : EditorWindow {
 		GUILayout.Label("Dialog");
 		positive.text = EditorGUILayout.TextField(positive.text, GUILayout.Height(80));
 		EditorGUILayout.EndHorizontal();
+		EditorGUILayout.BeginHorizontal();
+		GUILayout.Label("Message to add");
+		message = EditorGUILayout.ObjectField(message, typeof(ResourceMessage), false) as ResourceMessage;
+		if(message != null) {
+			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
+				posMessages.Add(message);
+				message = null;
+			}
+		}
+		else {
+			EditorGUILayout.HelpBox("No message to add.", MessageType.Warning);
+		}
+		EditorGUILayout.EndHorizontal();
 	}
 
 	private void NegativeField() {
@@ -46,35 +59,35 @@ public class ChoiceCreator : EditorWindow {
 		GUILayout.Label("Dialog");
 		negative.text = EditorGUILayout.TextField(negative.text, GUILayout.Height(80));
 		EditorGUILayout.EndHorizontal();
-	}
-
-	private void OnGUI() {
-		EditorGUILayout.BeginHorizontal();
-		GUILayout.Label("FileName");
-		fileName = EditorGUILayout.TextField(fileName);
-		EditorGUILayout.EndHorizontal();
-
-		PositiveField();
-		NegativeField();
-
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Message to add");
 		message = EditorGUILayout.ObjectField(message, typeof(ResourceMessage), false) as ResourceMessage;
-		EditorGUILayout.EndHorizontal();
-		EditorGUILayout.BeginHorizontal();
 		if(message != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
 				posMessages.Add(message);
-				message = null;
-			}
-			if(GUILayout.Button("Push Message to negative list", GUILayout.Height(30))) {
-				negMessages.Add(message);
 				message = null;
 			}
 		}
 		else {
 			EditorGUILayout.HelpBox("No message to add.", MessageType.Warning);
 		}
+		EditorGUILayout.EndHorizontal();
+	}
+
+	private void OnGUI() {
+		
+		EditorGUILayout.BeginHorizontal();
+		GUILayout.Label("FileName");
+		fileName = EditorGUILayout.TextField(fileName);
+		EditorGUILayout.EndHorizontal();
+
+		PositiveField();
+		
+		NegativeField();
+		
+		
+		EditorGUILayout.BeginHorizontal();
+		
 		EditorGUILayout.EndHorizontal();
 
 		EditorGUILayout.BeginHorizontal();
@@ -88,6 +101,10 @@ public class ChoiceCreator : EditorWindow {
 			SaveChoice();
 		}
 		EditorGUILayout.EndHorizontal();
+	}
+
+	public void OnInspectorUpdate() {
+		this.Repaint();
 	}
 
 	public void InitData() {

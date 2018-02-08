@@ -16,11 +16,20 @@ public class EventManager : MonoBehaviour {
 	public delegate void ChooseEvent();
     public static event ChooseEvent ChoosePositive;
     public static event ChooseEvent ChooseNegative;
+    public static event ChooseEvent UIEnable;
+    public static event ChooseEvent UIDisable;
+    public static event ChooseEvent UIContinue;
     public static void Choice_Load(Choice _choice) {
         ChoiceLoad(_choice);
     }
     public static void Choice_Unload() {
         ChoiceUnLoad();
+    }
+    public static void InterMission_Enable() {
+        UIEnable();
+    }
+    public static void InterMission_Disable() {
+        UIContinue();
     }
     public static void Choose_Choice(int state) {
         switch(state) {

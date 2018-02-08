@@ -14,8 +14,19 @@ public class UIManager : MonoBehaviour {
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.DisplayChoice += SetChoice;
+        EventManager.UIEnable += EnableUI;
+        EventManager.UIDisable += DisableUI;
+        EventManager.UIContinue += ContinueUI;
     }
 
+
+    void EnableUI() {
+    }
+    void DisableUI() {
+    }
+
+    void ContinueUI() {
+    }
     void LoadChoice(Choice _choice) {
         Choice.SetActive(true);
         DesicionButton.SetActive(true);

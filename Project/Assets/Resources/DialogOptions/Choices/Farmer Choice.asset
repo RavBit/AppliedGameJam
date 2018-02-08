@@ -14,7 +14,7 @@ MonoBehaviour:
   Dilemma: "I would like to start a farm in the Southern region, but I\u2019m terrible
     low on money. Would you care to fund a bit? It\u2019s only agriculture. "
   Name: Farmer
-  Character: {fileID: 21300000, guid: e0b84ac7da93847448a478a66b370bd8, type: 3}
+  Character: {fileID: 1109229819357984, guid: a48c10bf31feff4448b2c3b43b0fd943, type: 2}
   State: 0
   PositiveDialog: {fileID: 11400000, guid: 417a18aced4e8734da15fc5d107c4616, type: 2}
   NegativeDialog: {fileID: 11400000, guid: 44c6c9da502b4fe45a622d895d9dd537, type: 2}

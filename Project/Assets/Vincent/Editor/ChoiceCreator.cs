@@ -88,8 +88,8 @@ public class ChoiceCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 
 		EditorGUILayout.BeginHorizontal();
-		GUILayout.Label("Card art");
-		choice.Character = EditorGUILayout.ObjectField(choice.Character, typeof(Sprite), false) as Sprite;
+		GUILayout.Label("Character art");
+		choice.Character = EditorGUILayout.ObjectField(choice.Character, typeof(GameObject), false) as GameObject;
 		
 		EditorGUILayout.EndHorizontal();
 

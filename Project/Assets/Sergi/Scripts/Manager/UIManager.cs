@@ -6,11 +6,13 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
     public GameObject Choice;
-    public GameObject Screen;
     public GameObject DesicionButton;
     public GameObject ContinueButton;
     public Text Textbubble;
     public Image Character;
+
+	private Transform currentChar;
+
     public Text Population;
     public Text Happiness;
     public Text Environment;
@@ -25,30 +27,34 @@ public class UIManager : MonoBehaviour {
     }
     private void Update() {
         Population.text = "" + EventManager.Get_Population();
-        Happiness.text = "" + EventManager.Get_Happiness() + "%";
+        Happiness.text = "" + EventManager.Get_Happiness();
         Currency.text = "" + EventManager.Get_Currency();
-        Environment.text = "" + EventManager.Get_Environment() + "%";
+        Environment.text = "" + EventManager.Get_Environment();
     }
 
     void EnableUI() {
         //NACHT
-        Choice.SetActive(false);
-        Screen.SetActive(false);
 
     }
     void DisableUI() {
         //DAG
-        Choice.SetActive(true);
-        Screen.SetActive(true);
     }
 
     void ContinueUI() {
     }
     void LoadChoice(Choice _choice) {
+		if(currentChar != null)
+			DestroyImmediate(currentChar.gameObject);
         Choice.SetActive(true);
         DesicionButton.SetActive(true);
         ContinueButton.SetActive(false);
-        Character.sprite = _choice.Character;
+		currentChar = Instantiate(_choice.Character).transform;
+		Character.enabled = false;
+		currentChar.parent = Character.transform;
+		Debug.Log(currentChar.localScale);
+		currentChar.localScale = new Vector3(0.02f, 0.036f, 0.02f);
+		Debug.Log(currentChar.localScale);
+		currentChar.localPosition = Vector3.zero;
 		Debug.Log(_choice.Dilemma);
         Textbubble.text = _choice.Dilemma;
     }

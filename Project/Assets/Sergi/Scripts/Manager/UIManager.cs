@@ -6,11 +6,11 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
     public GameObject Choice;
+    public GameObject Screen;
     public GameObject DesicionButton;
     public GameObject ContinueButton;
     public Text Textbubble;
     public Image Character;
-
     public Text Population;
     public Text Happiness;
     public Text Environment;
@@ -25,17 +25,21 @@ public class UIManager : MonoBehaviour {
     }
     private void Update() {
         Population.text = "" + EventManager.Get_Population();
-        Happiness.text = "" + EventManager.Get_Happiness();
+        Happiness.text = "" + EventManager.Get_Happiness() + "%";
         Currency.text = "" + EventManager.Get_Currency();
-        Environment.text = "" + EventManager.Get_Environment();
+        Environment.text = "" + EventManager.Get_Environment() + "%";
     }
 
     void EnableUI() {
         //NACHT
+        Choice.SetActive(false);
+        Screen.SetActive(false);
 
     }
     void DisableUI() {
         //DAG
+        Choice.SetActive(true);
+        Screen.SetActive(true);
     }
 
     void ContinueUI() {

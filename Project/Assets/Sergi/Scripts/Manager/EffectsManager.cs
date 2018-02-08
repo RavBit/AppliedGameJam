@@ -2,15 +2,19 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
-
+using DG.Tweening;
 public class EffectsManager : MonoBehaviour {
     public PostProcessingProfile ppProfile;
     public int DayState = 0;
     public Environment_State EnvState;
 
+    public SpriteRenderer[] EnvironmentImage;
     private void Start() {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
+        EventManager.NightCycle += StartNight;
+        EnvironmentImage[1].DOFade(0, 0.1f);
+        EnvironmentImage[2].DOFade(0, 0.1f);
         SDT();     
     }
     void SDT() {
@@ -25,15 +29,18 @@ public class EffectsManager : MonoBehaviour {
     }
     //Day States
     public IEnumerator Change_Day_State() {
+        float time = 0;
         switch (DayState) {
             case (0):
                 //copy current bloom settings from the profile into a temporary variable
                 ColorGradingModel.Settings colorgrading = ppProfile.colorGrading.settings;
                 colorgrading.channelMixer.red = new Vector3(2, 0, 0);
+                Debug.Log("GOING THROUGH");
                 //change the intensity in the temporary settings variable
-                while (colorgrading.tonemapping.neutralBlackOut < 0) {
-                    colorgrading.tonemapping.neutralBlackOut = colorgrading.tonemapping.neutralBlackOut + 0.005f;
-                    yield return new WaitForSeconds(0.05f);
+                while (time < 2) {
+                    colorgrading.tonemapping.neutralBlackOut = colorgrading.tonemapping.neutralBlackOut + 0.05f;
+                    time = time + 0.5f;
+                    yield return new WaitForSeconds(0.5f);
                 }
 
                 //set the bloom settings in the actual profile to the temp settings with the changed value
@@ -67,19 +74,50 @@ public class EffectsManager : MonoBehaviour {
         }
         StopCoroutine("Change_Day_State");
     }
+    void StartNight() {
+        StartCoroutine("Night_State");
+    }
+    public IEnumerator Night_State() {
+        float time = 0;
+        float light = 2;
+        while(time < 5) {
+            //copy current bloom settings from the profile into a temporary variable
+            ColorGradingModel.Settings colorgrading = ppProfile.colorGrading.settings;
+            light = light - 0.025f;
+            colorgrading.channelMixer.red = new Vector3(light, 0, 0);
+            colorgrading.tonemapping.neutralBlackOut = (0 - (light / 100));
+            //change the intensity in the temporary settings variable
+            //set the bloom settings in the actual profile to the temp settings with the changed value
+            ppProfile.colorGrading.settings = colorgrading;
+            time = time + 0.1f;
+            yield return new WaitForSeconds(0.1f);
+        }
+        StartCoroutine("Change_Day_State");
+        DayState = 0;
+        Change_Environment();
+        EventManager.InterMission_Continue();
+    }
+
 
     //Environment states
     public void Change_Environment() {
-        switch(EnvState) {
-            case (Environment_State.Unhealthy):
-                //DO UNHEALTHY STUFF
-                break;
-            case (Environment_State.Neutral):
-                //DO NEUTRAL STUFF
-                break;
-            case (Environment_State.Healthy):
-                //DO HEALTHY STUFF
-                break;
+        if(EventManager.Get_Environment() < 30) {
+            Debug.Log("UNHEALTH");
+            EnvironmentImage[0].DOFade(1, 0.5f);
+            EnvironmentImage[1].DOFade(0, 0.5f);
+            EnvironmentImage[2].DOFade(0, 0.5f);
+        }
+        if (EventManager.Get_Environment() > 60) {
+            Debug.Log("HEALTHY");
+            EnvironmentImage[0].DOFade(0, 0.5f);
+            EnvironmentImage[1].DOFade(0, 0.5f);
+            EnvironmentImage[2].DOFade(1, 0.5f);
+        }
+            if (EventManager.Get_Environment() >= 30 && EventManager.Get_Environment() <= 60) {
+            Debug.Log("NEUTRAL");
+            EnvironmentImage[0].DOFade(0, 0.5f);
+            EnvironmentImage[1].DOFade(1, 0.5f);
+            EnvironmentImage[2].DOFade(0, 0.5f);
         }
     }
 }

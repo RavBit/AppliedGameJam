@@ -12,6 +12,7 @@ public class EventManager : MonoBehaviour {
 	public static event ResourceEvent SendResourceMessage;
 	public static event ResourceEvent EnqueueMessageEvent;
 
+
 	public delegate void ChooseEvent();
     public static event ChooseEvent ChoosePositive;
     public static event ChooseEvent ChooseNegative;
@@ -40,5 +41,8 @@ public class EventManager : MonoBehaviour {
 	}
 	public static void _EnqueueMessage(params ResourceMessage[] res) {
 		EnqueueMessageEvent(res);
+	}
+	public static void _ChoiceLoad() {
+		ChoiceUnLoad();
 	}
 }

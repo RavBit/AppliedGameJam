@@ -18,6 +18,7 @@ public abstract class BaseState {
 //Exists to act as the gameloop. Will proceed when all choices have been handled.
 public class DayState : BaseState {
 	private int choicesMade;
+	private bool isChanged = false;
 	public override void Entry(Queue<ResourceMessage> messages) {
 		choicesMade = 0;
 		EventManager.ChoiceUnLoad += IncreaseCount;
@@ -27,7 +28,10 @@ public class DayState : BaseState {
 			onState(new NightState());
 		}
 		else {
-			//EventManager._ChoiceLoad();
+			if(!isChanged) {
+				EventManager._ChoiceLoad();
+				isChanged = false;
+			}
 		}
 	}
 
@@ -35,8 +39,9 @@ public class DayState : BaseState {
 		EventManager.ChoiceUnLoad -= IncreaseCount;
 	}
 
-	public void IncreaseCount(Choice c) {
+	public void IncreaseCount() {
 		choicesMade++;
+		isChanged = true;
 	}
 }
 
@@ -64,6 +69,8 @@ public class BetweenState : BaseState {
 	private bool isDone;
 	public override void Entry(Queue<ResourceMessage> messages) {
 		isDone = false;
+		//Send notice upwards to enable intermission UI
+		//subscribe to event
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(isDone)
@@ -71,7 +78,8 @@ public class BetweenState : BaseState {
 	}
 
 	public override void Exit(Queue<ResourceMessage> messages) {
-
+		//Send notice upwards to disable intermission UI
+		//unsub from event
 	}
 
 	public void UpdateBetweenState() {

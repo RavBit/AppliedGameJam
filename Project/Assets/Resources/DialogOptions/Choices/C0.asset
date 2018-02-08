@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Name: C0
   m_EditorClassIdentifier: 
   Dilemma: Zou je een slaan robotten?
+  Name: 
+  Character: {fileID: 21300000, guid: b9efb5430bacbfd46952a42b391a7a65, type: 3}
   State: 0
   PositiveDialog: {fileID: 11400000, guid: df83128d237678e46989b5fd4352e0cd, type: 2}
   NegativeDialog: {fileID: 11400000, guid: 7074cffb671b7044d83dd29905c70067, type: 2}

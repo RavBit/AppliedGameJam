@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
     public Text Textbubble;
+    public Image Character;
 
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
@@ -12,7 +14,8 @@ public class UIManager : MonoBehaviour {
     }
 
     void LoadChoice(Choice _choice) {
-		Debug.Log("Reached");
+        //Character.Dodis
+        Character.sprite = _choice.Character;
 		Debug.Log(_choice.Dilemma);
         Textbubble.text = _choice.Dilemma;
     }

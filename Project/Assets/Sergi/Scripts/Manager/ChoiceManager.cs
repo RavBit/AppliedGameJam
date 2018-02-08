@@ -31,6 +31,15 @@ public class ChoiceManager : MonoBehaviour {
     }
 
     void UnLoadChoice(Choice _choice) {
-        ChoiceQueue.Enqueue(_choice);
+        if(_choice.State == State.Positive) {
+            foreach (ResourceMessage rm in _choice.PositiveDialog.messages) {
+                ChoiceQueue.Enqueue(rm);
+            }
+        }
+        if (_choice.State == State.Negative)
+            foreach (ResourceMessage rm in _choice.NegativeDialog.messages) {
+                ChoiceQueue.Enqueue(rm);
+            }
+        Debug.Log("Choice QUEUUEU  " + ChoiceQueue.Count);
     }
 }

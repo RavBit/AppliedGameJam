@@ -12,7 +12,7 @@ public class ChoiceManager : MonoBehaviour {
         //Load Choice for now
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
-        EventManager.DisplayChoice += UnLoadChoice;
+        EventManager.ChoiceUnLoad += UnLoadChoice;
 		Invoke("Test", .000001f);
     }
 	void Test() {
@@ -30,16 +30,15 @@ public class ChoiceManager : MonoBehaviour {
         curchoice = _choice;
     }
 
-    void UnLoadChoice(Choice _choice) {
-        if(_choice.State == State.Positive) {
-            foreach (ResourceMessage rm in _choice.PositiveDialog.messages) {
+    void UnLoadChoice() {
+        if(curchoice.State == State.Positive) {
+            foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {
                 ChoiceQueue.Enqueue(rm);
             }
         }
-        if (_choice.State == State.Negative)
-            foreach (ResourceMessage rm in _choice.NegativeDialog.messages) {
+        if (curchoice.State == State.Negative)
+            foreach (ResourceMessage rm in curchoice.NegativeDialog.messages) {
                 ChoiceQueue.Enqueue(rm);
             }
-        Debug.Log("Choice QUEUUEU  " + ChoiceQueue.Count);
     }
 }

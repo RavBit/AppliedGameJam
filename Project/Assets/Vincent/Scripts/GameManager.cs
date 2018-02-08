@@ -14,14 +14,13 @@ public class GameManager : MonoBehaviour {
 	 */
 
 	public void Awake() {
-
+		EventManager.EnqueueMessageEvent += EnqueueMessage;
 	}
 
 	private void NewDay() {
 		ExecuteDay();
 		currentDay = nextDay;
 		nextDay = new Queue<ResourceMessage>();
-		
 	}
 
 	private void ExecuteDay() {

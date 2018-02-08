@@ -39,6 +39,6 @@ public class EventManager : MonoBehaviour {
 		SendResourceMessage(res);
 	}
 	public static void _EnqueueMessage(params ResourceMessage[] res) {
-		SendResourceMessage(res);
+		EnqueueMessageEvent(res);
 	}
 }

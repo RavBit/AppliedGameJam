@@ -6,7 +6,8 @@ using UnityEditor;
 public class ChoiceCreator : EditorWindow {
 
 	private string fileName = "DefaultName";
-	public ResourceMessage message;
+	public ResourceMessage negMessage;
+	public ResourceMessage posMessage;
 	private List<ResourceMessage> negMessages;
 	private List<ResourceMessage> posMessages;
 	public Choice choice;
@@ -38,11 +39,11 @@ public class ChoiceCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Message to add");
-		message = EditorGUILayout.ObjectField(message, typeof(ResourceMessage), false) as ResourceMessage;
-		if(message != null) {
+		posMessage = EditorGUILayout.ObjectField(posMessage, typeof(ResourceMessage), false) as ResourceMessage;
+		if(posMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				posMessages.Add(message);
-				message = null;
+				posMessages.Add(posMessage);
+				posMessage = null;
 			}
 		}
 		else {
@@ -61,11 +62,11 @@ public class ChoiceCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Message to add");
-		message = EditorGUILayout.ObjectField(message, typeof(ResourceMessage), false) as ResourceMessage;
-		if(message != null) {
+		negMessage = EditorGUILayout.ObjectField(negMessage, typeof(ResourceMessage), false) as ResourceMessage;
+		if(negMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				posMessages.Add(message);
-				message = null;
+				posMessages.Add(negMessage);
+				negMessage = null;
 			}
 		}
 		else {
@@ -75,10 +76,26 @@ public class ChoiceCreator : EditorWindow {
 	}
 
 	private void OnGUI() {
-		
+
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("FileName");
 		fileName = EditorGUILayout.TextField(fileName);
+		EditorGUILayout.EndHorizontal();
+
+		EditorGUILayout.BeginHorizontal();
+		GUILayout.Label("Charater name");
+		choice.Name = EditorGUILayout.TextField(choice.Name);
+		EditorGUILayout.EndHorizontal();
+
+		EditorGUILayout.BeginHorizontal();
+		GUILayout.Label("Card art");
+		choice.Character = EditorGUILayout.ObjectField(choice.Character, typeof(Sprite), false) as Sprite;
+		
+		EditorGUILayout.EndHorizontal();
+
+		EditorGUILayout.BeginHorizontal();
+		GUILayout.Label("Dilemma text");
+		choice.Dilemma = EditorGUILayout.TextField(choice.Dilemma, GUILayout.Height(80));
 		EditorGUILayout.EndHorizontal();
 
 		PositiveField();
@@ -94,7 +111,10 @@ public class ChoiceCreator : EditorWindow {
 		if(GUILayout.Button("Reset all values", GUILayout.Height(30))) {
 			InitData();
 		}
-		if(fileName == null || fileName.Length < 1 || fileName == "DefaultName") {
+		if(choice.Character == null) {
+			EditorGUILayout.HelpBox("Sprite is needed to create choice.", MessageType.Warning);
+		}
+		else if(fileName == null || fileName.Length < 1 || fileName == "DefaultName") {
 			EditorGUILayout.HelpBox("FileName is too short or hasn't been changed.", MessageType.Warning);
 		}
 		else if(GUILayout.Button("Create Choice", GUILayout.Height(30))) {
@@ -111,6 +131,7 @@ public class ChoiceCreator : EditorWindow {
 		choice = new Choice();
 		negative = new Dialog();
 		positive = new Dialog();
+		fileName = "DefaultName";
 	}
 
 	private void SaveChoice() {
@@ -125,9 +146,9 @@ public class ChoiceCreator : EditorWindow {
 		choice.NegativeDialog = negative;
 		choice.PositiveDialog = positive;
 
-		string dataPath = "Assets/Resources/DialogOptions/NegativeDialog/" + fileName + ".asset";
+		string dataPath = "Assets/Resources/DialogOptions/NegativeDialog/" + fileName + "Neg.asset";
 		AssetDatabase.CreateAsset(negative, dataPath);
-		dataPath = "Assets/Resources/DialogOptions/PositiveDialog/" + fileName + ".asset";
+		dataPath = "Assets/Resources/DialogOptions/PositiveDialog/" + fileName + "Pos.asset";
 		AssetDatabase.CreateAsset(positive, dataPath);
 		dataPath = "Assets/Resources/DialogOptions/Choices/" + fileName + ".asset";
 		AssetDatabase.CreateAsset(choice, dataPath);

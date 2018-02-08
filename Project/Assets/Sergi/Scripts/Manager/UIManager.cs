@@ -35,4 +35,7 @@ public class UIManager : MonoBehaviour {
     public void Choose(int state) {
         EventManager.Choose_Choice(state);
     }
+    public void Continue() {
+        EventManager.Choice_Unload();
+    }
 }

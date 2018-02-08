@@ -14,6 +14,8 @@ public class GameCycleFSM {
 	}
 
 	public void SetState(BaseState newState) {
+		Debug.Log(currentState);
+		Debug.Log(newState);
 		if(currentState != null) {
 			currentState.onState -= SetState;
 			currentState.Exit(queueToHandle);

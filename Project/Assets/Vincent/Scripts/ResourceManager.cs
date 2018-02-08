@@ -45,7 +45,7 @@ public class ResourceManager : MonoBehaviour {
 		}
 		set {
 			happiness += value;
-			Debug.Log("Adding to happiness in property!");
+			Debug.Log("Adding to happiness in property!" + value);
 			//Some other update functions that need to be called upon changing this value.
 		}
 	}
@@ -69,30 +69,28 @@ public class ResourceManager : MonoBehaviour {
 	//It also accepts an infinite amount of changes per function call.
 	//This is the main communication reciever meant for the rest of the game to have influence on the resources.
 	public void SendResourceMessage(params ResourceMessage[] res) {
-		foreach(ResourceMessage i in res) {
-			Resources temp = i.GetResourceType();
-			//Debug.Log(temp);
-			//Debug.Log(i.GetResourceType());
-			switch(temp) {
-				case Resources.population:
-					Population += i.GetAmount();
-					Debug.Log("pop" + i.GetAmount());
-					break;
-				case Resources.currency:
-					Currency += i.GetAmount();
-					Debug.Log("cur" + i.GetAmount());
-					break;
-				case Resources.happiness:
-					Happiness += i.GetAmount();
-					Debug.Log("hap" + i.GetAmount());
-					break;
-				case Resources.environment:
-					Environment += i.GetAmount();
-					Debug.Log("env" + i.GetAmount());
-					break;
-				default:
-					Debug.Log("Unhandled enum type");
-					break;
+		if(res != null) {
+			foreach(ResourceMessage i in res) {
+				Resources temp = i.GetResourceType();
+				//Debug.Log(temp);
+				//Debug.Log(i.GetResourceType());
+				switch(temp) {
+					case Resources.population:
+						Population += i.amount;
+						break;
+					case Resources.currency:
+						Currency += i.amount;
+						break;
+					case Resources.happiness:
+						Happiness += i.amount;
+						break;
+					case Resources.environment:
+						Environment += i.amount;
+						break;
+					default:
+						Debug.Log("Unhandled enum type");
+						break;
+				}
 			}
 		}
 	}

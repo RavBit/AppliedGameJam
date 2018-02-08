@@ -18,13 +18,16 @@ public abstract class BaseState {
 //Exists to act as the gameloop. Will proceed when all choices have been handled.
 public class DayState : BaseState {
 	private int choicesMade;
-	private bool isChanged = false;
+	private bool isChanged = true;
 	public override void Entry(Queue<ResourceMessage> messages) {
 		choicesMade = 0;
 		EventManager.ChoiceUnLoad += IncreaseCount;
+		
+		Debug.Log("Entered day state");
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(choicesMade >= 3) {
+			Debug.Log("Reached");
 			onState(new NightState());
 		}
 		else {
@@ -43,23 +46,33 @@ public class DayState : BaseState {
 	public void IncreaseCount() {
 		choicesMade++;
 		isChanged = true;
+		Debug.Log("Choice made!");
+		Debug.Log(choicesMade);
 	}
 }
 
 //Exists to convert the choice queue to resourceMessages. When done, it will pass these on to the next state.
 public class NightState : BaseState {
 	private ResourceMessage[] rm;
+	private bool isDone = false;
 	public override void Entry(Queue<ResourceMessage> messages) {
-		rm = new ResourceMessage[messages.Count];
-		for(int i = 0; i < messages.Count; i++) {
-			rm[i] = messages.Dequeue();
+		Debug.Log("Entered night state");
+		if(messages != null) {
+			Debug.Log("Been here");
+			rm = new ResourceMessage[messages.Count];
+			int temp = messages.Count;
+			for(int i = 0; i < temp; i++) {
+				rm[i] = messages.Dequeue();
+			}
+			EventManager._EnqueueMessage(rm);
 		}
-		EventManager._EnqueueMessage(rm);
-		onState(new BetweenState());
+		isDone = true;
 	}
 
-	//Stay not needed here.
-
+	public override void Stay(Queue<ResourceMessage> messages) {
+		if(isDone)
+			onState(new BetweenState());
+	}
 	public override void Exit(Queue<ResourceMessage> messages) {
 		Debug.Log("Changing state to Between");
 	}
@@ -69,9 +82,11 @@ public class NightState : BaseState {
 public class BetweenState : BaseState {
 	private bool isDone;
 	public override void Entry(Queue<ResourceMessage> messages) {
+		Debug.Log("Entered between state");
 		isDone = false;
-		//Send notice upwards to enable intermission UI
-		//subscribe to event
+		EventManager.InterMission_Enable();
+		EventManager.UIContinue += UpdateBetweenState;
+		EventManager._NextDay();
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(isDone)
@@ -80,7 +95,8 @@ public class BetweenState : BaseState {
 
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
-		//unsub from event
+		EventManager.InterMission_Disable();
+		EventManager.UIContinue -= UpdateBetweenState;
 		Debug.Log("Changing state to Day");
 	}
 

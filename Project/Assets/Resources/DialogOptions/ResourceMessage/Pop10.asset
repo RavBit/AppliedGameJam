@@ -12,4 +12,5 @@ MonoBehaviour:
   m_Name: Pop10
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMessage
   resourceType: 0
+  isToday: 1
   amount: 10

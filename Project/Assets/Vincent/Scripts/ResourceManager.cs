@@ -59,10 +59,26 @@ public class ResourceManager : MonoBehaviour {
 		}
 	}
 
-	private void Start() {
+    private int GetHappiness() {
+        return happiness;
+    }
+    private int GetCurrency() {
+        return currency;
+    }
+    private int GetEnvironment() {
+        return environment;
+    }
+    private int Get_Population() {
+        return population;
+    }
+    private void Start() {
 		EventManager.SendResourceMessage += SendResourceMessage;
-		//SendResourceMessage(new ResourceMessage(Resources.currency, 10), new ResourceMessage(Resources.happiness, 50), new ResourceMessage(Resources.environment, 30), new ResourceMessage(Resources.population, 100));
-	}
+        EventManager.GetPopulation += Get_Population;
+        EventManager.GetHappiness += GetHappiness;
+        EventManager.GetEnvironment += GetEnvironment;
+        EventManager.GetCurrency += GetCurrency;
+        //SendResourceMessage(new ResourceMessage(Resources.currency, 10), new ResourceMessage(Resources.happiness, 50), new ResourceMessage(Resources.environment, 30), new ResourceMessage(Resources.population, 100));
+    }
 
 	//This function is made to handle all resource change subjects. It accepts both positive and negative values.
 	//It also accepts an infinite amount of changes per function call.

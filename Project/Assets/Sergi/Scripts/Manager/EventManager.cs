@@ -15,7 +15,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void AdvanceEvent();
 	public static event AdvanceEvent NextDay;
 
-	public delegate Queue<ResourceMessage> QueueEvent();
+    public delegate int GetDel();
+
+    public delegate Queue<ResourceMessage> QueueEvent();
 	public static event QueueEvent GetQueue;
 
 	public delegate void ChooseEvent();
@@ -26,9 +28,31 @@ public class EventManager : MonoBehaviour {
     public static event ChooseEvent UIContinue;
 	public static event ChooseEvent EmptyQueue;
 
+    public static event ChooseEvent NightCycle;
+    public static event GetDel GetPopulation;
+    public static event GetDel GetCurrency;
+    public static event GetDel GetEnvironment;
+    public static event GetDel GetHappiness;
+
     public static event ChooseEvent DayCycle;
     public static void Day_Cycle() {
         DayCycle();
+    }
+
+    public static int Get_Population() {
+        return GetPopulation();
+    }
+    public static int Get_Currency() {
+        return GetCurrency();
+    }
+    public static int Get_Environment() {
+        return GetEnvironment();
+    }
+    public static int Get_Happiness() {
+        return GetHappiness();
+    }
+    public static void Night_Cycle() {
+        NightCycle();
     }
     public static void Choice_Load(Choice _choice) {
         ChoiceLoad(_choice);
@@ -46,6 +70,9 @@ public class EventManager : MonoBehaviour {
     }
     public static void InterMission_Disable() {
 		UIDisable();
+    }
+    public static void InterMission_Continue() {
+        UIContinue();
     }
     public static void Choose_Choice(int state) {
         switch(state) {

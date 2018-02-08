@@ -5,8 +5,8 @@ using UnityEngine;
 public class ChoiceManager : MonoBehaviour {
     public List<Choice> Choices;
     public Choice curchoice;
-    public int choicecounter = 0;
-    public Queue ChoiceQueue = new Queue();
+    public int choicecounter = -1;
+    public Queue<ResourceMessage> ChoiceQueue = new Queue<ResourceMessage>();
 
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
@@ -14,9 +14,28 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
         EventManager.ChoiceUnLoad += UnLoadChoice;
-		Invoke("Test", .000001f);
+        EventManager.GetQueue += Get_Queue;
+        EventManager.NextDay += ResetQueue;
+        EventManager.NightCycle += TestNight;
+        Invoke("Test", .000001f);
     }
-	void Test() {
+    Queue<ResourceMessage> Get_Queue() {
+        return ChoiceQueue;
+    }
+
+    private void ResetQueue() {
+        ChoiceQueue = new Queue<ResourceMessage>();
+    }
+
+
+    void TestNight() {
+        Invoke("EndNight", 3);
+    }
+
+    void EndNight() {
+        EventManager.InterMission_Continue();
+    }
+    void Test() {
 		EventManager.Choice_Load(Choices[choicecounter]);
 	}
     void PositiveChoice() {

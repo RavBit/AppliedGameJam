@@ -11,6 +11,11 @@ public class UIManager : MonoBehaviour {
     public Text Textbubble;
     public Image Character;
 
+    public Text Population;
+    public Text Happiness;
+    public Text Environment;
+    public Text Currency;
+
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.DisplayChoice += SetChoice;
@@ -18,7 +23,12 @@ public class UIManager : MonoBehaviour {
         EventManager.UIDisable += DisableUI;
         EventManager.UIContinue += ContinueUI;
     }
-
+    private void Update() {
+        Population.text = "" + EventManager.Get_Population();
+        Happiness.text = "" + EventManager.Get_Happiness();
+        Currency.text = "" + EventManager.Get_Currency();
+        Environment.text = "" + EventManager.Get_Environment();
+    }
 
     void EnableUI() {
         //NACHT

@@ -27,6 +27,8 @@ public class DayState : BaseState {
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(choicesMade >= 3) {
+            //Event aanroepen
+            EventManager.Night_Cycle();
 			Debug.Log("Reached");
 			onState(new NightState());
 		}

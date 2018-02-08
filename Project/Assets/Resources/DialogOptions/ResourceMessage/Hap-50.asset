@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Name: Hap-50
   m_EditorClassIdentifier: Assembly-CSharp::ResourceMessage
   resourceType: 2
-  isToday: 0
+  isToday: 1
   amount: -50

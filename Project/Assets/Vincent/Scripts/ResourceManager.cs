@@ -24,7 +24,7 @@ public class ResourceManager : MonoBehaviour {
 			return population;
 		}
 		set {
-			population += value;
+			population = value;
 			Debug.Log("Adding to population in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
@@ -34,7 +34,7 @@ public class ResourceManager : MonoBehaviour {
 			return currency;
 		}
 		set {
-			currency += value;
+			currency = value;
 			Debug.Log("Adding to currency in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
@@ -44,8 +44,7 @@ public class ResourceManager : MonoBehaviour {
 			return happiness;
 		}
 		set {
-			happiness += value;
-			Debug.Log("Adding to happiness in property!" + value);
+			happiness =  value;
 			//Some other update functions that need to be called upon changing this value.
 		}
 	}
@@ -54,7 +53,7 @@ public class ResourceManager : MonoBehaviour {
 			return environment;
 		}
 		set {
-			environment += value;
+			environment = value;
 			Debug.Log("Adding to environment in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
@@ -72,20 +71,21 @@ public class ResourceManager : MonoBehaviour {
 		if(res != null) {
 			foreach(ResourceMessage i in res) {
 				Resources temp = i.GetResourceType();
+				int amt = i.amount;
 				//Debug.Log(temp);
 				//Debug.Log(i.GetResourceType());
 				switch(temp) {
 					case Resources.population:
-						Population += i.amount;
+						Population = Population + amt;
 						break;
 					case Resources.currency:
-						Currency += i.amount;
+						Currency = Currency + amt;
 						break;
 					case Resources.happiness:
-						Happiness += i.amount;
+						Happiness = Happiness + amt;
 						break;
 					case Resources.environment:
-						Environment += i.amount;
+						Environment = Environment + amt;
 						break;
 					default:
 						Debug.Log("Unhandled enum type");

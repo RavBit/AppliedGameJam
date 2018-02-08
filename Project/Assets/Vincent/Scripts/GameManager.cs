@@ -14,7 +14,7 @@ public class GameManager : MonoBehaviour {
 		fsm = new GameCycleFSM(new DayState());
 	}
 
-	private void Update() {
+	private void LateUpdate() {
 		fsm.queueToHandle = EventManager.Get_Queue();
 		fsm.Run();
 	}

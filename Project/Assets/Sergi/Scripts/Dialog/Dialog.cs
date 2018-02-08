@@ -10,7 +10,4 @@ public class Dialog : ScriptableObject{
     [TextArea()]
     public string text;
 
-	public void Submit() {
-		EventManager._SendResourceMessage(messages);
-	}
 }

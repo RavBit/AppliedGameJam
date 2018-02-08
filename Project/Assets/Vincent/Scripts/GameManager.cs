@@ -10,10 +10,12 @@ public class GameManager : MonoBehaviour {
 
 	public void Awake() {
 		EventManager.EnqueueMessageEvent += EnqueueMessage;
+		EventManager.NextDay += NewDay;
 		fsm = new GameCycleFSM(new DayState());
 	}
 
 	private void Update() {
+		fsm.queueToHandle = EventManager.Get_Queue();
 		fsm.Run();
 	}
 
@@ -28,15 +30,23 @@ public class GameManager : MonoBehaviour {
 		for(int i = 0; i < tempArray.Length; i++) {
 			tempArray[i] = currentDay.Dequeue();
 		}
-		EventManager._SendResourceMessage(tempArray);
+		if(tempArray.Length > 0)
+			EventManager._SendResourceMessage(tempArray);
 	}
 
 	public void EnqueueMessage(params ResourceMessage[] rs) {
-		foreach(ResourceMessage rm in rs) {
-			if(rm.GetIsToday())
-				currentDay.Enqueue(rm);
-			else
-				nextDay.Enqueue(rm);
+		if(rs.Length > 0) {
+			Debug.Log(rs.Length);
+			foreach(ResourceMessage rm in rs) {
+				if(rm != null) {
+					if(rm.GetIsToday())
+						currentDay.Enqueue(rm);
+					else
+						nextDay.Enqueue(rm);
+				}
+			}
 		}
+		Debug.Log(currentDay.Count);
+		Debug.Log(nextDay.Count);
 	}
 }

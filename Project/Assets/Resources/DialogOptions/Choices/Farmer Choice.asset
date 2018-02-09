@@ -11,8 +11,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
   m_Name: Farmer Choice
   m_EditorClassIdentifier: 
-  Dilemma: "I would like to start a farm in the Southern region, but I\u2019m terrible
-    low on money. Would you care to fund a bit? It\u2019s only agriculture. "
+  Dilemma: "I WOULD LIKE TO START A FARM IN THE SOUTHERN REGION, BUT I\u2019M TERRIBLE
+    LOW ON MONEY. WOULD YOU CARE TO FUND A BIT? IT\u2019S ONLY AGRICULTURE. "
   Name: Farmer
   Character: {fileID: 1109229819357984, guid: a48c10bf31feff4448b2c3b43b0fd943, type: 2}
   State: 0

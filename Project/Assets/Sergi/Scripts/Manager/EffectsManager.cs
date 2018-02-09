@@ -11,8 +11,6 @@ public class EffectsManager : MonoBehaviour {
     public SpriteRenderer EnvironmentImage;
     public Sprite[] Environment;
 
-	//Format of: population, currency, happiness, environment
-	private Vector4 resourceDeltas;
 
 	private void Start() {
         PostProcessingSettings();
@@ -82,12 +80,13 @@ public class EffectsManager : MonoBehaviour {
         StopCoroutine("Change_Day_State");
     }
     void StartNight() {
+        EventManager.InterMission_Disable();
         StartCoroutine("Night_State");
     }
     public IEnumerator Night_State() {
         float time = 0;
         float light = 2;
-        while(time < 5) {
+        while (time < 5) {
             //copy current bloom settings from the profile into a temporary variable
             ColorGradingModel.Settings colorgrading = ppProfile.colorGrading.settings;
             light = light - 0.025f;
@@ -102,6 +101,7 @@ public class EffectsManager : MonoBehaviour {
         StartCoroutine("Change_Day_State");
         DayState = 0;
         Change_Environment();
+
         EventManager.InterMission_Continue();
     }
 
@@ -109,14 +109,12 @@ public class EffectsManager : MonoBehaviour {
     //Environment states
     public void Change_Environment() {
         if(EventManager.Get_Environment() < 30) {
-            Debug.Log("UNHEALTH");
             EnvironmentImage.sprite = Environment[2];
             EnvAudio[1].DOFade(0, 0.5f);
             EnvAudio[0].DOFade(0, 0.5f);
             EnvAudio[2].DOFade(1, 1);
         }
         if (EventManager.Get_Environment() > 60) {
-            Debug.Log("HEALTHY");
             EnvAudio[1].DOFade(0, 0.5f);
             EnvAudio[2].DOFade(0, 0.5f);
             EnvAudio[0].DOFade(1, 1);
@@ -126,15 +124,9 @@ public class EffectsManager : MonoBehaviour {
             EnvAudio[0].DOFade(0, 0.5f);
             EnvAudio[2].DOFade(0, 0.5f);
             EnvAudio[1].DOFade(1, 1);
-            Debug.Log("NEUTRAL");
             EnvironmentImage.sprite = Environment[1];
         }
     }
-
-	//Format of: population, currency, happiness, environment
-	private void GetDeltas(Vector4 v4) {
-		resourceDeltas = v4;
-	}
 
 }
 

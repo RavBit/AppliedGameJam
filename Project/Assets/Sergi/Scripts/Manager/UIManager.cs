@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class UIManager : MonoBehaviour {
     public GameObject Choice;
+    public GameObject Screen;
+
     public GameObject DesicionButton;
     public GameObject ContinueButton;
     public Text Textbubble;
@@ -18,6 +20,8 @@ public class UIManager : MonoBehaviour {
     public Text Environment;
     public Text Currency;
 
+    //Format of: population, currency, happiness, environment
+    private Vector4 resourceDeltas;
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.DisplayChoice += SetChoice;
@@ -33,13 +37,19 @@ public class UIManager : MonoBehaviour {
     }
 
     void EnableUI() {
-        //NACHT
+        Screen.SetActive(false);
+        Choice.SetActive(false);
 
     }
     void DisableUI() {
-        //DAG
+        Screen.SetActive(true);
+        Choice.SetActive(true);
     }
 
+    //Format of: population, currency, happiness, environment
+    private void GetDeltas(Vector4 v4) {
+        resourceDeltas = v4;
+    }
     void ContinueUI() {
     }
     void LoadChoice(Choice _choice) {

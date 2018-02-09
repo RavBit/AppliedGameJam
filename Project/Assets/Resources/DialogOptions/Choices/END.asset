@@ -13,7 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Dilemma: END OF GAME
   Name: 
-  Character: {fileID: 21300000, guid: 7958624c05e5b4f448e45c1900ee5436, type: 3}
-  State: 0
+  Character: {fileID: 1897555893056354, guid: 02d379a9c82f5ee4ca4200172b83c276, type: 2}
+  State: 1
   PositiveDialog: {fileID: 11400000, guid: 61507439a4d30184a8986586dda14aca, type: 2}
   NegativeDialog: {fileID: 11400000, guid: c601d91e34245bf408fb903db17427b4, type: 2}

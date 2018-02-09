@@ -10,7 +10,7 @@ public class ResourceManager : MonoBehaviour {
 	private int population = 10000;
 	private int currency = 1000000;
 	private int happiness = 70;
-	private int environment = 10;
+	private int environment = 85;
 
 	private int prevPop = 10000;
 	private int prevCur = 1000000;
@@ -130,6 +130,7 @@ public class ResourceManager : MonoBehaviour {
 		prevEnv = environment;
 	}
 
+	//Format of: population, currency, happiness, environment
 	private Vector4 CalculateDeltas() {
 		resourceDelta = new Vector4(population - prevPop, currency - prevCur, happiness - prevHap, environment - prevEnv);
 		return resourceDelta;

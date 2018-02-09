@@ -10,10 +10,15 @@ public class EffectsManager : MonoBehaviour {
     public AudioSource[] EnvAudio;
     public SpriteRenderer EnvironmentImage;
     public Sprite[] Environment;
-    private void Start() {
+
+	//Format of: population, currency, happiness, environment
+	private Vector4 resourceDeltas;
+
+	private void Start() {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
         EventManager.NightCycle += StartNight;
+		EventManager.SendV4 += GetDeltas;
         EnvAudio[1].DOFade(0, 0.01f);
         EnvAudio[2].DOFade(0, 0.01f);
         EnvAudio[0].DOFade(1, 1);
@@ -125,6 +130,12 @@ public class EffectsManager : MonoBehaviour {
             EnvironmentImage.sprite = Environment[1];
         }
     }
+
+	//Format of: population, currency, happiness, environment
+	private void GetDeltas(Vector4 v4) {
+		resourceDeltas = v4;
+	}
+
 }
 
 public enum Environment_State {
@@ -132,6 +143,8 @@ public enum Environment_State {
     Neutral,
     Healthy
 }
+
+
 
 public enum Day_State {
     Morning,

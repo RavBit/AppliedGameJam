@@ -101,7 +101,7 @@ public class EffectsManager : MonoBehaviour {
         StartCoroutine("Change_Day_State");
         DayState = 0;
         Change_Environment();
-
+        EventManager.InterMission_Disable();
         EventManager.InterMission_Continue();
     }
 

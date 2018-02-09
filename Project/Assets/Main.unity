@@ -176,7 +176,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 28108cc21727d784a9255f0565d70870, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85e73fc6c666d3a4a92f7a290c759c8b, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -359,6 +359,11 @@ MonoBehaviour:
   ppProfile: {fileID: 11400000, guid: 5952e87d6e1e299469fd07716138f819, type: 2}
   DayState: 0
   EnvState: 0
+  EnvironmentImage: {fileID: 135021744}
+  Environment:
+  - {fileID: 21300000, guid: fb1db88177817324cb5140712cc47181, type: 3}
+  - {fileID: 21300000, guid: 85e73fc6c666d3a4a92f7a290c759c8b, type: 3}
+  - {fileID: 21300000, guid: 252394d276756d242ac8fb3c3dbe4a9c, type: 3}
 --- !u!4 &232724803
 Transform:
   m_ObjectHideFlags: 0
@@ -1415,7 +1420,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Choice: {fileID: 1348231099}
-  Screen: {fileID: 506035021}
   DesicionButton: {fileID: 220444319}
   ContinueButton: {fileID: 433488463}
   Textbubble: {fileID: 1801414302}

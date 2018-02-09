@@ -7,13 +7,16 @@ public class EffectsManager : MonoBehaviour {
     public PostProcessingProfile ppProfile;
     public int DayState = 0;
     public Environment_State EnvState;
-
+    public AudioSource[] EnvAudio;
     public SpriteRenderer EnvironmentImage;
     public Sprite[] Environment;
     private void Start() {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
         EventManager.NightCycle += StartNight;
+        EnvAudio[1].DOFade(0, 0.01f);
+        EnvAudio[2].DOFade(0, 0.01f);
+        EnvAudio[0].DOFade(1, 1);
         SDT();     
     }
     void SDT() {
@@ -103,12 +106,21 @@ public class EffectsManager : MonoBehaviour {
         if(EventManager.Get_Environment() < 30) {
             Debug.Log("UNHEALTH");
             EnvironmentImage.sprite = Environment[2];
+            EnvAudio[1].DOFade(0, 0.5f);
+            EnvAudio[0].DOFade(0, 0.5f);
+            EnvAudio[2].DOFade(1, 1);
         }
         if (EventManager.Get_Environment() > 60) {
             Debug.Log("HEALTHY");
+            EnvAudio[1].DOFade(0, 0.5f);
+            EnvAudio[2].DOFade(0, 0.5f);
+            EnvAudio[0].DOFade(1, 1);
             EnvironmentImage.sprite = Environment[0];
         }
             if (EventManager.Get_Environment() >= 30 && EventManager.Get_Environment() <= 60) {
+            EnvAudio[0].DOFade(0, 0.5f);
+            EnvAudio[2].DOFade(0, 0.5f);
+            EnvAudio[1].DOFade(1, 1);
             Debug.Log("NEUTRAL");
             EnvironmentImage.sprite = Environment[1];
         }

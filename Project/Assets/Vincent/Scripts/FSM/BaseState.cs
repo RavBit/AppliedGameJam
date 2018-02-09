@@ -87,7 +87,8 @@ public class BetweenState : BaseState {
 	public override void Entry(Queue<ResourceMessage> messages) {
 		Debug.Log("Entered between state");
 		isDone = false;
-		EventManager.UIContinue += UpdateBetweenState;
+        EventManager.InterMission_Enable();
+        EventManager.UIContinue += UpdateBetweenState;
 		
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
@@ -97,7 +98,6 @@ public class BetweenState : BaseState {
 
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
-		EventManager.InterMission_Disable();
 		EventManager.UIContinue -= UpdateBetweenState;
 		Debug.Log("Changing state to Day");
 	}

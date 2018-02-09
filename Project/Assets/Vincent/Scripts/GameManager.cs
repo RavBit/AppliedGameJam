@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -11,6 +12,7 @@ public class GameManager : MonoBehaviour {
 	public void Awake() {
 		EventManager.EnqueueMessageEvent += EnqueueMessage;
 		EventManager.NextDay += NewDay;
+		EventManager.EndGame += GameEnd;
 		fsm = new GameCycleFSM(new DayState());
 	}
 
@@ -48,5 +50,24 @@ public class GameManager : MonoBehaviour {
 		}
 		Debug.Log(currentDay.Count);
 		Debug.Log(nextDay.Count);
+	}
+
+	public void GameEnd(Resources r) {
+		switch(r) {
+			case Resources.population:
+				SceneManager.LoadScene("PopEnd");
+				break;
+			case Resources.currency:
+				SceneManager.LoadScene("CurEnd");
+				break;
+			case Resources.happiness:
+				SceneManager.LoadScene("HapEnd");
+				break;
+			case Resources.environment:
+				SceneManager.LoadScene("EnvEnd");
+				break;
+			default:
+				break;
+		}
 	}
 }

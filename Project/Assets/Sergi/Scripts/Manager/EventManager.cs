@@ -31,7 +31,10 @@ public class EventManager : MonoBehaviour {
     public static event ChooseEvent UIContinue;
 	public static event ChooseEvent EmptyQueue;
 
-    public static event ChooseEvent NightCycle;
+	public delegate void EndEvent(Resources r);
+	public static event EndEvent EndGame;
+
+	public static event ChooseEvent NightCycle;
     public static event GetDel GetPopulation;
     public static event GetDel GetCurrency;
     public static event GetDel GetEnvironment;
@@ -103,6 +106,9 @@ public class EventManager : MonoBehaviour {
 	}
 	public static void _NextDay() {
 		NextDay();
+	}
+	public static void _EndGame(Resources r) {
+		EndGame(r);
 	}
 	public static void _SendV4(Vector4 v4) {
 		SendV4(v4);

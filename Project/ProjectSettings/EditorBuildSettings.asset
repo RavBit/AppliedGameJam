@@ -14,3 +14,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main.unity
     guid: 68ce0f88727550b469c609c183f28ea8
+  - enabled: 1
+    path: Assets/HapEnd.unity
+    guid: cc78775878a96d046856fcf275dcf2fc
+  - enabled: 1
+    path: Assets/EnvEnd.unity
+    guid: 36228af6c7e97194bb01b87dd808fb58
+  - enabled: 1
+    path: Assets/CurEnd.unity
+    guid: ef2c7623e9c697842983c44cfe2c545e
+  - enabled: 1
+    path: Assets/PopEnd.unity
+    guid: 1db5871a873b91c4883f48f43f70c964

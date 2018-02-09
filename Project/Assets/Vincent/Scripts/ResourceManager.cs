@@ -120,6 +120,7 @@ public class ResourceManager : MonoBehaviour {
 				}
 			}
 			EventManager._SendV4(CalculateDeltas());
+			CheckEnd();
 		}
 	}
 
@@ -128,6 +129,22 @@ public class ResourceManager : MonoBehaviour {
 		prevCur = currency;
 		prevHap = happiness;
 		prevEnv = environment;
+	}
+
+	private void CheckEnd() {
+		Debug.Log("EndCheck");
+		if(population <= 0) {
+			EventManager._EndGame(Resources.population);
+		}
+		if(currency <= -1000000) {
+			EventManager._EndGame(Resources.currency);
+		}
+		if(happiness <= 0) {
+			EventManager._EndGame(Resources.happiness);
+		}
+		if(environment <= 0) {
+			EventManager._EndGame(Resources.environment);
+		}
 	}
 
 	//Format of: population, currency, happiness, environment

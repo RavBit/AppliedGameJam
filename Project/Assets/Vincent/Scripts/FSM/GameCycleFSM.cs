@@ -20,10 +20,8 @@ public class GameCycleFSM {
 			currentState.onState -= SetState;
 			currentState.Exit(queueToHandle);
 		}
-
 		newState.Entry(queueToHandle);
 		newState.onState += SetState;
-
 		currentState = newState;
 	}
 

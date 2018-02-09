@@ -87,7 +87,6 @@ public class BetweenState : BaseState {
 	public override void Entry(Queue<ResourceMessage> messages) {
 		Debug.Log("Entered between state");
 		isDone = false;
-		EventManager.InterMission_Enable();
 		EventManager.UIContinue += UpdateBetweenState;
 		
 	}

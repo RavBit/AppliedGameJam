@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour {
         EventManager.UIEnable += EnableUI;
         EventManager.UIDisable += DisableUI;
         EventManager.UIContinue += ContinueUI;
+        EventManager.SendV4 += GetDeltas;
     }
     private void Update() {
         Population.text = "" + EventManager.Get_Population();

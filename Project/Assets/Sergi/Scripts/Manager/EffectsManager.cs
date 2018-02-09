@@ -16,7 +16,6 @@ public class EffectsManager : MonoBehaviour {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
         EventManager.NightCycle += StartNight;
-		EventManager.SendV4 += GetDeltas;
         EnvAudio[1].DOFade(0, 0.01f);
         EnvAudio[2].DOFade(0, 0.01f);
         EnvAudio[0].DOFade(1, 1);

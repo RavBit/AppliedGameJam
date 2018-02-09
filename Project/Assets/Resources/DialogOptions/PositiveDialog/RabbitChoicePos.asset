@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: RabbitChoicePos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: e127dc451b89a1c4793c2791e487ae9b, type: 2}
+  - {fileID: 11400000, guid: 5339c58f4658e05498b25d81e38871b6, type: 2}
+  - {fileID: 11400000, guid: df2a5e5f1ad9b464cb55f686cf311f8d, type: 2}
+  text: Awesome!

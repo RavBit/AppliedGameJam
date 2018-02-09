@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
+  m_Name: CookChoice
+  m_EditorClassIdentifier: 
+  Dilemma: I would like to begin a luxurious restaurant. I specialize in the preparations
+    of pork belly, spare ribs and tomato soup! A restaurant like this is exactly what
+    the people are craving these days!
+  Name: Cook
+  Character: {fileID: 1377677188674532, guid: eaf3dffb7c06f9742a8bf5b12bb41d03, type: 2}
+  State: 0
+  PositiveDialog: {fileID: 11400000, guid: a69fb322af300e74397f8a5b85ecee8d, type: 2}
+  NegativeDialog: {fileID: 11400000, guid: 30bc84f2fda81e54fb01244a79f79d03, type: 2}

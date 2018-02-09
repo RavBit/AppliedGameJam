@@ -7,6 +7,8 @@ using DG.Tweening;
 public class UIManager : MonoBehaviour {
     public GameObject Choice;
     public GameObject Screen;
+    public GameObject Screen_Sprite;
+    public GameObject Results;
 
     public GameObject DesicionButton;
     public GameObject ContinueButton;
@@ -20,6 +22,11 @@ public class UIManager : MonoBehaviour {
     public Text Environment;
     public Text Currency;
 
+    public Text ResultPop;
+    public Text ResultHap;
+    public Text ResultEnv;
+    public Text ResultCur;
+
     //Format of: population, currency, happiness, environment
     private Vector4 resourceDeltas;
     private void Start() {
@@ -29,6 +36,7 @@ public class UIManager : MonoBehaviour {
         EventManager.UIDisable += DisableUI;
         EventManager.UIContinue += ContinueUI;
         EventManager.SendV4 += GetDeltas;
+        Screen_Sprite.transform.DOScale(0, 1);
     }
     private void Update() {
         Population.text = "" + EventManager.Get_Population();
@@ -39,11 +47,17 @@ public class UIManager : MonoBehaviour {
 
     void EnableUI() {
         Screen.SetActive(false);
+        Results.SetActive(true);
+        ResultPop.DOText("Population: " + resourceDeltas.w + " people", 1, true,ScrambleMode.None);
+        ResultHap.DOText("Hapiness: " + resourceDeltas.y + "%", 1, true, ScrambleMode.None);
+        ResultCur.DOText("Currency: " + resourceDeltas.x + " paluta", 1, true, ScrambleMode.None);
+        ResultEnv.DOText("Environment: " + resourceDeltas.z + "%", 1, true, ScrambleMode.None);
         Choice.SetActive(false);
 
     }
     void DisableUI() {
         Screen.SetActive(true);
+        Results.SetActive(false);
         Choice.SetActive(true);
     }
 
@@ -54,6 +68,7 @@ public class UIManager : MonoBehaviour {
     void ContinueUI() {
     }
     void LoadChoice(Choice _choice) {
+        
 		if(currentChar != null)
 			DestroyImmediate(currentChar.gameObject);
         Choice.SetActive(true);
@@ -64,10 +79,13 @@ public class UIManager : MonoBehaviour {
 		currentChar.parent = Character.transform;
 		Debug.Log(currentChar.localScale);
 		currentChar.localScale = new Vector3(0.02f, 0.036f, 0.02f);
-		Debug.Log(currentChar.localScale);
+        Screen_Sprite.transform.DOScale(0, 0.001f);
+        Debug.Log(currentChar.localScale);
 		currentChar.localPosition = Vector3.zero;
 		Debug.Log(_choice.Dilemma);
-        Textbubble.text = _choice.Dilemma;
+        //Textbubble.text = _choice.Dilemma;
+        Textbubble.DOText(_choice.Dilemma, 4, true, ScrambleMode.All);
+        Screen_Sprite.transform.DOScale(1, 1f);
     }
 
     void SetChoice(Choice _choice) {
@@ -75,10 +93,10 @@ public class UIManager : MonoBehaviour {
         ContinueButton.SetActive(true);
         switch (_choice.State) {
             case (State.Negative):
-                Textbubble.text = _choice.NegativeDialog.text;
+                Textbubble.DOText(_choice.NegativeDialog.text, 4, true, ScrambleMode.All);
                 break;
             case (State.Positive):
-                Textbubble.text = _choice.PositiveDialog.text;
+                Textbubble.DOText(_choice.PositiveDialog.text, 4, true, ScrambleMode.All);
                 break;
         }
     }

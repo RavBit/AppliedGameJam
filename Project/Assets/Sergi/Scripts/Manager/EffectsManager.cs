@@ -34,6 +34,7 @@ public class EffectsManager : MonoBehaviour {
     //Day States
     public IEnumerator Change_Day_State() {
         float time = 0;
+        yield return new WaitForSeconds(2);
         switch (DayState) {
             case (0):
                 //copy current bloom settings from the profile into a temporary variable

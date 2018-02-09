@@ -8,6 +8,9 @@ public class EventManager : MonoBehaviour {
     public static event ChoiceState DisplayChoice;
     public static event ChooseEvent ChoiceUnLoad;
 
+	public delegate void SubmitV4(Vector4 v4);
+	public static event SubmitV4 SendV4;
+
 	public delegate void ResourceEvent(params ResourceMessage[] res);
 	public static event ResourceEvent SendResourceMessage;
 	public static event ResourceEvent EnqueueMessageEvent;
@@ -99,5 +102,8 @@ public class EventManager : MonoBehaviour {
 	}
 	public static void _NextDay() {
 		NextDay();
+	}
+	public static void _SendV4(Vector4 v4) {
+		SendV4(v4);
 	}
 }

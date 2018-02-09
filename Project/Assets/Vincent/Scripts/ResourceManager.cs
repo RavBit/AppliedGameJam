@@ -12,6 +12,13 @@ public class ResourceManager : MonoBehaviour {
 	private int happiness = 70;
 	private int environment = 85;
 
+	private int prevPop = 10000;
+	private int prevCur = 1000000;
+	private int prevHap = 70;
+	private int prevEnv = 85;
+
+	private Vector4 resourceDelta = new Vector4();
+
 	//Properties for the four resources to enable function calls upon change. 
 
 	/*
@@ -88,6 +95,7 @@ public class ResourceManager : MonoBehaviour {
 	//This is the main communication reciever meant for the rest of the game to have influence on the resources.
 	public void SendResourceMessage(params ResourceMessage[] res) {
 		if(res != null) {
+			SavePrevious();
 			foreach(ResourceMessage i in res) {
 				Resources temp = i.GetResourceType();
 				int amt = i.amount;
@@ -111,6 +119,19 @@ public class ResourceManager : MonoBehaviour {
 						break;
 				}
 			}
+			EventManager._SendV4(CalculateDeltas());
 		}
+	}
+
+	private void SavePrevious() {
+		prevPop = population;
+		prevCur = currency;
+		prevHap = happiness;
+		prevEnv = environment;
+	}
+
+	private Vector4 CalculateDeltas() {
+		resourceDelta = new Vector4(population - prevPop, currency - prevCur, happiness - prevHap, environment - prevEnv);
+		return resourceDelta;
 	}
 }

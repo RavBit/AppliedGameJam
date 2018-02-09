@@ -76,6 +76,7 @@ public class NightState : BaseState {
 			onState(new BetweenState());
 	}
 	public override void Exit(Queue<ResourceMessage> messages) {
+		EventManager._NextDay();
 		Debug.Log("Changing state to Between");
 	}
 }
@@ -88,7 +89,7 @@ public class BetweenState : BaseState {
 		isDone = false;
 		EventManager.InterMission_Enable();
 		EventManager.UIContinue += UpdateBetweenState;
-		EventManager._NextDay();
+		
 	}
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(isDone)

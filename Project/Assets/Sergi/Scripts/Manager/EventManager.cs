@@ -91,7 +91,8 @@ public class EventManager : MonoBehaviour {
     public static void Display_Choice(Choice _choice) {
         DisplayChoice(_choice);
     }
-	public static void _SendResourceMessage(params ResourceMessage[] res) {
+
+    public static void _SendResourceMessage(params ResourceMessage[] res) {
 		SendResourceMessage(res);
 	}
 	public static void _EnqueueMessage(params ResourceMessage[] res) {

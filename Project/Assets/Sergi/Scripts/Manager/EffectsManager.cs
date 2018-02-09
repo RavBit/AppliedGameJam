@@ -8,13 +8,12 @@ public class EffectsManager : MonoBehaviour {
     public int DayState = 0;
     public Environment_State EnvState;
 
-    public SpriteRenderer[] EnvironmentImage;
+    public SpriteRenderer EnvironmentImage;
+    public Sprite[] Environment;
     private void Start() {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
         EventManager.NightCycle += StartNight;
-        EnvironmentImage[1].DOFade(0, 0.1f);
-        EnvironmentImage[2].DOFade(0, 0.1f);
         SDT();     
     }
     void SDT() {
@@ -103,21 +102,15 @@ public class EffectsManager : MonoBehaviour {
     public void Change_Environment() {
         if(EventManager.Get_Environment() < 30) {
             Debug.Log("UNHEALTH");
-            EnvironmentImage[0].DOFade(1, 0.5f);
-            EnvironmentImage[1].DOFade(0, 0.5f);
-            EnvironmentImage[2].DOFade(0, 0.5f);
+            EnvironmentImage.sprite = Environment[2];
         }
         if (EventManager.Get_Environment() > 60) {
             Debug.Log("HEALTHY");
-            EnvironmentImage[0].DOFade(0, 0.5f);
-            EnvironmentImage[1].DOFade(0, 0.5f);
-            EnvironmentImage[2].DOFade(1, 0.5f);
+            EnvironmentImage.sprite = Environment[0];
         }
             if (EventManager.Get_Environment() >= 30 && EventManager.Get_Environment() <= 60) {
             Debug.Log("NEUTRAL");
-            EnvironmentImage[0].DOFade(0, 0.5f);
-            EnvironmentImage[1].DOFade(1, 0.5f);
-            EnvironmentImage[2].DOFade(0, 0.5f);
+            EnvironmentImage.sprite = Environment[1];
         }
     }
 }

@@ -28,6 +28,7 @@ public class UIManager : MonoBehaviour {
     public Text ResultCur;
 
     //Format of: population, currency, happiness, environment
+
     private Vector4 resourceDeltas;
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
@@ -48,10 +49,10 @@ public class UIManager : MonoBehaviour {
     void EnableUI() {
         Screen.SetActive(false);
         Results.SetActive(true);
-        ResultPop.DOText("Population: " + resourceDeltas.w + " people", 1, true,ScrambleMode.None);
-        ResultHap.DOText("Hapiness: " + resourceDeltas.y + "%", 1, true, ScrambleMode.None);
-        ResultCur.DOText("Currency: " + resourceDeltas.x + " paluta", 1, true, ScrambleMode.None);
-        ResultEnv.DOText("Environment: " + resourceDeltas.z + "%", 1, true, ScrambleMode.None);
+        ResultPop.DOText("Population: " + resourceDeltas.x + " people", 1, true,ScrambleMode.None);
+        ResultHap.DOText("Hapiness: " + resourceDeltas.z + "%", 1, true, ScrambleMode.None);
+        ResultCur.DOText("Currency: " + resourceDeltas.y + " paluta", 1, true, ScrambleMode.None);
+        ResultEnv.DOText("Environment: " + resourceDeltas.w + "%", 1, true, ScrambleMode.None);
         Choice.SetActive(false);
 
     }

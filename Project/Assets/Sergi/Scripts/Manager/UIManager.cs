@@ -79,7 +79,8 @@ public class UIManager : MonoBehaviour {
 		Character.enabled = false;
 		currentChar.parent = Character.transform;
 		Debug.Log(currentChar.localScale);
-		currentChar.localScale = new Vector3(0.02f, 0.036f, 0.02f);
+		currentChar.localScale = new Vector3(0.03f, 0.058f, 0.03f);
+        currentChar.localRotation = Quaternion.identity;
         Screen_Sprite.transform.DOScale(0, 0.001f);
         Debug.Log(currentChar.localScale);
 		currentChar.localPosition = Vector3.zero;

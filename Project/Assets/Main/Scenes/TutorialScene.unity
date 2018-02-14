@@ -794,7 +794,7 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: During the game you will be presented with propositions made by the inhabitants
-        of your planet and you decide wether or not they go through!
+        of your planet and you decide whether or not they go through!
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c39e241a92f69704b89a9adba42e3ee2, type: 2}
@@ -1189,7 +1189,7 @@ Prefab:
     - target: {fileID: 114684538865958968, guid: c39e241a92f69704b89a9adba42e3ee2,
         type: 2}
       propertyPath: m_Text
-      value: These decisions will influence the economy, health and population fo
+      value: These decisions will influence the economy, health and population of
         the planet.
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -4348,7 +4348,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1741891764}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eff211d02bb57434293f49df97f19fd4, type: 3}
+  m_Script: {fileID: 11500000, guid: 078f45e6ff1e84e458b68f12db7f2eb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   progression: 0

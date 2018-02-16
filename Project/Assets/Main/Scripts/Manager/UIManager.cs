@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 
+//This class handles the UI displaying and only that. The choiceManager gets called from here.
 public class UIManager : MonoBehaviour {
     public GameObject Choice;
     public GameObject Screen;
@@ -29,7 +30,7 @@ public class UIManager : MonoBehaviour {
 
     //Format of: population, currency, happiness, environment
 
-    private Vector4 resourceDeltas;
+    private ResourceStorage resourceDeltas;
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.DisplayChoice += SetChoice;
@@ -49,10 +50,10 @@ public class UIManager : MonoBehaviour {
     void EnableUI() {
         Screen.SetActive(false);
         Results.SetActive(true);
-        ResultPop.DOText("Population: " + resourceDeltas.x + " people", 1, true,ScrambleMode.None);
-        ResultHap.DOText("Hapiness: " + resourceDeltas.z + "%", 1, true, ScrambleMode.None);
-        ResultCur.DOText("Currency: " + resourceDeltas.y + " paluta", 1, true, ScrambleMode.None);
-        ResultEnv.DOText("Environment: " + resourceDeltas.w + "%", 1, true, ScrambleMode.None);
+        ResultPop.DOText("Population: " + resourceDeltas.population + " people", 1, true,ScrambleMode.None);
+        ResultHap.DOText("Hapiness: " + resourceDeltas.happiness + "%", 1, true, ScrambleMode.None);
+        ResultCur.DOText("Currency: " + resourceDeltas.currency + " paluta", 1, true, ScrambleMode.None);
+        ResultEnv.DOText("Environment: " + resourceDeltas.environment + "%", 1, true, ScrambleMode.None);
         Choice.SetActive(false);
 
     }
@@ -63,7 +64,7 @@ public class UIManager : MonoBehaviour {
     }
 
     //Format of: population, currency, happiness, environment
-    private void GetDeltas(Vector4 v4) {
+    private void GetDeltas(ResourceStorage v4) {
         resourceDeltas = v4;
     }
     void ContinueUI() {

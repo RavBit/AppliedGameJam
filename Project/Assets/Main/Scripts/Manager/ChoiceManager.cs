@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script manages the placing and removal of choices in the gamescene.
 public class ChoiceManager : MonoBehaviour {
     public List<Choice> Choices;
     public Choice curchoice;
@@ -10,16 +11,16 @@ public class ChoiceManager : MonoBehaviour {
 
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
-        //Load Choice for now
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
         EventManager.ChoiceUnLoad += UnLoadChoice;
         EventManager.GetQueue += Get_Queue;
         EventManager.NextDay += ResetQueue;
-        EventManager.NightCycle += TestNight;
-        Invoke("Test", .000001f);
+        EventManager.NightCycle += BeginNight;
+        Invoke("Initialize", .000001f);
     }
-    Queue<ResourceMessage> Get_Queue() {
+
+	private Queue<ResourceMessage> Get_Queue() {
         return ChoiceQueue;
     }
 
@@ -27,30 +28,30 @@ public class ChoiceManager : MonoBehaviour {
         ChoiceQueue = new Queue<ResourceMessage>();
     }
 
-
-    void TestNight() {
+	private void BeginNight() {
         Invoke("EndNight", 3);
     }
 
-    void EndNight() {
+	private void EndNight() {
         EventManager.InterMission_Continue();
     }
-    void Test() {
+	private void Initialize() {
 		EventManager.Choice_Load(Choices[choicecounter]);
 	}
-    void PositiveChoice() {
+	private void PositiveChoice() {
         curchoice.State = State.Positive;
         EventManager.Display_Choice(curchoice);
     }
-    void NegativeChoice() {
+	private void NegativeChoice() {
         curchoice.State = State.Negative;
         EventManager.Display_Choice(curchoice);
     }
-    void LoadChoice(Choice _choice) {
+	private void LoadChoice(Choice _choice) {
         curchoice = _choice;
     }
 
-    void UnLoadChoice() {
+	//This function removes the current choice from the gamescene and submits all the resourceMessages to the gameManager.
+    private void UnLoadChoice() {
         choicecounter++;
         if (curchoice.State == State.Positive) {
             foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {

@@ -2,8 +2,8 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+//This is a storage class to hold 2 dialogs. It keeps a state depending on the dis-/approve bottun hit. It get's handled in the resourcesManager.
 [System.Serializable]
-[CreateAssetMenu(menuName = "Choice")]
 public class Choice : ScriptableObject {
     [Header("Dilemma: ")]
     [TextArea()]

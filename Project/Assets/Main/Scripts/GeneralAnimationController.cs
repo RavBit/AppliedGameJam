@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This script enables all animations within the animator which is attached to this script. 
+//It subscribes to the thumbs up/down button events which are en-/disabled within the choiceManager.
 [RequireComponent(typeof(Animator))]
 public class GeneralAnimationController : MonoBehaviour {
 

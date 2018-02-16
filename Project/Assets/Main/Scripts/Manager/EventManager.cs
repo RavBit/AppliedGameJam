@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This class is the main communications manager. Through this script events get called that every script can reach.
 public class EventManager : MonoBehaviour {
     public delegate void ChoiceState (Choice _choice);
     public static event ChoiceState ChoiceLoad;
     public static event ChoiceState DisplayChoice;
     public static event ChooseEvent ChoiceUnLoad;
 
-	public delegate void SubmitV4(Vector4 v4);
+	public delegate void SubmitV4(ResourceStorage v4);
 	public static event SubmitV4 SendV4;
 
 	public delegate void ResourceEvent(params ResourceMessage[] res);
@@ -110,7 +111,7 @@ public class EventManager : MonoBehaviour {
 	public static void _EndGame(Resources r) {
 		EndGame(r);
 	}
-	public static void _SendV4(Vector4 v4) {
+	public static void _SendV4(ResourceStorage v4) {
 		SendV4(v4);
 	}
 }

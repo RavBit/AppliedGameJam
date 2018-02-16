@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.PostProcessing;
 using DG.Tweening;
+
+//This class handles the visual effects within the post-processing stack.
 public class EffectsManager : MonoBehaviour {
     public PostProcessingProfile ppProfile;
     public int DayState = 0;
@@ -10,7 +12,6 @@ public class EffectsManager : MonoBehaviour {
     public AudioSource[] EnvAudio;
     public SpriteRenderer EnvironmentImage;
     public Sprite[] Environment;
-
 
 	private void Start() {
         PostProcessingSettings();
@@ -21,11 +22,11 @@ public class EffectsManager : MonoBehaviour {
         EnvAudio[0].DOFade(1, 1);
         SDT();     
     }
-    void SDT() {
+    private void SDT() {
         Debug.Log("Day state");
         StartCoroutine("Change_Day_State");
     }
-    void PostProcessingSettings() {
+	private void PostProcessingSettings() {
         ColorGradingModel.Settings colorgrading = ppProfile.colorGrading.settings;
         colorgrading.tonemapping.neutralBlackOut = -0.09f;
         colorgrading.channelMixer.red = new Vector3(1, 0, 0);
@@ -78,7 +79,7 @@ public class EffectsManager : MonoBehaviour {
         }
         StopCoroutine("Change_Day_State");
     }
-    void StartNight() {
+	private void StartNight() {
         EventManager.InterMission_Disable();
         StartCoroutine("Night_State");
     }

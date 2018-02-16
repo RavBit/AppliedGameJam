@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This class is used to store all resourcemessages for when it's supposed to be handled, and then handle them.
 public class GameManager : MonoBehaviour {
 
 	private Queue<ResourceMessage> currentDay = new Queue<ResourceMessage>();
@@ -16,17 +17,20 @@ public class GameManager : MonoBehaviour {
 		fsm = new GameCycleFSM(new DayState());
 	}
 
+	//Mainly used for the state-machine to operate. 
 	private void LateUpdate() {
 		fsm.queueToHandle = EventManager.Get_Queue();
 		fsm.Run();
 	}
 
+	//Gets called when the state-machine starts a new day.
 	private void NewDay() {
 		ExecuteDay();
 		currentDay = nextDay;
 		nextDay = new Queue<ResourceMessage>();
 	}
 
+	//Processes all resourcechanges.
 	private void ExecuteDay() {
 		ResourceMessage[] tempArray = new ResourceMessage[currentDay.Count];
 		for(int i = 0; i < tempArray.Length; i++) {
@@ -36,6 +40,7 @@ public class GameManager : MonoBehaviour {
 			EventManager._SendResourceMessage(tempArray);
 	}
 
+	//Sends recieved resourceMessages to the resourceManager to be handled at the end of the gameLoop.
 	public void EnqueueMessage(params ResourceMessage[] rs) {
 		if(rs.Length > 0) {
 			Debug.Log(rs.Length);
@@ -52,6 +57,7 @@ public class GameManager : MonoBehaviour {
 		Debug.Log(nextDay.Count);
 	}
 
+	//Depensing on what factor killed the planet, the relevant end-scene gets loaded in.
 	public void GameEnd(Resources r) {
 		switch(r) {
 			case Resources.population:

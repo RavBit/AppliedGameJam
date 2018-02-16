@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This is a FSM that functions as the main gameLoop.
 public class GameCycleFSM {
 
 	private BaseState currentState;

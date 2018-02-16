@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+//This script handles the tutorial sequence. It's hacky, I know.
 public class Tutorial : MonoBehaviour {
 
 	public int progression = 0;

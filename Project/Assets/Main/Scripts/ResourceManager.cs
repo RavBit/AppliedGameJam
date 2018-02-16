@@ -17,17 +17,7 @@ public class ResourceManager : MonoBehaviour {
 	private int prevHap = 70;
 	private int prevEnv = 85;
 
-	private Vector4 resourceDelta = new Vector4();
-
-	//Properties for the four resources to enable function calls upon change. 
-
-	/*
-	 * ///////////////////////////////////////////////////////////////////////////////////
-	 * ///																			   ///
-	 * !!! The only place in this script that needs to be changed are these properties.!!!
-	 * ///																			   ///
-	 * ///////////////////////////////////////////////////////////////////////////////////
-	 */
+	private ResourceStorage resourceDelta = new ResourceStorage(0,0,0,0);
 
 	private int Population {
 		get {
@@ -35,7 +25,6 @@ public class ResourceManager : MonoBehaviour {
 		}
 		set {
 			population = value;
-			Debug.Log("Adding to population in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
 	}
@@ -45,7 +34,6 @@ public class ResourceManager : MonoBehaviour {
 		}
 		set {
 			currency = value;
-			Debug.Log("Adding to currency in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
 	}
@@ -64,31 +52,18 @@ public class ResourceManager : MonoBehaviour {
 		}
 		set {
 			environment = value;
-			Debug.Log("Adding to environment in property!");
 			//Some other update functions that need to be called upon changing this value.
 		}
 	}
-
-    private int GetHappiness() {
-        return happiness;
-    }
-    private int GetCurrency() {
-        return currency;
-    }
-    private int GetEnvironment() {
-        return environment;
-    }
-    private int Get_Population() {
-        return population;
-    }
+	
+	//Initialises the script
     private void Start() {
 		EventManager.SendResourceMessage += SendResourceMessage;
         EventManager.GetPopulation += Get_Population;
         EventManager.GetHappiness += GetHappiness;
         EventManager.GetEnvironment += GetEnvironment;
         EventManager.GetCurrency += GetCurrency;
-        //SendResourceMessage(new ResourceMessage(Resources.currency, 10), new ResourceMessage(Resources.happiness, 50), new ResourceMessage(Resources.environment, 30), new ResourceMessage(Resources.population, 100));
-    }
+	}
 
 	//This function is made to handle all resource change subjects. It accepts both positive and negative values.
 	//It also accepts an infinite amount of changes per function call.
@@ -99,8 +74,6 @@ public class ResourceManager : MonoBehaviour {
 			foreach(ResourceMessage i in res) {
 				Resources temp = i.GetResourceType();
 				int amt = i.amount;
-				//Debug.Log(temp);
-				//Debug.Log(i.GetResourceType());
 				switch(temp) {
 					case Resources.population:
 						Population = Population + amt;
@@ -124,6 +97,7 @@ public class ResourceManager : MonoBehaviour {
 		}
 	}
 
+	//Saves the previous state the resources
 	private void SavePrevious() {
 		prevPop = population;
 		prevCur = currency;
@@ -131,6 +105,7 @@ public class ResourceManager : MonoBehaviour {
 		prevEnv = environment;
 	}
 
+	//Checks end-conditions. Subject to change
 	private void CheckEnd() {
 		Debug.Log("EndCheck");
 		if(population <= 0) {
@@ -147,9 +122,33 @@ public class ResourceManager : MonoBehaviour {
 		}
 	}
 
-	//Format of: population, currency, happiness, environment
-	private Vector4 CalculateDeltas() {
-		resourceDelta = new Vector4(population - prevPop, currency - prevCur, happiness - prevHap, environment - prevEnv);
+	//Used in the event to relay the storage struct to the ui manager
+	private ResourceStorage CalculateDeltas() {
+		resourceDelta = new ResourceStorage(population - prevPop, currency - prevCur, happiness - prevHap, environment - prevEnv);
 		return resourceDelta;
 	}
+
+	private int GetHappiness() {
+		return happiness;
+	}
+	private int GetCurrency() {
+		return currency;
+	}
+	private int GetEnvironment() {
+		return environment;
+	}
+	private int Get_Population() {
+		return population;
+	}
+}
+
+//This struct is used to relay the resources to the UIManager
+public struct ResourceStorage {
+	public ResourceStorage(int pop, int cur, int hap, int env) {
+		population = pop;
+		currency = cur;
+		happiness = hap;
+		environment = env;
+	}
+	public int population, currency, happiness, environment;
 }

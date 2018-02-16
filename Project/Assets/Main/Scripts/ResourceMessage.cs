@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+//This is a storage class that contains the values to change for a single resource.
 [CreateAssetMenu(menuName = "ResourceMessage")]
 public class ResourceMessage : ScriptableObject {
 	public Resources resourceType;

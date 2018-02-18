@@ -8,21 +8,3 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/StartScreen.unity
     guid: 23c1aa2e46d8b2c43a3fc09709817dd3
-  - enabled: 1
-    path: Assets/Main/Scenes/TutorialScene.unity
-    guid: 3363af38fbd222e438dac4bdeece9bb2
-  - enabled: 1
-    path: Assets/Main/Scenes/Main.unity
-    guid: d87a257a9187f4b47a43bbf47569de4f
-  - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/CurEnd.unity
-    guid: be59bf2676e8fe14aa41b041a19baa87
-  - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/EnvEnd.unity
-    guid: bb49439f779f7cf4caf2a2d48446ad59
-  - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/HapEnd.unity
-    guid: 5efed67cc98538641873a956280ed611
-  - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/PopEnd.unity
-    guid: 9422c1b055fcae2429f96af22c5da4db

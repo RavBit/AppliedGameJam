@@ -111,6 +111,7 @@ public class FacebookManager : MonoBehaviour
                 }
                 else
                 {
+                    AppManager.instance.SetUser(user);
                     LoginFeedback.text = "You can log in now";
                     SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
                 }
@@ -164,6 +165,7 @@ public class FacebookManager : MonoBehaviour
                 }
                 else
                 {
+                    AppManager.instance.SetUser(user);
                     //Login the user and redirect it to a new scene
                     LoginFeedback.text = "login successful.";
                     //AppManager.instance.SetUser(user);

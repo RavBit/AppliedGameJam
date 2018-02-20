@@ -68,9 +68,10 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 else
                 {
+                    Debug.Log("user: " + user.email);
                     //Login the user and redirect it to a new scene
                     LoginFeedback.text = "login successful.";
-                    //AppManager.instance.SetUser(user);
+                    AppManager.instance.SetUser(user);
                     SceneManager.LoadScene("Main", LoadSceneMode.Single);
                 }
                 //If the JsonArary is empty return this string in the feedback
@@ -109,7 +110,6 @@ public class AuthenticationManager : MonoBehaviour
         if (string.IsNullOrEmpty(w.error))
         {
             User user = JsonUtility.FromJson<User>(w.text);
-            Debug.Log("username" + user.ID);
             if (user.success == true)
             {
                 if (user.error != "")
@@ -118,6 +118,7 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 else
                 {
+                    AppManager.instance.SetUser(user);
                     SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
                     LoginFeedback.text = "You can log in now";
                 }
@@ -146,4 +147,9 @@ public class User
     public string error;
     public string email;
     public int ID;
+    public int population;
+    public int currency;
+    public int environment;
+    public int happiness;
+    public string name;
 }

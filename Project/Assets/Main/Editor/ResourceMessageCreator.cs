@@ -7,10 +7,7 @@ using System.IO;
 public class ResourceMessageCreator : EditorWindow {
 
 	private bool isPositive = true;
-	private ResourceMessage pop;
-	private ResourceMessage hap;
-	private ResourceMessage cur;
-	private ResourceMessage env;
+	private ResourceMessage airPol,	waterPol, soilPol, landUse,	bioD, cur, pop;
 	private string nameHost = "";
 	private string posNegString = "";
 	private Resources resources = Resources.currency;
@@ -20,8 +17,8 @@ public class ResourceMessageCreator : EditorWindow {
 	[MenuItem("Window/Message Creator")]
 	static public void OpenWindow() {
 		ResourceMessageCreator window = (ResourceMessageCreator)GetWindow(typeof(ResourceMessageCreator));
-		window.minSize = new Vector2(400, 390);
-		window.maxSize = new Vector2(400, 390);
+		window.minSize = new Vector2(400, 680);
+		window.maxSize = new Vector2(400, 680);
 		window.Show();
 	}
 
@@ -41,10 +38,13 @@ public class ResourceMessageCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.Space();
 
-		DisplayMessage(pop);
+		DisplayMessage(airPol);
+		DisplayMessage(waterPol);
+		DisplayMessage(soilPol);
+		DisplayMessage(landUse);
+		DisplayMessage(bioD);
 		DisplayMessage(cur);
-		DisplayMessage(hap);
-		DisplayMessage(env);
+		DisplayMessage(pop);
 
 		EditorGUILayout.BeginHorizontal();
 		if(GUILayout.Button("Reset all values", GUILayout.Height(30))) {
@@ -61,17 +61,26 @@ public class ResourceMessageCreator : EditorWindow {
 	private void DisplayMessage(ResourceMessage res) {
 		string typeResource;
 		switch(res.resourceType) {
-			case Resources.population:
-				typeResource = "Population";
+			case Resources.airPollution:
+				typeResource = "AirPollution";
+				break;
+			case Resources.soilPollution:
+				typeResource = "SoilPollution";
+				break;
+			case Resources.waterPollution:
+				typeResource = "WaterPollution";
+				break;
+			case Resources.landUse:
+				typeResource = "LandUse";
+				break;
+			case Resources.biodiversity:
+				typeResource = "Biodiversity";
 				break;
 			case Resources.currency:
 				typeResource = "Currency";
 				break;
-			case Resources.happiness:
-				typeResource = "Happiness";
-				break;
-			case Resources.environment:
-				typeResource = "Environment";
+			case Resources.population:
+				typeResource = "Population";
 				break;
 			default:
 				typeResource = "";
@@ -97,37 +106,67 @@ public class ResourceMessageCreator : EditorWindow {
 	public void InitData() {
 		nameHost = "";
 		isPositive = true;
-		pop = new ResourceMessage(Resources.population, 0, true);
-		hap = new ResourceMessage(Resources.happiness, 0, true);
-		cur = new ResourceMessage(Resources.currency, 0, true);
-		env = new ResourceMessage(Resources.environment, 0, true);
+		airPol = CreateInstance<ResourceMessage>();
+		waterPol = CreateInstance<ResourceMessage>();
+		soilPol = CreateInstance<ResourceMessage>();
+		landUse = CreateInstance<ResourceMessage>();
+		bioD = CreateInstance<ResourceMessage>();
+		cur = CreateInstance<ResourceMessage>();
+		pop = CreateInstance<ResourceMessage>();
+
+		airPol.Initialise(Resources.airPollution, 0, true);
+		waterPol.Initialise(Resources.waterPollution, 0, true);
+		soilPol.Initialise(Resources.soilPollution, 0, true);
+		landUse.Initialise(Resources.landUse, 0, true);
+		bioD.Initialise(Resources.biodiversity, 0, true);
+		cur.Initialise(Resources.currency, 0, true);
+		pop.Initialise(Resources.population, 0, true);
 	}
 
 	private void SaveMessage() {
+		string airString = "";
+		string waterString = "";
+		string soilString = "";
+		string landString = "";
+		string bioString = "";
 		string curString = "";
 		string popString = "";
-		string hapString = "";
-		string envString = "";
-
-		if(pop.isToday)
-			popString = "Population" + pop.amount + "Today";
+		#region NameChecks
+		if(airPol.isToday)
+			airString = "AirPollution" + airPol.amount + "Today";
 		else
-			popString = "Population" + pop.amount + "NotToday";
+			airString = "AirPollution" + airPol.amount + "NotToday";
+
+		if(waterPol.isToday)
+			waterString = "WaterPollution" + waterPol.amount + "Today";
+		else
+			waterString = "WaterPollution" + waterPol.amount + "NotToday";
+
+		if(soilPol.isToday)
+			soilString = "SoilPollution" + soilPol.amount + "Today";
+		else
+			soilString = "SoilPollution" + soilPol.amount + "NotToday";
+
+		if(landUse.isToday)
+			landString = "LandUse" + landUse.amount + "Today";
+		else
+			landString = "LandUse" + landUse.amount + "NotToday";
+
+		if(bioD.isToday)
+			bioString = "Biodiversity" + bioD.amount + "Today";
+		else
+			bioString = "Biodiversity" + bioD.amount + "NotToday";
 
 		if(cur.isToday)
 			curString = "Currency" + cur.amount + "Today";
 		else
 			curString = "Currency" + cur.amount + "NotToday";
 
-		if(hap.isToday)
-			hapString = "Happiness" + hap.amount + "Today";
+		if(pop.isToday)
+			popString = "Population" + pop.amount + "Today";
 		else
-			hapString = "Happiness" + hap.amount + "NotToday";
-
-		if(env.isToday)
-			envString = "Environment" + env.amount + "Today";
-		else
-			envString = "Environment" + env.amount + "NotToday";
+			popString = "Population" + pop.amount + "NotToday";
+#endregion
 
 		if(isPositive)
 			posNegString = "Positive";
@@ -140,19 +179,28 @@ public class ResourceMessageCreator : EditorWindow {
 		if(!Directory.Exists("Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString))
 			AssetDatabase.CreateFolder("Assets/Resources/DialogOptions/ResourceMessage/" + nameHost, posNegString);
 
+		string dataPathAir = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + airString + ".asset";
+		string dataPathWater = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + waterString + ".asset";
+		string dataPathSoil = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + soilString + ".asset";
+		string dataPathLand = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + landString + ".asset";
+		string dataPathBioD = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + bioString + ".asset";
 		string dataPathCur = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + curString + ".asset";
 		string dataPathPop = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + popString + ".asset";
-		string dataPathHap = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + hapString + ".asset";
-		string dataPathEnv = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + envString + ".asset";
 
+		if(airPol.amount != 0)
+			AssetDatabase.CreateAsset(airPol, dataPathAir);
+		if(waterPol.amount != 0)
+			AssetDatabase.CreateAsset(waterPol, dataPathWater);
+		if(soilPol.amount != 0)
+			AssetDatabase.CreateAsset(soilPol, dataPathSoil);
+		if(landUse.amount != 0)
+			AssetDatabase.CreateAsset(landUse, dataPathLand);
+		if(bioD.amount != 0)
+			AssetDatabase.CreateAsset(bioD, dataPathBioD);
 		if(cur.amount != 0)
 			AssetDatabase.CreateAsset(cur, dataPathCur);
 		if(pop.amount != 0)
 			AssetDatabase.CreateAsset(pop, dataPathPop);
-		if(hap.amount != 0)
-			AssetDatabase.CreateAsset(hap, dataPathHap);
-		if(env.amount != 0)
-			AssetDatabase.CreateAsset(env, dataPathEnv);
 		InitData();
 	}
 }

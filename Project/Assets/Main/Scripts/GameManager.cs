@@ -18,8 +18,13 @@ public class GameManager : MonoBehaviour {
 		fsm = new GameCycleFSM(new DayState());
 	}
 
-	//Mainly used for the state-machine to operate. 
-	private void LateUpdate() {
+    private void Start()
+    {
+        AppManager.instance.ParseTowardsResources();
+    }
+
+    //Mainly used for the state-machine to operate. 
+    private void LateUpdate() {
 		fsm.queueToHandle = EventManager.Get_Queue();
 		fsm.Run();
 	}

@@ -62,6 +62,7 @@ public class AuthenticationManager : MonoBehaviour
         //Check if the response if empty or not
         if (string.IsNullOrEmpty(w.error))
         {
+            Debug.Log("w.text: " + w.text);
             //Return the json array and put it in the C# User class
             User user = JsonUtility.FromJson<User>(w.text);
             if (user.success == true)
@@ -123,17 +124,74 @@ public class AuthenticationManager : MonoBehaviour
                 }
                 else
                 {
-                    AppManager.instance.SetUser(user);
-                    SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+                    StartCoroutine("RequestDataUser");
                     LoginFeedback.text = "You can log in now";
                 }
+            }
+            else
+            {
+                Debug.Log("W: " + w.error);
+                LoginFeedback.text = "An error occured";
+            }
+
+            // todo: launch the game (player)
+        }
+        else
+        {
+            // error
+            Debug.Log("error: " + w.error);
+            LoginFeedback.text = "An error occured.";
+        }
+
+
+    }
+    //Corountine that goes through the Login process
+    public IEnumerator RequestDataUser()
+    {
+        //Assigning strings from the text
+        string email = TextUsername.text;
+        string password = TextPassword.text;
+        LoginFeedback.color = Color.white;
+
+        //Init form and give them the email and password
+        form = new WWWForm();
+        form.AddField("usernamePost", email);
+        form.AddField("passwordPost", password);
+
+
+        //Login to the website and wait for a response
+        WWW w = new WWW("http://81.169.177.181/OLP/action_login.php", form);
+        yield return w;
+
+        //Check if the response if empty or not
+        if (string.IsNullOrEmpty(w.error))
+        {
+            Debug.Log("w.text: " + w.text);
+            //Return the json array and put it in the C# User class
+            User user = JsonUtility.FromJson<User>(w.text);
+            if (user.success == true)
+            {
+                //Check if there is any error in the class. If there is return the error
+                if (user.error != "")
+                {
+                    LoginFeedback.text = user.error;
+                }
+                else
+                {
+                    Debug.Log("user: " + user.email);
+                    //Login the user and redirect it to a new scene
+                    LoginFeedback.text = "login successful.";
+                    AppManager.instance.SetUser(user);
+                    SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+                }
+                //If the JsonArary is empty return this string in the feedback
             }
             else
             {
                 LoginFeedback.text = "An error occured";
             }
 
-            // todo: launch the game (player)
+            //If the string is empty return this string in the feedback
         }
         else
         {
@@ -154,7 +212,10 @@ public class User
     public int ID;
     public int population;
     public int currency;
-    public int environment;
-    public int happiness;
+    public int air_polution;
+    public int soil_polution;
+    public int water_polution;
+    public int land_use;
+    public int biodiversity;
     public string name;
 }

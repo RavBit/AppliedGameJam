@@ -24,4 +24,9 @@ public class AppManager : MonoBehaviour {
     {
         User = user;
     }
+
+    public void UpdateResources()
+    {
+
+    }
 }

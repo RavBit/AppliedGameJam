@@ -61,20 +61,36 @@ public class GameManager : MonoBehaviour {
 	//Depensing on what factor killed the planet, the relevant end-scene gets loaded in.
 	public void GameEnd(Resources r) {
 		switch(r) {
-			case Resources.population:
-				SceneManager.LoadScene("PopEnd");
+			case Resources.airPollution:
+				SceneManager.LoadScene("AirEnd");
+				break;
+			case Resources.soilPollution:
+				SceneManager.LoadScene("SoilEnd");
+				break;
+			case Resources.waterPollution:
+				SceneManager.LoadScene("WaterEnd");
+				break;
+			case Resources.landUse:
+				SceneManager.LoadScene("LandEnd");
+				break;
+			case Resources.biodiversity:
+				SceneManager.LoadScene("BioEnd");
 				break;
 			case Resources.currency:
 				SceneManager.LoadScene("CurEnd");
 				break;
-			case Resources.happiness:
-				SceneManager.LoadScene("HapEnd");
-				break;
-			case Resources.environment:
-				SceneManager.LoadScene("EnvEnd");
+			case Resources.population:
+				SceneManager.LoadScene("PopEnd");
 				break;
 			default:
 				break;
 		}
 	}
 }
+
+/*
+ * SceneManager.LoadScene("PopEnd");
+ * SceneManager.LoadScene("CurEnd");
+ * SceneManager.LoadScene("HapEnd");
+ * SceneManager.LoadScene("EnvEnd");
+ */

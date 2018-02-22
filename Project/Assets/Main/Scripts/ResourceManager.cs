@@ -3,66 +3,61 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 
-public enum Resources { population, currency, happiness, environment}
+public enum Resources { airPollution, soilPollution, waterPollution, landUse, biodiversity, currency, population}
 
 public class ResourceManager : MonoBehaviour {
 
-	private int population = 10000;
-	private int currency = 1000000;
-	private int happiness = 70;
-	private int environment = 85;
+	private int airPollution, soilPollution, waterPollution, landUse, biodiversity, currency, population;
 
-	private int prevPop = 10000;
-	private int prevCur = 1000000;
-	private int prevHap = 70;
-	private int prevEnv = 85;
+	private int prevAirPollution, prevSoilPollution, prevWaterPollution, prevLandUse, prevBiodiversity, prevCurrency, prevPopulation;
 
-	private ResourceStorage resourceDelta = new ResourceStorage(0,0,0,0);
+	private ResourceStorage resourceDelta = new ResourceStorage(0,0,0,0,0,0,0);
+
+	#region resourceProperties
+	private int AirPollution {
+		get { return airPollution; }
+		set { airPollution = value; }
+	}
+	private int SoilPollution {
+		get { return soilPollution; }
+		set { soilPollution = value; }
+	}
+	private int WaterPollution {
+		get { return waterPollution; }
+		set { waterPollution = value; }
+	}
+	private int LandUse {
+		get { return landUse; }
+		set { landUse = value; }
+	}
+	private int Biodiversity {
+		get { return biodiversity; }
+		set { biodiversity = value; }
+	}
 
 	private int Population {
-		get {
-			return population;
-		}
-		set {
-			population = value;
-			//Some other update functions that need to be called upon changing this value.
-		}
+		get { return population; }
+		set { population = value; }
 	}
 	private int Currency {
-		get {
-			return currency;
-		}
-		set {
-			currency = value;
-			//Some other update functions that need to be called upon changing this value.
-		}
+		get { return currency; }
+		set { currency = value; }
 	}
-	private int Happiness {
-		get {
-			return happiness;
-		}
-		set {
-			happiness =  value;
-			//Some other update functions that need to be called upon changing this value.
-		}
-	}
-	private int Environment {
-		get {
-			return environment;
-		}
-		set {
-			environment = value;
-			//Some other update functions that need to be called upon changing this value.
-		}
-	}
-	
+	#endregion
+
 	//Initialises the script
-    private void Start() {
+	private void Start() {
 		EventManager.SendResourceMessage += SendResourceMessage;
-        EventManager.GetPopulation += Get_Population;
-        EventManager.GetHappiness += GetHappiness;
-        EventManager.GetEnvironment += GetEnvironment;
-        EventManager.GetCurrency += GetCurrency;
+		
+	#region Resource event subscriptions
+		EventManager.GetAirPollution += GetAirPollution;
+		EventManager.GetSoilPollution += GetSoilPollution;
+		EventManager.GetWaterPollution += GetWaterPollution;
+		EventManager.GetLandUse += GetLandUse;
+		EventManager.GetBiodiversity += GetBiodiversity;
+		EventManager.GetPopulation += GetPopulation;
+		EventManager.GetCurrency += GetCurrency;
+	#endregion
 	}
 
 	//This function is made to handle all resource change subjects. It accepts both positive and negative values.
@@ -75,20 +70,28 @@ public class ResourceManager : MonoBehaviour {
 				Resources temp = i.GetResourceType();
 				int amt = i.amount;
 				switch(temp) {
-					case Resources.population:
-						Population = Population + amt;
+					case Resources.airPollution:
+						AirPollution = AirPollution + amt;
+						break;
+					case Resources.soilPollution:
+						SoilPollution = SoilPollution + amt;
+						break;
+					case Resources.waterPollution:
+						WaterPollution = WaterPollution + amt;
+						break;
+					case Resources.landUse:
+						LandUse = LandUse + amt;
+						break;
+					case Resources.biodiversity:
+						Biodiversity = Biodiversity + amt;
 						break;
 					case Resources.currency:
 						Currency = Currency + amt;
 						break;
-					case Resources.happiness:
-						Happiness = Happiness + amt;
-						break;
-					case Resources.environment:
-						Environment = Environment + amt;
+					case Resources.population:
+						Population = Population + amt;
 						break;
 					default:
-						Debug.Log("Unhandled enum type");
 						break;
 				}
 			}
@@ -99,56 +102,91 @@ public class ResourceManager : MonoBehaviour {
 
 	//Saves the previous state the resources
 	private void SavePrevious() {
-		prevPop = population;
-		prevCur = currency;
-		prevHap = happiness;
-		prevEnv = environment;
+		prevAirPollution = airPollution;
+		prevSoilPollution = soilPollution;
+		prevWaterPollution = waterPollution;
+		prevLandUse = landUse;
+		prevBiodiversity = biodiversity;
+		prevCurrency = currency;
+		prevPopulation = population;
 	}
 
 	//Checks end-conditions. Subject to change
 	private void CheckEnd() {
 		Debug.Log("EndCheck");
-		if(population <= 0) {
-			EventManager._EndGame(Resources.population);
+		if(airPollution <= 0) {
+			EventManager._EndGame(Resources.airPollution);
+		}
+		if(soilPollution <= 0) {
+			EventManager._EndGame(Resources.soilPollution);
+		}
+		if(waterPollution <= 0) {
+			EventManager._EndGame(Resources.waterPollution);
+		}
+		if(landUse <= 0) {
+			EventManager._EndGame(Resources.landUse);
+		}
+		if(biodiversity <= 0) {
+			EventManager._EndGame(Resources.biodiversity);
 		}
 		if(currency <= -1000000) {
 			EventManager._EndGame(Resources.currency);
 		}
-		if(happiness <= 0) {
-			EventManager._EndGame(Resources.happiness);
-		}
-		if(environment <= 0) {
-			EventManager._EndGame(Resources.environment);
-		}
+		if(population <= 0) {
+			EventManager._EndGame(Resources.population);
+		}		
 	}
 
 	//Used in the event to relay the storage struct to the ui manager
 	private ResourceStorage CalculateDeltas() {
-		resourceDelta = new ResourceStorage(population - prevPop, currency - prevCur, happiness - prevHap, environment - prevEnv);
+		resourceDelta = new ResourceStorage(airPollution, waterPollution, soilPollution , landUse, biodiversity, currency , population);
 		return resourceDelta;
 	}
-
-	private int GetHappiness() {
-		return happiness;
+	
+	#region private Getters
+	private int GetAirPollution() {
+		return airPollution;
+	}
+	private int GetSoilPollution() {
+		return soilPollution; 
+	}
+	private int GetWaterPollution() {
+		return waterPollution; 
+	}
+	private int GetLandUse() {
+		return landUse; 
+	}
+	private int GetBiodiversity() {
+		return biodiversity; 
+	}
+	private int GetPopulation() { 
+		return population; 
 	}
 	private int GetCurrency() {
-		return currency;
+		return currency; 
 	}
-	private int GetEnvironment() {
-		return environment;
-	}
-	private int Get_Population() {
-		return population;
-	}
+	#endregion
 }
 
 //This struct is used to relay the resources to the UIManager
 public struct ResourceStorage {
-	public ResourceStorage(int pop, int cur, int hap, int env) {
-		population = pop;
+	public ResourceStorage(int ap, int wp, int sp, int lu, int bd, int cur, int pop) {
+		airPollution = ap;
+		waterPollution = wp;
+		soilPollution = sp;
+		landUse = lu;
+		biodiversity = bd;
 		currency = cur;
-		happiness = hap;
-		environment = env;
+		population = pop;
+
+		//Average for now.
+		pollution = (airPollution + waterPollution + soilPollution) / 3f;
 	}
-	public int population, currency, happiness, environment;
+	public float pollution;
+	public int airPollution, waterPollution, soilPollution;
+
+	public int landUse, biodiversity;
+
+	public int currency, population;
+
 }

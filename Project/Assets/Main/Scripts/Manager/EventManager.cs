@@ -36,29 +36,44 @@ public class EventManager : MonoBehaviour {
 	public static event EndEvent EndGame;
 
 	public static event ChooseEvent NightCycle;
-    public static event GetDel GetPopulation;
-    public static event GetDel GetCurrency;
-    public static event GetDel GetEnvironment;
-    public static event GetDel GetHappiness;
+	public static event GetDel GetAirPollution;
+	public static event GetDel GetSoilPollution;
+	public static event GetDel GetWaterPollution;
+	public static event GetDel GetLandUse;
+	public static event GetDel GetBiodiversity;
+	public static event GetDel GetPopulation;
+	public static event GetDel GetCurrency;
 
-    public static event ChooseEvent DayCycle;
+	public static event ChooseEvent DayCycle;
     public static void Day_Cycle() {
         DayCycle();
     }
 
-    public static int Get_Population() {
-        return GetPopulation();
-    }
-    public static int Get_Currency() {
-        return GetCurrency();
-    }
-    public static int Get_Environment() {
-        return GetEnvironment();
-    }
-    public static int Get_Happiness() {
-        return GetHappiness();
-    }
-    public static void Night_Cycle() {
+	#region ResourceEvents
+	private static int _GetAirPollution() {
+		return GetAirPollution();
+	}
+	private static int _GetSoilPollution() {
+		return GetSoilPollution();
+	}
+	private static int _GetWaterPollution() {
+		return GetWaterPollution();
+	}
+	private static int _GetLandUse() {
+		return GetLandUse();
+	}
+	private static int _GetBiodiversity() {
+		return GetBiodiversity();
+	}
+	private static int _GetPopulation() {
+		return GetPopulation();
+	}
+	private static int _GetCurrency() {
+		return GetCurrency();
+	}
+	#endregion
+
+	public static void Night_Cycle() {
         NightCycle();
     }
     public static void Choice_Load(Choice _choice) {

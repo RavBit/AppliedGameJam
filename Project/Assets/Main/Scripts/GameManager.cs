@@ -11,7 +11,8 @@ public class GameManager : MonoBehaviour {
 	private GameCycleFSM fsm;
 
 	public void Awake() {
-		EventManager.EnqueueMessageEvent += EnqueueMessage;
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        EventManager.EnqueueMessageEvent += EnqueueMessage;
 		EventManager.NextDay += NewDay;
 		EventManager.EndGame += GameEnd;
 		fsm = new GameCycleFSM(new DayState());

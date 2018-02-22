@@ -23,6 +23,11 @@ public class AuthenticationManager : MonoBehaviour
 
     WWWForm form;
 
+    private void Start()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
+
     public void Login_Press()
     {
         //Start login in and starting the corountine

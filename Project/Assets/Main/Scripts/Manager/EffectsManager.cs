@@ -109,7 +109,8 @@ public class EffectsManager : MonoBehaviour {
 
     //Environment states
     public void Change_Environment() {
-        if(EventManager.Get_Environment() < 30) {
+        //TODO FIX ENVIRONMENT
+        /*if(EventManager.Get_Environment() < 30) {
             EnvironmentImage.sprite = Environment[2];
             EnvAudio[1].DOFade(0, 0.5f);
             EnvAudio[0].DOFade(0, 0.5f);
@@ -126,7 +127,7 @@ public class EffectsManager : MonoBehaviour {
             EnvAudio[2].DOFade(0, 0.5f);
             EnvAudio[1].DOFade(1, 1);
             EnvironmentImage.sprite = Environment[1];
-        }
+        }*/
     }
 
 }

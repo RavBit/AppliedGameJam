@@ -41,19 +41,19 @@ public class UIManager : MonoBehaviour {
         Screen_Sprite.transform.DOScale(0, 1);
     }
     private void Update() {
-        Population.text = "" + EventManager.Get_Population();
+        /*Population.text = "" + EventManager.Get_Population();
         Happiness.text = "" + EventManager.Get_Happiness();
         Currency.text = "" + EventManager.Get_Currency();
-        Environment.text = "" + EventManager.Get_Environment();
+        Environment.text = "" + EventManager.Get_Environment();*/
     }
 
     void EnableUI() {
         Screen.SetActive(false);
         Results.SetActive(true);
         ResultPop.DOText("Population: " + resourceDeltas.population + " people", 1, true,ScrambleMode.None);
-        ResultHap.DOText("Hapiness: " + resourceDeltas.happiness + "%", 1, true, ScrambleMode.None);
+        //ResultHap.DOText("Hapiness: " + resourceDeltas.happiness + "%", 1, true, ScrambleMode.None);
         ResultCur.DOText("Currency: " + resourceDeltas.currency + " paluta", 1, true, ScrambleMode.None);
-        ResultEnv.DOText("Environment: " + resourceDeltas.environment + "%", 1, true, ScrambleMode.None);
+        //ResultEnv.DOText("Environment: " + resourceDeltas.environment + "%", 1, true, ScrambleMode.None);
         Choice.SetActive(false);
 
     }

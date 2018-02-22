@@ -11,6 +11,7 @@ public class EventManager : MonoBehaviour {
 
 	public delegate void SubmitV4(ResourceStorage v4);
 	public static event SubmitV4 SendV4;
+	public static event SubmitV4 SetupResources;
 
 	public delegate void ResourceEvent(params ResourceMessage[] res);
 	public static event ResourceEvent SendResourceMessage;
@@ -73,6 +74,9 @@ public class EventManager : MonoBehaviour {
 	}
 	#endregion
 
+	public static void _SetupResourceManager(ResourceStorage rs) {
+		SetupResources(rs);
+	}
 	public static void Night_Cycle() {
         NightCycle();
     }

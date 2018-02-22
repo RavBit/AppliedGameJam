@@ -45,6 +45,10 @@ public class ResourceManager : MonoBehaviour {
 	}
 	#endregion
 
+	private void Awake() {
+		EventManager.SetupResources += SetupManager;
+	}
+
 	//Initialises the script
 	private void Start() {
 		EventManager.SendResourceMessage += SendResourceMessage;
@@ -166,6 +170,17 @@ public class ResourceManager : MonoBehaviour {
 		return currency; 
 	}
 	#endregion
+
+	public void SetupManager(ResourceStorage rs) {
+		airPollution = rs.airPollution;
+		waterPollution = rs.waterPollution;
+		soilPollution = rs.soilPollution;
+		landUse = rs.landUse;
+		biodiversity = rs.biodiversity;
+		currency = rs.currency;
+		population = rs.population;
+		SavePrevious();
+	}
 }
 
 //This struct is used to relay the resources to the UIManager

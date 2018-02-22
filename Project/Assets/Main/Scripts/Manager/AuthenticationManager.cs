@@ -212,9 +212,9 @@ public class User
     public int ID;
     public int population;
     public int currency;
-    public int air_polution;
-    public int soil_polution;
-    public int water_polution;
+    public int air_pollution;
+    public int soil_pollution;
+    public int water_pollution;
     public int land_use;
     public int biodiversity;
     public string name;

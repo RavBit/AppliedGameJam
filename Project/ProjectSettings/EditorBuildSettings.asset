@@ -23,8 +23,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/End-scenes/BioEnd.unity
     guid: f734fa500150b1d448fb55a1aa85a5c4
-  - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/CurEnd.unity
+  - enabled: 0
+    path: Assets/Main/Scenes/End-scenes/HapEnd.unity
     guid: 5efed67cc98538641873a956280ed611
   - enabled: 1
     path: Assets/Main/Scenes/End-scenes/LandEnd.unity
@@ -33,5 +33,5 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/End-scenes/PopEnd.unity
     guid: 9422c1b055fcae2429f96af22c5da4db
   - enabled: 1
-    path: Assets/Main/Scenes/End-scenes/SoilEnd.unity
+    path: Assets/Main/Scenes/End-scenes/CurEnd.unity
     guid: be59bf2676e8fe14aa41b041a19baa87

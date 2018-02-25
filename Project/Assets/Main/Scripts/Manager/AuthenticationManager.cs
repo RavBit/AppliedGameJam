@@ -182,7 +182,7 @@ public class AuthenticationManager : MonoBehaviour
                     //Login the user and redirect it to a new scene
                     LoginFeedback.text = "login successful.";
                     AppManager.instance.SetUser(user);
-                    SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+                    SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
                 }
                 //If the JsonArary is empty return this string in the feedback
             }

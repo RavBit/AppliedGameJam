@@ -113,7 +113,7 @@ public class FacebookManager : MonoBehaviour
                 {
                     AppManager.instance.SetUser(user);
                     LoginFeedback.text = "You can log in now";
-                    SceneManager.LoadScene("Tutorial", LoadSceneMode.Single);
+                    SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
                 }
             }
             else

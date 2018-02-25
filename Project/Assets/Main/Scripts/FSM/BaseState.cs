@@ -99,7 +99,8 @@ public class BetweenState : BaseState {
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
 		EventManager.UIContinue -= UpdateBetweenState;
-		Debug.Log("Changing state to Day");
+        AppManager.instance.StartCoroutine("UpdateResources");
+        Debug.Log("Changing state to Day");
 	}
 
 	public void UpdateBetweenState() {

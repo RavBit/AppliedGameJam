@@ -2433,22 +2433,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Choices:
-  - {fileID: 11400000, guid: cebc203d4ae3a294fbbc37df6198f1a2, type: 2}
-  - {fileID: 11400000, guid: e650d60a14c2ea14ab29734418b4df02, type: 2}
-  - {fileID: 11400000, guid: 02c27ecdfdb548e449c0d609e239c75d, type: 2}
-  - {fileID: 11400000, guid: 09a567ba12bf93f4a98415ee6e8f17ec, type: 2}
-  - {fileID: 11400000, guid: 960e3335da6d5d6449c758464558b538, type: 2}
-  - {fileID: 11400000, guid: b7d1bd8a329be4c42afe4020349b83a4, type: 2}
-  - {fileID: 11400000, guid: 39a271d98ce0a234f9fd6a002dcfa0c7, type: 2}
-  - {fileID: 11400000, guid: bc41545730d24364c93b12bd51cee611, type: 2}
-  - {fileID: 11400000, guid: 0467dc976c8aa2a4f8455062549058b5, type: 2}
-  - {fileID: 11400000, guid: 29d5903b578269f438598cb09dce088e, type: 2}
-  - {fileID: 11400000, guid: b4c35a2ecb46491458395183e0950adc, type: 2}
-  - {fileID: 11400000, guid: 8d418c2a540fc364dac14d5433d4c387, type: 2}
-  - {fileID: 11400000, guid: baa978bd16d5503429f1d31b2e599b46, type: 2}
-  - {fileID: 11400000, guid: 8f02ae20d6e936247a561869ab37a249, type: 2}
-  - {fileID: 11400000, guid: 624f1ce84be70b448a5f8698099c56b3, type: 2}
-  - {fileID: 11400000, guid: 358b719b52260814082dbc56d12e4ac3, type: 2}
+  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
+  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
+  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
+  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
   curchoice: {fileID: 0}
   choicecounter: 0
 --- !u!1 &1593938797

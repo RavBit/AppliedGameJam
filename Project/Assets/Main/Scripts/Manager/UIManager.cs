@@ -108,7 +108,6 @@ public class UIManager : MonoBehaviour {
         EventManager.Choose_Choice(state);
     }
     public void Continue() {
-        AppManager.instance.StartCoroutine("UpdateResources");
         Choice.SetActive(false);
         EventManager.Day_Cycle();
         EventManager.Choice_Unload();

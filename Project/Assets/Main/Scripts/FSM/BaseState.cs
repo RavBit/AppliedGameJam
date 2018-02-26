@@ -28,16 +28,18 @@ public class DayState : BaseState {
 	public override void Stay(Queue<ResourceMessage> messages) {
 		if(choicesMade >= 1) {
             //Event aanroepen
+
             EventManager.Night_Cycle();
-			Debug.Log("Reached");
+        AppManager.instance.StartCoroutine("UpdateResources");
+        Debug.Log("Reached");
 			onState(new NightState());
 		}
-		else {
-			if(!isChanged) {
-				EventManager._ChoiceLoad();
-				isChanged = false;
-			}
-		}
+		//else {
+		//	if(!isChanged) {
+		//		EventManager._ChoiceLoad();
+		//		isChanged = false;
+		//	}
+		//}
 	}
 
 	public override void Exit(Queue<ResourceMessage> messages) {
@@ -99,7 +101,6 @@ public class BetweenState : BaseState {
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
 		EventManager.UIContinue -= UpdateBetweenState;
-        AppManager.instance.StartCoroutine("UpdateResources");
         Debug.Log("Changing state to Day");
 	}
 

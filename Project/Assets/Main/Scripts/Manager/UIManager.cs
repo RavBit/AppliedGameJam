@@ -25,6 +25,9 @@ public class UIManager : MonoBehaviour {
     public Text Environment;
 
     public Text Pollution;
+    public Text AirPollution;
+    public Text SoilPollution;
+    public Text WaterPollution;
 
     public Text ResultPop;
     public Text ResultHap;
@@ -45,10 +48,13 @@ public class UIManager : MonoBehaviour {
     }
     private void Update() {
         Population.text = "" + AppManager.instance.User.population;
-        Land_Use.text = "" + AppManager.instance.User.land_use;
+        Land_Use.text = "" + AppManager.instance.User.land_use + "%";
         Currency.text = "" + AppManager.instance.User.currency;
         Biodiversity.text = "" + AppManager.instance.User.biodiversity;
-        Pollution.text = "" + resourceDeltas.pollution;
+        Pollution.text = "" + ((AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + "%";
+        AirPollution.text = "" + AppManager.instance.User.air_pollution + "%";
+        SoilPollution.text = "" + AppManager.instance.User.soil_pollution + "%";
+        WaterPollution.text = "" + AppManager.instance.User.water_pollution + "%";
     }
 
     void EnableUI() {

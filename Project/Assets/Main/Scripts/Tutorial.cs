@@ -11,9 +11,9 @@ public class Tutorial : MonoBehaviour {
 	public GameObject[] tutorialElements;
 
 	private void Start() {
-		
 
-		foreach(GameObject g in tutorialElements) {
+        Screen.orientation = ScreenOrientation.LandscapeLeft;
+        foreach (GameObject g in tutorialElements) {
 			g.SetActive(false);
 		}
 		tutorialElements[0].SetActive(true);

@@ -19,9 +19,12 @@ public class UIManager : MonoBehaviour {
 	private Transform currentChar;
 
     public Text Population;
-    public Text Happiness;
-    public Text Environment;
+    public Text Biodiversity;
+    public Text Land_Use;
     public Text Currency;
+    public Text Environment;
+
+    public Text Pollution;
 
     public Text ResultPop;
     public Text ResultHap;
@@ -41,10 +44,11 @@ public class UIManager : MonoBehaviour {
         Screen_Sprite.transform.DOScale(0, 1);
     }
     private void Update() {
-        /*Population.text = "" + EventManager.Get_Population();
-        Happiness.text = "" + EventManager.Get_Happiness();
-        Currency.text = "" + EventManager.Get_Currency();
-        Environment.text = "" + EventManager.Get_Environment();*/
+        Population.text = "" + AppManager.instance.User.population;
+        Land_Use.text = "" + AppManager.instance.User.land_use;
+        Currency.text = "" + AppManager.instance.User.currency;
+        Biodiversity.text = "" + AppManager.instance.User.biodiversity;
+        Pollution.text = "" + resourceDeltas.pollution;
     }
 
     void EnableUI() {

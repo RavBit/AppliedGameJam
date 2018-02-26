@@ -45,6 +45,9 @@ public class EventManager : MonoBehaviour {
 	public static event GetDel GetPopulation;
 	public static event GetDel GetCurrency;
 
+	public delegate GameObject GetAnim(Characters ch);
+	public static event GetAnim _GetAnim;
+
 	public static event ChooseEvent DayCycle;
     public static void Day_Cycle() {
         DayCycle();
@@ -133,4 +136,8 @@ public class EventManager : MonoBehaviour {
 	public static void _SendV4(ResourceStorage v4) {
 		SendV4(v4);
 	}
+	public static GameObject _GetAnimation(Characters c) {
+		return _GetAnim(c);
+	}
+
 }

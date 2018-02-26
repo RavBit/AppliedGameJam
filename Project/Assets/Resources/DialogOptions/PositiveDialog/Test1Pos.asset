@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Test1Pos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: bb308a93721d1954bb5a271f1368335d, type: 2}
+  - {fileID: 11400000, guid: e351e5659404f70469ce2a86b5b9dcee, type: 2}
+  - {fileID: 11400000, guid: e79005c6ad4c5f4489db8a1ac6661f27, type: 2}
+  - {fileID: 11400000, guid: 1d2f476354e7b534b84390ad22f73132, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 2befcce3f39b7f948b064206a86d3fe7, type: 2}
+  - {fileID: 11400000, guid: 8ece1e1178f063846b6dcac9aa496423, type: 2}
+  text: loltest1

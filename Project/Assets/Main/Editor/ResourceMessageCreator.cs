@@ -107,6 +107,16 @@ public class ResourceMessageCreator : EditorWindow {
 	public void InitData() {
 		nameHost = "";
 		isPositive = true;
+		airPol = CreateInstance<ResourceMessage>();
+		waterPol = CreateInstance<ResourceMessage>();
+		soilPol = CreateInstance<ResourceMessage>();
+		landUse = CreateInstance<ResourceMessage>();
+		bioD = CreateInstance<ResourceMessage>();
+		cur = CreateInstance<ResourceMessage>();
+		pop = CreateInstance<ResourceMessage>();
+		rmr = CreateInstance<ResourceMessageReflection>();
+		rmr.Initialise();
+		/*
 		airPol = new ResourceMessage(Resources.airPollution, 0, true);
 		waterPol = new ResourceMessage(Resources.waterPollution, 0, true);
 		soilPol = new ResourceMessage(Resources.soilPollution, 0, true);
@@ -116,7 +126,7 @@ public class ResourceMessageCreator : EditorWindow {
 		pop = new ResourceMessage(Resources.population, 0, true);
 		rmr = CreateInstance<ResourceMessageReflection>();
 		rmr.Initialise();
-		/*
+		*/
 		airPol.Initialise(Resources.airPollution, 0, true);
 		waterPol.Initialise(Resources.waterPollution, 0, true);
 		soilPol.Initialise(Resources.soilPollution, 0, true);
@@ -124,7 +134,6 @@ public class ResourceMessageCreator : EditorWindow {
 		bioD.Initialise(Resources.biodiversity, 0, true);
 		cur.Initialise(Resources.currency, 0, true);
 		pop.Initialise(Resources.population, 0, true);
-		*/
 	}
 
 	private void SaveMessage() {
@@ -145,11 +154,11 @@ public class ResourceMessageCreator : EditorWindow {
 		if(!Directory.Exists("Assets/Resources/DialogOptions/ResourceMessage/" + nameHost))
 			AssetDatabase.CreateFolder("Assets/Resources/DialogOptions/ResourceMessage", nameHost);
 
-		string dataPath = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + ".asset";
+		string dataPath = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "_" + nameHost + ".asset";
 		AssetDatabase.CreateAsset(rmr, dataPath);
 
-		InitData();
-		/*
+		
+		
 		string airString = "";
 		string waterString = "";
 		string soilString = "";
@@ -222,7 +231,7 @@ public class ResourceMessageCreator : EditorWindow {
 			AssetDatabase.CreateAsset(cur, dataPathCur);
 		if(pop.amount != 0)
 			AssetDatabase.CreateAsset(pop, dataPathPop);
-			*/
 
+		InitData();
 	}
 }

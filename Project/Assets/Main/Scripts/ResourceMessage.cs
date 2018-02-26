@@ -4,12 +4,12 @@ using UnityEngine;
 
 //This is a storage class that contains the values to change for a single resource.
 [CreateAssetMenu(menuName = "ResourceMessage")]
-public class ResourceMessage {
+public class ResourceMessage : ScriptableObject{
 	public Resources resourceType;
 	public bool isToday = true;
 	public int amount;
 
-	public ResourceMessage(Resources t, int i, bool b) {
+	public void Initialise(Resources t, int i, bool b) {
 		resourceType = t;
 		amount = i;
 		isToday = b;

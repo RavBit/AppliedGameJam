@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
+  m_Name: Test2
+  m_EditorClassIdentifier: 
+  Dilemma: rewxerw
+  Name: Arien lol
+  character: 0
+  State: 0
+  PositiveDialog: {fileID: 11400000, guid: 0aeef7dc86139974b9a9fe5b78f8e900, type: 2}
+  NegativeDialog: {fileID: 11400000, guid: cb229c99a22f17a41a7141fe5036df4a, type: 2}

@@ -42,10 +42,11 @@ public class ChoiceCreator : EditorWindow {
 		posMessage = EditorGUILayout.ObjectField(posMessage, typeof(ResourceMessageReflection), false) as ResourceMessageReflection;
 		if(posMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				foreach(ResourceMessage rm in posMessage.resourceMessages) {
-					posMessages.Add(rm);
+				int temp = posMessage.resourceMessages.Count;
+				for(int i = 0; i < temp; i++) {
+					posMessages.Add(posMessage.resourceMessages[i]);
 				}
-				posMessage = null ;
+				posMessage = null;
 			}
 		}
 		else {
@@ -66,9 +67,10 @@ public class ChoiceCreator : EditorWindow {
 		GUILayout.Label("Message to add");
 		negMessage = EditorGUILayout.ObjectField(negMessage, typeof(ResourceMessageReflection), false) as ResourceMessageReflection;
 		if(negMessage != null) {
-			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				foreach(ResourceMessage rm in negMessage.resourceMessages) {
-					negMessages.Add(rm);
+			if(GUILayout.Button("Push Message to negative list", GUILayout.Height(30))) {
+				int temp = negMessage.resourceMessages.Count;
+				for(int i = 0; i < temp; i++) {
+					negMessages.Add(negMessage.resourceMessages[i]);
 				}
 				negMessage = null;
 			}

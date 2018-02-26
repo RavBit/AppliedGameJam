@@ -2917,11 +2917,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Choices:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 11400000, guid: bcfe8f5f2587a834e9f0f004473a5ea7, type: 2}
+  - {fileID: 11400000, guid: ef4fb14d4e244804d8d837bf3c15fcaf, type: 2}
+  - {fileID: 11400000, guid: fcd6399fda30d2f45ac6dcb84f670965, type: 2}
+  - {fileID: 11400000, guid: e1082031cc24b974cbc07f7a5f08a6e6, type: 2}
+  - {fileID: 11400000, guid: cd5bc1bac42d0f24c97a856a82561451, type: 2}
+  - {fileID: 11400000, guid: f71c1b5d7a63210439fb1f2a58dd776f, type: 2}
   curchoice: {fileID: 0}
   choicecounter: 0
 --- !u!1 &1465059536

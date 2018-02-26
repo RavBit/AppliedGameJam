@@ -118,13 +118,13 @@ public class ResourceManager : MonoBehaviour {
 	//Checks end-conditions. Subject to change
 	private void CheckEnd() {
 		Debug.Log("EndCheck");
-		if(airPollution <= 0) {
+		if(airPollution >= 100) {
 			EventManager._EndGame(Resources.airPollution);
 		}
-		if(soilPollution <= 0) {
+		if(soilPollution >= 100) {
 			EventManager._EndGame(Resources.soilPollution);
 		}
-		if(waterPollution <= 0) {
+		if(waterPollution >= 100) {
 			EventManager._EndGame(Resources.waterPollution);
 		}
 		if(landUse <= 0) {

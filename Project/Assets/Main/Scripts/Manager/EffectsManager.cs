@@ -110,24 +110,44 @@ public class EffectsManager : MonoBehaviour {
     //Environment states
     public void Change_Environment() {
         //TODO FIX ENVIRONMENT
-        /*if(EventManager.Get_Environment() < 30) {
+        if (AppManager.instance.User.air_pollution < 10 || AppManager.instance.User.soil_pollution < 10
+            || AppManager.instance.User.water_pollution < 10 || AppManager.instance.User.biodiversity < 60 || AppManager.instance.User.land_use > 10) {
+            EnvironmentImage.sprite = Environment[1];
+            EnvAudio[2].DOFade(0, 0.5f);
+            EnvAudio[0].DOFade(0, 0.5f);
+            EnvAudio[1].DOFade(1, 1);
+        }
+        if (AppManager.instance.User.air_pollution < 20 || AppManager.instance.User.soil_pollution < 20
+            || AppManager.instance.User.water_pollution < 20 || AppManager.instance.User.biodiversity < 50 || AppManager.instance.User.land_use > 20)
+        {
             EnvironmentImage.sprite = Environment[2];
+            EnvAudio[2].DOFade(0, 0.5f);
+            EnvAudio[0].DOFade(0, 0.5f);
+            EnvAudio[1].DOFade(1, 1);
+        }
+        if (AppManager.instance.User.air_pollution < 30 || AppManager.instance.User.soil_pollution < 30
+            || AppManager.instance.User.water_pollution < 30 || AppManager.instance.User.biodiversity < 40 || AppManager.instance.User.land_use > 30)
+        {
+            EnvironmentImage.sprite = Environment[3];
             EnvAudio[1].DOFade(0, 0.5f);
             EnvAudio[0].DOFade(0, 0.5f);
             EnvAudio[2].DOFade(1, 1);
         }
-        if (EventManager.Get_Environment() > 60) {
+        if (AppManager.instance.User.air_pollution < 80 || AppManager.instance.User.soil_pollution < 80
+            || AppManager.instance.User.water_pollution < 80 || AppManager.instance.User.biodiversity < 10 || AppManager.instance.User.land_use > 80)
+        {
+            EnvironmentImage.sprite = Environment[4];
             EnvAudio[1].DOFade(0, 0.5f);
-            EnvAudio[2].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(1, 1);
-            EnvironmentImage.sprite = Environment[0];
-        }
-            if (EventManager.Get_Environment() >= 30 && EventManager.Get_Environment() <= 60) {
             EnvAudio[0].DOFade(0, 0.5f);
+            EnvAudio[2].DOFade(1, 1);
+        }
+        else
+        {
+            EnvironmentImage.sprite = Environment[0];
             EnvAudio[2].DOFade(0, 0.5f);
-            EnvAudio[1].DOFade(1, 1);
-            EnvironmentImage.sprite = Environment[1];
-        }*/
+            EnvAudio[1].DOFade(0, 0.5f);
+            EnvAudio[0].DOFade(1, 1);
+        }
     }
 
 }

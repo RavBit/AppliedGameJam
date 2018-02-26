@@ -548,9 +548,11 @@ MonoBehaviour:
   - {fileID: 2048966630}
   EnvironmentImage: {fileID: 135021744}
   Environment:
-  - {fileID: 21300000, guid: fb1db88177817324cb5140712cc47181, type: 3}
-  - {fileID: 21300000, guid: 85e73fc6c666d3a4a92f7a290c759c8b, type: 3}
-  - {fileID: 21300000, guid: 252394d276756d242ac8fb3c3dbe4a9c, type: 3}
+  - {fileID: 21300000, guid: 8387672412cfce6429cf63ac29e3351f, type: 3}
+  - {fileID: 21300000, guid: 7f2c38f6e4896f244bdd4a75d5c6e0e9, type: 3}
+  - {fileID: 21300000, guid: d8809b0add9eed8419bb6e5bc160fc98, type: 3}
+  - {fileID: 21300000, guid: 6144afece6e83c94b875758d3e6cef41, type: 3}
+  - {fileID: 21300000, guid: e13b5e637cf0ee94a8dfe47d76e2f753, type: 3}
 --- !u!4 &232724803
 Transform:
   m_ObjectHideFlags: 0
@@ -3425,7 +3427,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1738951079}
   m_Layer: 0
-  m_Name: Environment
+  m_Name: 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour {
         Choice.SetActive(true);
         DesicionButton.SetActive(true);
         ContinueButton.SetActive(false);
-		currentChar = Instantiate(_choice.Character).transform;
+		currentChar = Instantiate(EventManager._GetAnimation(_choice.character)).transform;
 		Character.enabled = false;
 		currentChar.parent = Character.transform;
 		Debug.Log(currentChar.localScale);

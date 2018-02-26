@@ -8,6 +8,7 @@ public class ResourceMessageCreator : EditorWindow {
 
 	private bool isPositive = true;
 	private ResourceMessage airPol,	waterPol, soilPol, landUse,	bioD, cur, pop;
+	ResourceMessageReflection rmr;
 	private string nameHost = "";
 	private string posNegString = "";
 	private Resources resources = Resources.currency;
@@ -106,14 +107,16 @@ public class ResourceMessageCreator : EditorWindow {
 	public void InitData() {
 		nameHost = "";
 		isPositive = true;
-		airPol = CreateInstance<ResourceMessage>();
-		waterPol = CreateInstance<ResourceMessage>();
-		soilPol = CreateInstance<ResourceMessage>();
-		landUse = CreateInstance<ResourceMessage>();
-		bioD = CreateInstance<ResourceMessage>();
-		cur = CreateInstance<ResourceMessage>();
-		pop = CreateInstance<ResourceMessage>();
-
+		airPol = new ResourceMessage(Resources.airPollution, 0, true);
+		waterPol = new ResourceMessage(Resources.waterPollution, 0, true);
+		soilPol = new ResourceMessage(Resources.soilPollution, 0, true);
+		landUse = new ResourceMessage(Resources.landUse, 0, true);
+		bioD = new ResourceMessage(Resources.biodiversity, 0, true);
+		cur = new ResourceMessage(Resources.currency, 0, true);
+		pop = new ResourceMessage(Resources.population, 0, true);
+		rmr = CreateInstance<ResourceMessageReflection>();
+		rmr.Initialise();
+		/*
 		airPol.Initialise(Resources.airPollution, 0, true);
 		waterPol.Initialise(Resources.waterPollution, 0, true);
 		soilPol.Initialise(Resources.soilPollution, 0, true);
@@ -121,9 +124,32 @@ public class ResourceMessageCreator : EditorWindow {
 		bioD.Initialise(Resources.biodiversity, 0, true);
 		cur.Initialise(Resources.currency, 0, true);
 		pop.Initialise(Resources.population, 0, true);
+		*/
 	}
 
 	private void SaveMessage() {
+
+		if(isPositive)
+			posNegString = "Positive";
+		else
+			posNegString = "Negative";
+
+		rmr.resourceMessages.Add(airPol);
+		rmr.resourceMessages.Add(waterPol);
+		rmr.resourceMessages.Add(soilPol);
+		rmr.resourceMessages.Add(landUse);
+		rmr.resourceMessages.Add(bioD);
+		rmr.resourceMessages.Add(cur);
+		rmr.resourceMessages.Add(pop);
+
+		if(!Directory.Exists("Assets/Resources/DialogOptions/ResourceMessage/" + nameHost))
+			AssetDatabase.CreateFolder("Assets/Resources/DialogOptions/ResourceMessage", nameHost);
+
+		string dataPath = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + ".asset";
+		AssetDatabase.CreateAsset(rmr, dataPath);
+
+		InitData();
+		/*
 		string airString = "";
 		string waterString = "";
 		string soilString = "";
@@ -166,12 +192,7 @@ public class ResourceMessageCreator : EditorWindow {
 			popString = "Population" + pop.amount + "Today";
 		else
 			popString = "Population" + pop.amount + "NotToday";
-#endregion
-
-		if(isPositive)
-			posNegString = "Positive";
-		else
-			posNegString = "Negative";
+			#endregion
 
 		if(!Directory.Exists("Assets/Resources/DialogOptions/ResourceMessage/" + nameHost))
 			AssetDatabase.CreateFolder("Assets/Resources/DialogOptions/ResourceMessage", nameHost);
@@ -186,7 +207,7 @@ public class ResourceMessageCreator : EditorWindow {
 		string dataPathBioD = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + bioString + ".asset";
 		string dataPathCur = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + curString + ".asset";
 		string dataPathPop = "Assets/Resources/DialogOptions/ResourceMessage/" + nameHost + "/" + posNegString + "/" + popString + ".asset";
-
+		
 		if(airPol.amount != 0)
 			AssetDatabase.CreateAsset(airPol, dataPathAir);
 		if(waterPol.amount != 0)
@@ -201,6 +222,7 @@ public class ResourceMessageCreator : EditorWindow {
 			AssetDatabase.CreateAsset(cur, dataPathCur);
 		if(pop.amount != 0)
 			AssetDatabase.CreateAsset(pop, dataPathPop);
-		InitData();
+			*/
+
 	}
 }

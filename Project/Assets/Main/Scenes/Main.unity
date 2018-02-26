@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -2232,11 +2232,11 @@ MonoBehaviour:
   Textbubble: {fileID: 1801414302}
   Character: {fileID: 1030300458}
   Population: {fileID: 783910891}
-  Biodiversity: {fileID: 690570714}
-  Land_Use: {fileID: 442154605}
+  Biodiversity: {fileID: 0}
+  Land_Use: {fileID: 0}
   Currency: {fileID: 351383798}
   Environment: {fileID: 690570714}
-  Pollution: {fileID: 1026125348}
+  Pollution: {fileID: 0}
   ResultPop: {fileID: 978692829}
   ResultHap: {fileID: 695502594}
   ResultEnv: {fileID: 267960401}
@@ -2572,11 +2572,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Choices:
-  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
-  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
-  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
-  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
-  - {fileID: 11400000, guid: 455d094e77d322c469e4079658a2ce56, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   curchoice: {fileID: 0}
   choicecounter: 0
 --- !u!1 &1564671443
@@ -2738,6 +2738,7 @@ GameObject:
   - component: {fileID: 1635043944}
   - component: {fileID: 1635043946}
   - component: {fileID: 1635043947}
+  - component: {fileID: 1635043948}
   m_Layer: 0
   m_Name: __Game_Manager__
   m_TagString: Untagged
@@ -2791,6 +2792,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0fd72d0a1c588044c8da024eb74c4447, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1635043948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635043943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2c1881abd4687c4ba69d901f9c7a71f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alien: {fileID: 1897555893056354, guid: 02d379a9c82f5ee4ca4200172b83c276, type: 2}
+  cook: {fileID: 1377677188674532, guid: eaf3dffb7c06f9742a8bf5b12bb41d03, type: 2}
+  farmer: {fileID: 1109229819357984, guid: a48c10bf31feff4448b2c3b43b0fd943, type: 2}
+  geekyGirl: {fileID: 1603298773280748, guid: ff750835f1988864aaebb7b21d6ec61a, type: 2}
+  hotdog: {fileID: 1392662330001736, guid: 697d3479e56028e4987dd071ea709bfc, type: 2}
+  jorji: {fileID: 1291500956532256, guid: ec3f7e91ed5f50e43ae7cb0d3ab91afa, type: 2}
+  lightBulb: {fileID: 1550151765310860, guid: ab19a1bccad50194c9aa963beb5c5a4e, type: 2}
+  octoGirl: {fileID: 1338020559965158, guid: 1f29216a76fd81e4daea7b23e5e5617a, type: 2}
+  protester: {fileID: 1230173765299604, guid: bef0b43ef906f10439660e6762ca4e97, type: 2}
+  queenKing: {fileID: 1935116862848824, guid: de30514139edd0842a04631fb05a6a8c, type: 2}
+  rabbit: {fileID: 1584587668206142, guid: 3a7aa9738e45d764fa7d5435439a059f, type: 2}
+  salesman: {fileID: 1260907613562882, guid: a93abdc007c94c74ab41285c87569cde, type: 2}
+  sheep: {fileID: 1475577188561170, guid: b3bbe078d5057ea4d8ee27b65201a35b, type: 2}
+  snake: {fileID: 1926799424856690, guid: e72afaee07500324bad9621898d40786, type: 2}
+  teenager: {fileID: 1583751496242948, guid: 72dc924b4042b00428adb0bd4a2f5c80, type: 2}
 --- !u!1 &1653804601
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,8 +6,8 @@ using UnityEditor;
 public class ChoiceCreator : EditorWindow {
 
 	private string fileName = "DefaultName";
-	public ResourceMessage negMessage;
-	public ResourceMessage posMessage;
+	public ResourceMessageReflection negMessage;
+	public ResourceMessageReflection posMessage;
 	private List<ResourceMessage> negMessages;
 	private List<ResourceMessage> posMessages;
 	public Choice choice;
@@ -39,11 +39,13 @@ public class ChoiceCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Message to add");
-		posMessage = EditorGUILayout.ObjectField(posMessage, typeof(ResourceMessage), false) as ResourceMessage;
+		posMessage = EditorGUILayout.ObjectField(posMessage, typeof(ResourceMessageReflection), false) as ResourceMessageReflection;
 		if(posMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				posMessages.Add(posMessage);
-				posMessage = null;
+				foreach(ResourceMessage rm in posMessage.resourceMessages) {
+					posMessages.Add(rm);
+				}
+				posMessage = null ;
 			}
 		}
 		else {
@@ -62,10 +64,12 @@ public class ChoiceCreator : EditorWindow {
 		EditorGUILayout.EndHorizontal();
 		EditorGUILayout.BeginHorizontal();
 		GUILayout.Label("Message to add");
-		negMessage = EditorGUILayout.ObjectField(negMessage, typeof(ResourceMessage), false) as ResourceMessage;
+		negMessage = EditorGUILayout.ObjectField(negMessage, typeof(ResourceMessageReflection), false) as ResourceMessageReflection;
 		if(negMessage != null) {
 			if(GUILayout.Button("Push Message to positive list", GUILayout.Height(30))) {
-				negMessages.Add(negMessage);
+				foreach(ResourceMessage rm in negMessage.resourceMessages) {
+					negMessages.Add(rm);
+				}
 				negMessage = null;
 			}
 		}

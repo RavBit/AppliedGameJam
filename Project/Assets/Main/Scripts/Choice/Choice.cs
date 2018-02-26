@@ -13,8 +13,8 @@ public class Choice : ScriptableObject {
     [TextArea()]
     public string Name;
 
-    [Header("Character sprite: ")]
-    public GameObject Character;
+	[Header("Character: ")]
+	public Characters character;
     [Header("State:")]
     public State State;
     [Header("Positive Dialog")]

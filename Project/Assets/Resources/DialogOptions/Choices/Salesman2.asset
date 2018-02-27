@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Name: Salesman2
   m_EditorClassIdentifier: 
   Dilemma: Hello your highness. We, your city planners, have come together and made
-    a proposal for the city center of our great city [city name]. We suggest moving
-    some of the industry to the hinterlands. This will greatly improve the living
-    conditions and appeal of the city center. On top of that it allows us to expand
-    the industry further as there is plenty of space in the hinterlands. The wetlands
-    outside of the city are of little use as they are now, but this new industrial
-    area will put our great city on the map, your highness!
+    a proposal for the city center of our great city. We suggest moving some of the
+    industry to the hinterlands. This will greatly improve the living conditions and
+    appeal of the city center. On top of that it allows us to expand the industry
+    further as there is plenty of space in the hinterlands. The wetlands outside of
+    the city are of little use as they are now, but this new industrial area will
+    put our great city on the map, your highness!
   Name: Contractor Dave
   character: 11
   State: 0

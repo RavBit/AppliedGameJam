@@ -1188,7 +1188,7 @@ GameObject:
   - component: {fileID: 442154606}
   - component: {fileID: 442154605}
   m_Layer: 5
-  m_Name: Land_Use
+  m_Name: BioDiversity
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1578,7 +1578,7 @@ GameObject:
   - component: {fileID: 690570715}
   - component: {fileID: 690570714}
   m_Layer: 5
-  m_Name: Biodiversity
+  m_Name: Land_Use
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2741,10 +2741,9 @@ MonoBehaviour:
   Textbubble: {fileID: 1801414302}
   Character: {fileID: 1030300458}
   Population: {fileID: 783910891}
-  Biodiversity: {fileID: 690570714}
-  Land_Use: {fileID: 442154605}
+  Biodiversity: {fileID: 442154605}
+  Land_Use: {fileID: 690570714}
   Currency: {fileID: 351383798}
-  Environment: {fileID: 690570714}
   Pollution: {fileID: 1026125348}
   AirPollution: {fileID: 1593938799}
   SoilPollution: {fileID: 1564671445}

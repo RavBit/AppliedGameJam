@@ -22,7 +22,6 @@ public class UIManager : MonoBehaviour {
     public Text Biodiversity;
     public Text Land_Use;
     public Text Currency;
-    public Text Environment;
 
     public Text Pollution;
     public Text AirPollution;

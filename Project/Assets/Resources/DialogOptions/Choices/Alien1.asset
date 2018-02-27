@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
+  m_Name: Alien1
+  m_EditorClassIdentifier: 
+  Dilemma: "The people need more entertainment,I would like to build a new shopping
+    district! If you have any money to spare, an investment would be great! How about
+    I\u2019ll double that money for you! "
+  Name: Executive Eve
+  character: 0
+  State: 0
+  PositiveDialog: {fileID: 11400000, guid: b7cf586c79e3f784799ebaeb94952b86, type: 2}
+  NegativeDialog: {fileID: 11400000, guid: d1de613b1c68f864db90119ae40521b5, type: 2}

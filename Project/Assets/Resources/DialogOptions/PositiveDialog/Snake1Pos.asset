@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Snake1Pos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: 6f4019779fcea0a4e84087afdd4eaece, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: d0176e60fe6ae6c4f85eb311bfc85112, type: 2}
+  - {fileID: 11400000, guid: c945e8d755133c44cbbcfd42ccfc6010, type: 2}
+  - {fileID: 11400000, guid: 1898c3324e241134f967ea334fa92707, type: 2}
+  - {fileID: 11400000, guid: 6e52960c298cfbf45bd8fd539ff5b03b, type: 2}
+  - {fileID: 11400000, guid: d2e21053bded86e408fe4f5c8637f73c, type: 2}
+  text: Yes, I really think this is the right choice sssir!

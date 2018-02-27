@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Jorji1Pos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: 8126c039d0eb3bf42b2a7df5c10c320a, type: 2}
+  - {fileID: 11400000, guid: 50c3f68daf9ac974bb04d4b8c2adb5d8, type: 2}
+  - {fileID: 11400000, guid: e08d6df4c8154194d884e9023d40e7c3, type: 2}
+  - {fileID: 11400000, guid: b11e58f45866f91479072c756b3cdf0b, type: 2}
+  - {fileID: 11400000, guid: 2cd25357d5ede444d9ec897dcac7bf25, type: 2}
+  - {fileID: 11400000, guid: 08b7173bb7b0bb94d9e9470694369aed, type: 2}
+  - {fileID: 11400000, guid: d25bbfa14fce48e47b8296844e970fd0, type: 2}
+  text: "I\u2019m lovin\u2019 it!"

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a640a8d4489b5d5408910d544d84d833, type: 3}
+  m_Name: Farmer2
+  m_EditorClassIdentifier: 
+  Dilemma: "My neighbouring farmers and I wish to convert our current monocultures
+    into polycultures where we rotate crops in order to sustain a more integrated
+    pest management and thus reduce our pesticide usage! However\u2026 this change
+    requires a substantial investment. Would your holiness perhaps consider\u2026financing?"
+  Name: Farmer Bill
+  character: 2
+  State: 0
+  PositiveDialog: {fileID: 11400000, guid: ebd53d123f4d4724ebbf458d91a96c84, type: 2}
+  NegativeDialog: {fileID: 11400000, guid: 0dfcffa2dd5ece742b3ed19a5e44e01d, type: 2}

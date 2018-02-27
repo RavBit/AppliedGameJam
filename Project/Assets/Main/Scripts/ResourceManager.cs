@@ -16,32 +16,37 @@ public class ResourceManager : MonoBehaviour {
 	#region resourceProperties
 	private int AirPollution {
 		get { return airPollution; }
-		set { airPollution = value; }
+		set { airPollution = value;
+			airPollution = (int)Mathf.Clamp(airPollution, 0, 100); }
 	}
 	private int SoilPollution {
 		get { return soilPollution; }
-		set { soilPollution = value; }
+		set { soilPollution = value;
+			soilPollution = (int)Mathf.Clamp(soilPollution, 0, 100); }
 	}
 	private int WaterPollution {
 		get { return waterPollution; }
-		set { waterPollution = value; }
+		set { waterPollution = value;
+			waterPollution = (int)Mathf.Clamp(waterPollution, 0, 100); }
 	}
 	private int LandUse {
 		get { return landUse; }
-		set { landUse = value; }
+		set { landUse = value;
+			landUse = (int)Mathf.Clamp(landUse, 0, 100); }
 	}
 	private int Biodiversity {
 		get { return biodiversity; }
-		set { biodiversity = value; }
+		set { biodiversity = value;
+			biodiversity = (int)Mathf.Clamp(biodiversity, 0, 100); }
 	}
 
 	private int Population {
 		get { return population; }
-		set { population = value; }
+		set { population = value;}
 	}
 	private int Currency {
 		get { return currency; }
-		set { currency = value; }
+		set { currency = value;}
 	}
 	#endregion
 

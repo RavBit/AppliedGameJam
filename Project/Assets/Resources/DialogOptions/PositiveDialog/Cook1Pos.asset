@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Cook1Pos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: 120e3683dc786064e89c944ced5bf1e5, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: c17f99a0f6cf8214bbf2c667fa03048f, type: 2}
+  - {fileID: 11400000, guid: 65477a22b917a264e9eb0e9eec371902, type: 2}
+  - {fileID: 11400000, guid: 8917f919820c7144a973a75dd64a4aac, type: 2}
+  - {fileID: 11400000, guid: 2bd5fc33a275bf34bae436f49ba530b2, type: 2}
+  text: "Yeah! Let\u2019s prepare some tasty soup!"

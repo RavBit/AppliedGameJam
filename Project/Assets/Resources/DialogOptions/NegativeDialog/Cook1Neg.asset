@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Cook1Neg
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 2fc0b1339541cb3479dfb746efe661f4, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: f6a60b709cf78ed41ba65b7d18d221aa, type: 2}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: ec7279da8e15bc040b7761204770637c, type: 2}
+  text: "But they all taste so good\u2026"

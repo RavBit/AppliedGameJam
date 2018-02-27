@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dea876ce1171e94fac411b192574c84, type: 3}
+  m_Name: Lightbulb1Pos
+  m_EditorClassIdentifier: 
+  messages:
+  - {fileID: 11400000, guid: 15357fcc02eaab34180bc3b57de7ad8a, type: 2}
+  - {fileID: 11400000, guid: f3f90c7f42d64e4449704626b58287c5, type: 2}
+  - {fileID: 11400000, guid: dd32cd4e52a7d5241a7f6d53f93d6ba9, type: 2}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 11400000, guid: 939bbb9d3822620439ad7670ad169926, type: 2}
+  - {fileID: 0}
+  text: Wise decision.

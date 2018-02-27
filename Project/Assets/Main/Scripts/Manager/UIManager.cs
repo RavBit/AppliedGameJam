@@ -30,8 +30,9 @@ public class UIManager : MonoBehaviour {
     public Text WaterPollution;
 
     public Text ResultPop;
-    public Text ResultHap;
-    public Text ResultEnv;
+    public Text ResultPol;
+    public Text ResultBio;
+    public Text ResultLandU;
     public Text ResultCur;
 
     //Format of: population, currency, happiness, environment
@@ -60,10 +61,11 @@ public class UIManager : MonoBehaviour {
     void EnableUI() {
         Screen.SetActive(false);
         Results.SetActive(true);
-        ResultPop.DOText("Population: " + resourceDeltas.population + " people", 1, true,ScrambleMode.None);
-        //ResultHap.DOText("Hapiness: " + resourceDeltas.happiness + "%", 1, true, ScrambleMode.None);
-        ResultCur.DOText("Currency: " + resourceDeltas.currency + " paluta", 1, true, ScrambleMode.None);
-        //ResultEnv.DOText("Environment: " + resourceDeltas.environment + "%", 1, true, ScrambleMode.None);
+        ResultPop.DOText("" + (resourceDeltas.population - AppManager.instance.User.population) + " people", 1, true,ScrambleMode.None);
+        ResultPol.DOText("" + (((resourceDeltas.airPollution + resourceDeltas.waterPollution + resourceDeltas.soilPollution) / 3) - (AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + " %", 1, true, ScrambleMode.None);
+        ResultLandU.DOText("" + (resourceDeltas.landUse - AppManager.instance.User.land_use) + "%", 1, true, ScrambleMode.None);
+        ResultCur.DOText("" + (resourceDeltas.currency - AppManager.instance.User.currency) + " paluta", 1, true, ScrambleMode.None);
+        ResultBio.DOText("" + (resourceDeltas.biodiversity - AppManager.instance.User.biodiversity) + "%", 1, true, ScrambleMode.None);
         Choice.SetActive(false);
 
     }

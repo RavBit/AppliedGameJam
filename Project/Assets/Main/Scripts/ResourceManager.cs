@@ -127,7 +127,7 @@ public class ResourceManager : MonoBehaviour {
 		if(waterPollution >= 100) {
 			EventManager._EndGame(Resources.waterPollution);
 		}
-		if(landUse <= 0) {
+		if(landUse >= 100) {
 			EventManager._EndGame(Resources.landUse);
 		}
 		if(biodiversity <= 0) {

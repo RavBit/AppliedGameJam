@@ -30,7 +30,6 @@ public class DayState : BaseState {
             //Event aanroepen
 
             EventManager.Night_Cycle();
-        AppManager.instance.StartCoroutine("UpdateResources");
         Debug.Log("Reached");
 			onState(new NightState());
 		}
@@ -101,6 +100,7 @@ public class BetweenState : BaseState {
 	public override void Exit(Queue<ResourceMessage> messages) {
 		//Send notice upwards to disable intermission UI
 		EventManager.UIContinue -= UpdateBetweenState;
+        AppManager.instance.StartCoroutine("UpdateResources");
         Debug.Log("Changing state to Day");
 	}
 

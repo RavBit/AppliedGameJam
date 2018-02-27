@@ -5,6 +5,7 @@ using UnityEngine;
 public class AppManager : MonoBehaviour {
     public static AppManager instance;
     public User User;
+    [SerializeField]
     public ResourceStorage RM;
     [Header("Username of logged in User")]
     [SerializeField]
@@ -41,12 +42,14 @@ public class AppManager : MonoBehaviour {
     }
     public void ResourceUpdate(ResourceStorage _RM)
     {
+        Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! RESOURCES UPDATE");
         RM = _RM;
+
     }
     public IEnumerator UpdateResources()
     {
         //Assigning strings from the text
-
+        Debug.Log("RESOURCES UPDATE " + RM.population);
         //Init form and give them the email and password
         WWWForm form = new WWWForm();
         form.AddField("user_ID", User.ID);
@@ -78,6 +81,14 @@ public class AppManager : MonoBehaviour {
                 }
                 else
                 {
+                    User.air_pollution = RM.airPollution;
+                    User.soil_pollution = RM.soilPollution;
+                    User.water_pollution = RM.waterPollution;
+                    User.land_use = RM.landUse;
+                    User.biodiversity = RM.biodiversity;
+                    User.currency = RM.currency;
+                    User.population = RM.population;
+                    User.currency = RM.currency;
                     //Login the user and redirect it to a new scene
                     Debug.Log("Succes!");
                 }

@@ -12,8 +12,8 @@ public class EffectsManager : MonoBehaviour {
     public AudioSource[] EnvAudio;
     public SpriteRenderer EnvironmentImage;
     public Sprite[] Environment;
-
-	private void Start() {
+    public Color lerpedColor;
+    private void Start() {
         PostProcessingSettings();
         EventManager.DayCycle += SDT;
         EventManager.NightCycle += StartNight;
@@ -21,6 +21,9 @@ public class EffectsManager : MonoBehaviour {
         EnvAudio[2].DOFade(0, 0.01f);
         EnvAudio[0].DOFade(1, 1);
         SDT();     
+    }
+    private void Update()
+    {
     }
     private void SDT() {
         Debug.Log("Day state");

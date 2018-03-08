@@ -1,14 +1,9 @@
 fileFormatVersion: 2
-guid: 5cbde1e6482e51146aea8306db57cdd7
-timeCreated: 1519668876
+guid: 20ee199eae808c64bb2675dfad57f1fe
+timeCreated: 1520524225
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: UI_IconsPollution_0
-    21300002: UI_IconsPollution_1
-    21300004: UI_IconsPollution_2
-    21300006: UI_IconsPollution_3
-    21300008: UI_IconsPollution_4
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -45,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -103,77 +98,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: UI_IconsPollution_0
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 164
-        width: 60
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_IconsPollution_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 84
-        width: 60
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_IconsPollution_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 60
-        height: 84
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_IconsPollution_3
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 164
-        width: 60
-        height: 80
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: UI_IconsPollution_4
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 85
-        width: 60
-        height: 78
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 

@@ -89,7 +89,6 @@ public class EffectsManager : MonoBehaviour {
     public IEnumerator Night_State() {
         float time = 0;
         float light = 2;
-        yield return new WaitForSeconds(4f);
         while (time < 5) {
             //copy current bloom settings from the profile into a temporary variable
             ColorGradingModel.Settings colorgrading = ppProfile.colorGrading.settings;

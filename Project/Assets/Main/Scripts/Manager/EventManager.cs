@@ -13,7 +13,10 @@ public class EventManager : MonoBehaviour {
 	public static event SubmitV4 SendV4;
 	public static event SubmitV4 SetupResources;
 
-	public delegate void ResourceEvent(params ResourceMessage[] res);
+    public delegate void StoreItem(Item item);
+    public static event StoreItem CreateStoreItem;
+    public static event StoreItem BuyStoreItem;
+    public delegate void ResourceEvent(params ResourceMessage[] res);
 	public static event ResourceEvent SendResourceMessage;
 	public static event ResourceEvent EnqueueMessageEvent;
 
@@ -91,7 +94,15 @@ public class EventManager : MonoBehaviour {
         ChoiceUnLoad();
     }
 	
-	public static Queue<ResourceMessage> Get_Queue() {
+    public static void Create_StoreItem(Item item)
+    {
+        CreateStoreItem(item);
+    }
+    public static void Buy_StoreItem(Item item)
+    {
+        BuyStoreItem(item);
+    }
+    public static Queue<ResourceMessage> Get_Queue() {
 		return GetQueue();
 	}
     public static void InterMission_Enable() {

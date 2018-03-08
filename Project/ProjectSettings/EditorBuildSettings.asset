@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Main/Scenes/DemoScreen.unity
     guid: c4497a8d0efa3ea499f4f32a3a3b8fac
   - enabled: 1
-    path: Assets/Main/Scenes/Main.unity
+    path: Assets/Main/Scenes/Main_Old.unity
     guid: d87a257a9187f4b47a43bbf47569de4f
   - enabled: 1
     path: Assets/Main/Scenes/TutorialScene.unity
@@ -32,3 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Main/Scenes/End-scenes/CurEnd.unity
     guid: be59bf2676e8fe14aa41b041a19baa87
+  - enabled: 1
+    path: Assets/Main/Scenes/Main.unity
+    guid: 8fd4620bd0f753d438ec3f476c2236c8

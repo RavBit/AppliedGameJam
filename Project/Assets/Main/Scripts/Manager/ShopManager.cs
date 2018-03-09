@@ -11,6 +11,7 @@ public class ShopManager : MonoBehaviour {
     void Start()
     {
         EventManager.CreateStoreItem += InitItem;
+        EventManager.CreateUserData += InitUser;
         //TODO SET EVENT FOR CREATE USERITEM
     }
 

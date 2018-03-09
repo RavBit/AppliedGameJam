@@ -2,6 +2,7 @@
   "choices": [
     {
       "Dilemma": "The people need more entertainment,I would like to build a new shopping district! If you have any money to spare, an investment would be great! How about I’ll double that money for you! ",
+      "AdvisorText": "",
       "Name": "Executive Eve",
       "character": "0",
       "State": "0",
@@ -88,6 +89,7 @@
     },
     {
       "Dilemma": "I would like to begin a luxurious restaurant. I specialize in the preparations of pork belly, spare ribs and tomato soup! A restaurant like this is exactly what the people are craving these days!",
+      "AdvisorText": "",
       "Name": "Chef Bertha",
       "character": "1",
       "State": "0",
@@ -174,6 +176,7 @@
     },
     {
       "Dilemma": "My neighbouring farmers and I wish to convert our current monocultures into polycultures where we rotate crops in order to sustain a more integrated pest management and thus reduce our pesticide usage! However… this change requires a substantial investment. Would your holiness perhaps consider…financing?",
+      "AdvisorText": "",
       "Name": "Farmer Bill",
       "character": "2",
       "State": "0",
@@ -258,8 +261,9 @@
         "text": "Oh geez, I guess that means we'll have to fund our selves..."
       }
     },
-	{
+    {
       "Dilemma": "I did some research with the electricity! We can produce more energy for less money if we use more natural gases!",
+      "AdvisorText": "",
       "Name": "Inventor Hedy",
       "character": "3",
       "State": "0",
@@ -344,1467 +348,1484 @@
         "text": "Yeah, back to the drawing board."
       }
     },
-	{
-  "Dilemma": "My friends don’t seem so happy these days, so I’ve been pondering on how to improve their moods. I figured some games might do us well. Would you help me by funding a hotdog eating contest? ",
-  "Name": "Little Timmy",
-  "character": "4",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "10",
-        "isToday": "true",
-        "amount": "0"
+    {
+      "Dilemma": "My friends don’t seem so happy these days, so I’ve been pondering on how to improve their moods. I figured some games might do us well. Would you help me by funding a hotdog eating contest? ",
+      "AdvisorText": "",
+      "Name": "Little Timmy",
+      "character": "4",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "10",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "500"
+          }
+        ],
+        "text": "Thank you! This is going to be so much fun!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "500"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-500"
+          }
+        ],
+        "text": "That's too bad..."
       }
-    ],
-    "text": "Thank you! This is going to be so much fun!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "My food company is completely consumer centered and I promise you the plebs are loving it! However, if you, my lord, would be a sponsor, our food could reach an even greater amount of people. ",
+      "AdvisorText": "",
+      "Name": "Executive Salesperson Hans",
+      "character": "5",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "20"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "20"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "20"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-15"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "350000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "300"
+          }
+        ],
+        "text": "I’m lovin’ it!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-500"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "That is too bad..."
       }
-    ],
-    "text": "That's too bad..."
-  }
-},
-{
-  "Dilemma": "My food company is completely consumer centered and I promise you the plebs are loving it! However, if you, my lord, would be a sponsor, our food could reach an even greater amount of people. ",
-  "Name": "Executive Salesperson Hans",
-  "character": "5",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "20"
+    },
+    {
+      "Dilemma": "The lightbulbs we’re currently using are bad for the environment, so I’d like to develop a cleaner type. Will you fund me? ",
+      "AdvisorText": "",
+      "Name": "Inventor Jane",
+      "character": "6",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-200000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Wise decision."
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "20"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "20"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-15"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "350000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "300"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "YOU WILL REGRET THIS!"
       }
-    ],
-    "text": "I’m lovin’ it!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
+    },
+    {
+      "Dilemma": "I have invented a new type of diet that will keep the city healthy. It requires no meat or any type of other animal products. I made a lot of recipes and want to begin my own shop near the shopping mall. I got enough money, I just need a licence! ",
+      "AdvisorText": "",
+      "Name": "Flora",
+      "character": "7",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "20"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "25"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-55000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-4500"
+          }
+        ],
+        "text": "Well then, I hope your people will live long lives. Thank you very much!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "But this diet is way more healthy..."
       }
-    ],
-    "text": "That is too bad..."
-  }
-},
-{
-  "Dilemma": "The lightbulbs we’re currently using are bad for the environment, so I’d like to develop a cleaner type. Will you fund me? ",
-  "Name": "Inventor Jane",
-  "character": "6",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-10"
+    },
+    {
+      "Dilemma": "A factory closeby keeps polluting the rivers and the ground. I want it to be closed down!",
+      "AdvisorText": "",
+      "Name": "Elizabeth",
+      "character": "8",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-15"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-100000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Yeah! Get them polluters fired!!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-200000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-1000"
+          }
+        ],
+        "text": "But now there will no longer be any place to play..."
       }
-    ],
-    "text": "Wise decision."
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "10"
+    },
+    {
+      "Dilemma": "Good afternoon, ye primal planet. We has noticed a decreasing health in thy atmosphere. We would help, but we do not have the resources. If only thou would fund… ",
+      "AdvisorText": "",
+      "Name": "Otherworldy Being",
+      "character": "9",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-300000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "You lowly being! You misplaced your trust!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Did he know..? He saw right through it..."
       }
-    ],
-    "text": "YOU WILL REGRET THIS!"
-  }
-},
-{
-  "Dilemma": "I have invented a new type of diet that will keep the city healthy. It requires no meat or any type of other animal products. I made a lot of recipes and want to begin my own shop near the shopping mall. I got enough money, I just need a licence! ",
-  "Name": "Flora",
-  "character": "7",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-10"
+    },
+    {
+      "Dilemma": "As a representative of Synthesticide Inc., leader in the synthetic pesticide industry, I am pleased to announce we have succeeded in creating a herbicide capable of dealing with that persistent weed so many of our farmers are dealing with. Our fix is fast and safe for people, relieving our farmers of their sleepless nights in a matter of days… if your majesty approves it for sale, that is.",
+      "AdvisorText": "",
+      "Name": "Synthesticide Inc. representative",
+      "character": "5",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "A wise decision."
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "20"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "25"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-55000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-4500"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-10000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-100"
+          }
+        ],
+        "text": "Then I suppose I won't be getting that bonus at the end of the year."
       }
-    ],
-    "text": "Well then, I hope your people will live long lives. Thank you very much!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "Hello your highness. We, your city planners, have come together and made a proposal for the city center of our great city [city name]. We suggest moving some of the industry to the hinterlands. This will greatly improve the living conditions and appeal of the city center. On top of that it allows us to expand the industry further as there is plenty of space in the hinterlands. The wetlands outside of the city are of little use as they are now, but this new industrial area will put our great city on the map, your highness!",
+      "AdvisorText": "",
+      "Name": "Contractor Dave",
+      "character": "11",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "85000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "1000"
+          }
+        ],
+        "text": "Reports will follow shortly."
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Back to the drawing board."
       }
-    ],
-    "text": "But this diet is way more healthy..."
-  }
-},
-{
-  "Dilemma": "A factory closeby keeps polluting the rivers and the ground. I want it to be closed down!",
-  "Name": "Elizabeth",
-  "character": "8",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-10"
+    },
+    {
+      "Dilemma": "I own Beelicious, a bee farm capable of producing the sweetest honey. Recently many of my bees have been incapable of finding their colonies, appearing completely disoriented. Some colonies have even started dying! I am sure it is the insecticides those farmers in the area use. Would you perhaps considering banning the particular pesticides they use, it kills more than just their problems!",
+      "AdvisorText": "",
+      "Name": "Beelicious C.E.O.",
+      "character": "12",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-50000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-500"
+          }
+        ],
+        "text": "I'll get to sending the closure orders right away!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-15"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-100000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "But why would you NOT choose to ban pesticides..?"
       }
-    ],
-    "text": "Yeah! Get them polluters fired!!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "10"
+    },
+    {
+      "Dilemma": "There ssseems to be a virus spreading among the cattle, I’d recommend we kill all the infected animals before it ssspreads too far. ",
+      "AdvisorText": "",
+      "Name": "Biologist Slith",
+      "character": "13",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-10"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-125000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-200"
+          }
+        ],
+        "text": "Yes, I really think this is the right choice sssir!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-1000"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-1000"
+          }
+        ],
+        "text": "Wh..w...WHAT!?"
       }
-    ],
-    "text": "But now there will no longer be any place to play..."
-  }
-},
-{
-  "Dilemma": "Good afternoon, ye primal planet. We has noticed a decreasing health in thy atmosphere. We would help, but we do not have the resources. If only thou would fund… ",
-  "Name": "Otherworldy Being",
-  "character": "9",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "We want to use the nearby forest as an expedition place to advertise nature! Here we will do camping, quid tours, just roasting some marshmallows… You know?",
+      "AdvisorText": "",
+      "Name": "Irene",
+      "character": "10",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "500"
+          }
+        ],
+        "text": "I hereby swear to protect this forest!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-300000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-300"
+          }
+        ],
+        "text": "There are other things than marshmallows burning now..."
       }
-    ],
-    "text": "You lowly being! You misplaced your trust!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "Greetings your highness, I come to you with a most lucrative proposal. I have engineered a crop species that produces toxins, protecting it from any unwanted pests and ensuring our people remain well fed. With your approval I could bring it to the market, revolutionizing our pesticide management and preventing crop loss. I can assure you this would generate quite a profit, our most reverent ruler.",
+      "AdvisorText": "",
+      "Name": "Chemist Aurelia",
+      "character": "0",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "50000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Thank you my liege. I will get right to it."
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "I do suppose proposing toxins to your holiness was not the brightest idea..."
       }
-    ],
-    "text": "Did he know..? He saw right through it..."
-  }
-},
-{
-  "Dilemma": "As a representative of Synthesticide Inc., leader in the synthetic pesticide industry, I am pleased to announce we have succeeded in creating a herbicide capable of dealing with that persistent weed so many of our farmers are dealing with. Our fix is fast and safe for people, relieving our farmers of their sleepless nights in a matter of days… if your majesty approves it for sale, that is.",
-  "Name": "Synthesticide Inc. representative",
-  "character": "5",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "I would like to start a farm in the Southern region, but I’m terrible low on money. Would you care to fund a bit? It’s only agriculture. ",
+      "AdvisorText": "",
+      "Name": "Farmer Lynn",
+      "character": "2",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-300000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "1500"
+          }
+        ],
+        "text": "Thank you very much! This way I can finally feed my family and my people. "
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-1000"
+          }
+        ],
+        "text": "We are all going to die… "
       }
-    ],
-    "text": "A wise decision."
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "I would like a new road near my house so I can try out my new motorcycle! … Once I get my drivers licence, of course.",
+      "AdvisorText": "",
+      "Name": "Felicia",
+      "character": "10",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-50000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "1500"
+          }
+        ],
+        "text": "Awesome!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-10000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-100"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "Nawh..."
       }
-    ],
-    "text": "Then I suppose I won't be getting that bonus at the end of the year."
-  }
-},
-{
-  "Dilemma": "Hello your highness. We, your city planners, have come together and made a proposal for the city center of our great city [city name]. We suggest moving some of the industry to the hinterlands. This will greatly improve the living conditions and appeal of the city center. On top of that it allows us to expand the industry further as there is plenty of space in the hinterlands. The wetlands outside of the city are of little use as they are now, but this new industrial area will put our great city on the map, your highness!",
-  "Name": "Contractor Dave",
-  "character": "11",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "10"
+    },
+    {
+      "Dilemma": "Our company, Solargized, would like to develop a solar farm in the desert south of Oasith. A photovoltaic power station will provide more than enough energy for the little town and might turn up a profit eventually, as we may sell energy to neighbouring towns. If your majesty is willing to meet our investment, we can share profits.",
+      "AdvisorText": "",
+      "Name": "Solargized representative",
+      "character": "6",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "50000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "My boss will be elated!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "85000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "1000"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "0"
+          }
+        ],
+        "text": "I do understand your decision. That does not mean I agree."
       }
-    ],
-    "text": "Reports will follow shortly."
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
+    },
+    {
+      "Dilemma": "I got a great deal for you sir! I have the idea to build a resthouse on the cattle breeding terrain. We got more than enough food to go around and the elder people need someplace safe. How about it?",
+      "AdvisorText": "",
+      "Name": "John Dane",
+      "character": "11",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-100000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "500"
+          }
+        ],
+        "text": "Perhaps my grandma will finally like me now!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-500"
+          }
+        ],
+        "text": "I see. Are you sure this was the right decision?"
       }
-    ],
-    "text": "Back to the drawing board."
-  }
-},
-{
-  "Dilemma": "I own Beelicious, a bee farm capable of producing the sweetest honey. Recently many of my bees have been incapable of finding their colonies, appearing completely disoriented. Some colonies have even started dying! I am sure it is the insecticides those farmers in the area use. Would you perhaps considering banning the particular pesticides they use, it kills more than just their problems!",
-  "Name": "Beelicious C.E.O.",
-  "character": "12",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
+    },
+    {
+      "Dilemma": "I’d like to reclaim a patch of land for cattle breeding. The cattle can be used as food as well as for clothing. Will you help me in my endeavor? ",
+      "AdvisorText": "",
+      "Name": "Plotter Sara",
+      "character": "12",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "10"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "-100000"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "1000"
+          }
+        ],
+        "text": "I look forward to working with you!"
       },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-50000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-500"
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "1",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "2",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "3",
+            "isToday": "true",
+            "amount": "-5"
+          },
+          {
+            "resourceType": "4",
+            "isToday": "true",
+            "amount": "5"
+          },
+          {
+            "resourceType": "5",
+            "isToday": "true",
+            "amount": "0"
+          },
+          {
+            "resourceType": "6",
+            "isToday": "true",
+            "amount": "-850"
+          }
+        ],
+        "text": "You basta… I mean, I apologise for taking up your time."
       }
-    ],
-    "text": "I'll get to sending the closure orders right away!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "But why would you NOT choose to ban pesticides..?"
-  }
-},
-{
-  "Dilemma": "There ssseems to be a virus spreading among the cattle, I’d recommend we kill all the infected animals before it ssspreads too far. ",
-  "Name": "Biologist Slith",
-  "character": "13",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-10"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-125000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-200"
-      }
-    ],
-    "text": "Yes, I really think this is the right choice sssir!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-1000"
-      }
-    ],
-    "text": "Wh..w...WHAT!?"
-  }
-},
-{
-  "Dilemma": "We want to use the nearby forest as an expedition place to advertise nature! Here we will do camping, quid tours, just roasting some marshmallows… You know?",
-  "Name": "Irene",
-  "character": "10",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "500"
-      }
-    ],
-    "text": "I hereby swear to protect this forest!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-300"
-      }
-    ],
-    "text": "There are other things than marshmallows burning now..."
-  }
-},
-{
-  "Dilemma": "Greetings your highness, I come to you with a most lucrative proposal. I have engineered a crop species that produces toxins, protecting it from any unwanted pests and ensuring our people remain well fed. With your approval I could bring it to the market, revolutionizing our pesticide management and preventing crop loss. I can assure you this would generate quite a profit, our most reverent ruler.",
-  "Name": "Chemist Aurelia",
-  "character": "0",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "50000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "Thank you my liege. I will get right to it."
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "I do suppose proposing toxins to your holiness was not the brightest idea..."
-  }
-},
-{
-  "Dilemma": "I would like to start a farm in the Southern region, but I’m terrible low on money. Would you care to fund a bit? It’s only agriculture. ",
-  "Name": "Farmer Lynn",
-  "character": "2",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-300000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "1500"
-      }
-    ],
-    "text": "Thank you very much! This way I can finally feed my family and my people. "
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-1000"
-      }
-    ],
-    "text": "We are all going to die… "
-  }
-},
-{
-  "Dilemma": "I would like a new road near my house so I can try out my new motorcycle! … Once I get my drivers licence, of course.",
-  "Name": "Felicia",
-  "character": "10",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-50000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "1500"
-      }
-    ],
-    "text": "Awesome!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "Nawh..."
-  }
-},
-{
-  "Dilemma": "Our company, Solargized, would like to develop a solar farm in the desert south of Oasith. A photovoltaic power station will provide more than enough energy for the little town and might turn up a profit eventually, as we may sell energy to neighbouring towns. If your majesty is willing to meet our investment, we can share profits.",
-  "Name": "Solargized representative",
-  "character": "6",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "50000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "My boss will be elated!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "0"
-      }
-    ],
-    "text": "I do understand your decision. That does not mean I agree."
-  }
-},
-{
-  "Dilemma": "I got a great deal for you sir! I have the idea to build a resthouse on the cattle breeding terrain. We got more than enough food to go around and the elder people need someplace safe. How about it?",
-  "Name": "John Dane",
-  "character": "11",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-100000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "500"
-      }
-    ],
-    "text": "Perhaps my grandma will finally like me now!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-500"
-      }
-    ],
-    "text": "I see. Are you sure this was the right decision?"
-  }
-},
-{
-  "Dilemma": "I’d like to reclaim a patch of land for cattle breeding. The cattle can be used as food as well as for clothing. Will you help me in my endeavor? ",
-  "Name": "Plotter Sara",
-  "character": "12",
-  "State": "0",
-  "PositiveDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "10"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "-100000"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "1000"
-      }
-    ],
-    "text": "I look forward to working with you!"
-  },
-  "NegativeDialog": {
-    "messages": [
-      {
-        "resourceType": "0",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "1",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "2",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "3",
-        "isToday": "true",
-        "amount": "-5"
-      },
-      {
-        "resourceType": "4",
-        "isToday": "true",
-        "amount": "5"
-      },
-      {
-        "resourceType": "5",
-        "isToday": "true",
-        "amount": "0"
-      },
-      {
-        "resourceType": "6",
-        "isToday": "true",
-        "amount": "-850"
-      }
-    ],
-    "text": "You basta… I mean, I apologise for taking up your time."
-  }
-}
+    }
   ]
 }

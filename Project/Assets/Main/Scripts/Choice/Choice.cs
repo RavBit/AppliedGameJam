@@ -10,6 +10,8 @@ public class Choice  {
     [TextArea()]
     public string Dilemma;
 
+	[Header("Advisor text")]
+	public string AdvisorText;
     [Header("Character name: ")]
     [TextArea()]
     public string Name;
@@ -23,6 +25,10 @@ public class Choice  {
 
     [Header("Negative Dialog")]
     public Dialog NegativeDialog;
+
+	public string GetAdvisorText() {
+		return AdvisorText;
+	}
 
 }
 

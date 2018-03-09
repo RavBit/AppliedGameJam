@@ -8,13 +8,17 @@ using System;
 [Serializable]
 public class ResourceMessage {
 	public Resources resourceType;
-	public bool isToday = true;
 	public int amount;
+	public int lrBaseChange;
+	public float lrModChange;
+	public LivingResource lr;
 
-	public void Initialise(Resources t, int i, bool b) {
+	public void Initialise(Resources t, int i, int lrBase, float lrMod, LivingResource l = null) {
 		resourceType = t;
 		amount = i;
-		isToday = b;
+		lr = l;
+		lrBaseChange = lrBase;
+		lrModChange = lrMod;
 	}
 
 	public Resources GetResourceType() {
@@ -23,9 +27,5 @@ public class ResourceMessage {
 
 	public int GetAmount() {
 		return amount;
-	}
-
-	public bool GetIsToday() {
-		return isToday;
 	}
 }

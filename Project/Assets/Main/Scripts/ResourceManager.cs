@@ -103,6 +103,15 @@ public class ResourceManager : MonoBehaviour {
 					default:
 						break;
 				}
+				if(i.lr != null) {
+					EventManager._AddLivingResource(i.lr);
+				}
+				if(i.lrBaseChange != 0) {
+					EventManager._AddBaseValue(i.resourceType, i.lrBaseChange);
+				}
+				if(i.lrModChange != 0) {
+					EventManager._AddModifierValue(i.resourceType, i.lrModChange);
+				}
 			}
 			EventManager._SendV4(CalculateDeltas());
 			CheckEnd();

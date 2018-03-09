@@ -1,0 +1,643 @@
+{
+  "choices": [
+    {
+      "Dilemma": "",
+      "AdvisorText": "",
+      "Name": "",
+      "character": "0",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      },
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      }
+    },{
+      "Dilemma": "",
+      "AdvisorText": "",
+      "Name": "",
+      "character": "0",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      },
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      }
+    },
+      {
+      "Dilemma": "",
+      "AdvisorText": "",
+      "Name": "",
+      "character": "0",
+      "State": "0",
+      "PositiveDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      },
+      "NegativeDialog": {
+        "messages": [
+          {
+            "resourceType": "0",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "1",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"1",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "2",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"2",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "3",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"3",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "4",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"4",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "5",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"5",
+                  "amount":"0",
+                  "isToBeDestroyed":"false"
+              }
+          },
+          {
+            "resourceType": "6",
+            "amount": "0",
+              "lrBaseChange": "0",
+              "lrModChange": "0",
+              "lr":{
+                  "lifetime":"0",
+                  "cooldown": "0",
+                  "initCooldown":"0",
+                  "res":"0",
+                  "amount":"6",
+                  "isToBeDestroyed":"false"
+              }
+          }
+        ],
+        "text": ""
+      }
+    }
+    
+  ]
+}

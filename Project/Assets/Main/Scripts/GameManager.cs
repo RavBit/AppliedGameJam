@@ -52,10 +52,10 @@ public class GameManager : MonoBehaviour {
 			Debug.Log(rs.Length);
 			foreach(ResourceMessage rm in rs) {
 				if(rm != null) {
-					if(rm.GetIsToday())
-						currentDay.Enqueue(rm);
-					else
-						nextDay.Enqueue(rm);
+					//if(rm.GetIsToday())
+					currentDay.Enqueue(rm);
+					//else
+					//	nextDay.Enqueue(rm);
 				}
 			}
 		}

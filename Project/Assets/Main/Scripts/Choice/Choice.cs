@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System;
 
-//This is a storage class to hold 2 dialogs. It keeps a state depending on the dis-/approve bottun hit. It get's handled in the resourcesManager.
+//This is a storage class to hold 2 dialogs. It keeps a state depending on the dis-/approve button hit. It get's handled in the resourcesManager.
 [Serializable]
 public class Choice  {
     [Header("Dilemma: ")]

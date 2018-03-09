@@ -18,11 +18,17 @@ public class ChoiceManager : MonoBehaviour {
 	private ChoicesContainer choices;
 
 	private void Awake() {
-		dataPath = Application.streamingAssetsPath + "/Choices.json";
-		LoadJson();
-	}
+        string url = "http://81.169.177.181/OLP/Choices.json";
+        WWW www = new WWW(url);
+        StartCoroutine(WaitForRequest(www));
+    }
+    IEnumerator WaitForRequest(WWW www)
+    {
+        yield return www;
+        LoadJson(www.text);
+    }
 
-	private void Start() {
+    private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
@@ -82,14 +88,10 @@ public class ChoiceManager : MonoBehaviour {
     }
 
 	[ContextMenu("LoadFromJson")]
-	private void LoadJson() {
-		using(StreamReader stream = new StreamReader(dataPath)) {
-			string json = stream.ReadToEnd();
-			choices = JsonConvert.DeserializeObject<ChoicesContainer>(json);
-
-			//choices = JsonUtility.FromJson<ChoicesContainer>(json);
-			//Debug.Log($"Length of choices: {choices.choices.Length}");
-		}
+	private void LoadJson(string json) {
+        choices = JsonConvert.DeserializeObject<ChoicesContainer>(json);
+        //choices = JsonUtility.FromJson<ChoicesContainer>(json);
+        //Debug.Log($"Length of choices: {choices.choices.Length}");
 		Choices = choices.choices.ToList();
 	}
 }

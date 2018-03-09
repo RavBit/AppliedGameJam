@@ -1,10 +1,12 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 //This is a storage class that contains the values to change for a single resource.
 [CreateAssetMenu(menuName = "ResourceMessage")]
-public class ResourceMessage : ScriptableObject{
+[Serializable]
+public class ResourceMessage {
 	public Resources resourceType;
 	public bool isToday = true;
 	public int amount;

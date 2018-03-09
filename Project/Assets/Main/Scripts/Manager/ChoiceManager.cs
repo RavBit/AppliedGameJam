@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
+using System.Linq;
+using Newtonsoft.Json;
 
 //This script manages the placing and removal of choices in the gamescene.
 public class ChoiceManager : MonoBehaviour {
@@ -9,7 +12,17 @@ public class ChoiceManager : MonoBehaviour {
     public int choicecounter = -1;
     public Queue<ResourceMessage> ChoiceQueue = new Queue<ResourceMessage>();
 
-    private void Start() {
+	[SerializeField]
+	private string dataPath; //= Application.streamingAssetsPath + "/Choices.json";
+	[SerializeField]
+	private ChoicesContainer choices;
+
+	private void Awake() {
+		dataPath = Application.streamingAssetsPath + "/Choices.json";
+		LoadJson();
+	}
+
+	private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.ChoosePositive += PositiveChoice;
         EventManager.ChooseNegative += NegativeChoice;
@@ -67,4 +80,16 @@ public class ChoiceManager : MonoBehaviour {
 
         EventManager.Choice_Load(Choices[choicecounter]);
     }
+
+	[ContextMenu("LoadFromJson")]
+	private void LoadJson() {
+		using(StreamReader stream = new StreamReader(dataPath)) {
+			string json = stream.ReadToEnd();
+			choices = JsonConvert.DeserializeObject<ChoicesContainer>(json);
+
+			//choices = JsonUtility.FromJson<ChoicesContainer>(json);
+			//Debug.Log($"Length of choices: {choices.choices.Length}");
+		}
+		Choices = choices.choices.ToList();
+	}
 }

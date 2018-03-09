@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ChoiceDataContainer xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <ChoiceDataArray>
+      
+    <ChoiceReflection CharacterName="Template name">
+  <fileName>          ""  </fileName>
+  <!-- 
+            0 = person_Alien
+            1 = person_Cook
+            2 = person_Farmer
+            3 = person_GeekyGirl
+            4 = person_HotDog
+            5 = person_Jorji
+            6 = person_LightBulb
+            7 = person_OctoGirl
+            8 = person_Protester
+            9 = person_QueenKing
+            10 = person_Rabbit  
+            11 = person_Salesman
+            12 = person_Sheep
+            13 = person_Snake
+            14 = person_Teenager
+            -->
+  <characterSprite>   0   </characterSprite>
+  <!-- This text is the text displayed ingame as the dilemma-->
+  <choiceText>        ""  </choiceText>
+  <!-- This is the text for the positive dialog option -->
+  <textPositive>      ""  </textPositive>
+  <!-- Resource changes for the positive result -->
+  <airPollutionPos>   0   </airPollutionPos>
+  <soilPollutionPos>  0   </soilPollutionPos>
+  <waterPollutionPos> 0   </waterPollutionPos>
+  <landUsePos>        0   </landUsePos>
+  <biodiversityPos>   0   </biodiversityPos>
+  <currencyPos>       0   </currencyPos>
+  <populationPos>     0   </populationPos>
+  <!-- This is the text for the negative dialog option -->
+  <textNegative>""</textNegative>
+  <!-- Resource changes for the negative result -->
+  <airPollutionNeg>   0   </airPollutionNeg>
+  <soilPollutionNeg>  0   </soilPollutionNeg>
+  <waterPollutionNeg> 0   </waterPollutionNeg>
+  <landUseNeg>        0   </landUseNeg>
+  <biodiversityNeg>   0   </biodiversityNeg>
+  <currencyNeg>       0   </currencyNeg>
+  <populationNeg>     0   </populationNeg>
+</ChoiceReflection>
+      
+</ChoiceDataArray>

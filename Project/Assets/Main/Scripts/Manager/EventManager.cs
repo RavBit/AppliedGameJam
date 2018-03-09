@@ -48,6 +48,10 @@ public class EventManager : MonoBehaviour {
 	public static event GetDel GetPopulation;
 	public static event GetDel GetCurrency;
 
+	public delegate void LivingRes(params LivingResource[] res);
+	public static event LivingRes AddLivingResource;
+	public static event ChooseEvent ExecuteLivingResources;
+
 	public delegate GameObject GetAnim(Characters ch);
 	public static event GetAnim _GetAnim;
 
@@ -151,4 +155,11 @@ public class EventManager : MonoBehaviour {
 		return _GetAnim(c);
 	}
 
+	public static void _AddLivingResource(params LivingResource[] res) {
+		AddLivingResource(res);
+	}
+
+	public static void _ExecuteLivingResources() {
+		ExecuteLivingResources();
+	}
 }

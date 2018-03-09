@@ -69,6 +69,7 @@ public class NightState : BaseState {
 			}
 			EventManager._EnqueueMessage(rm);
 		}
+		EventManager._ExecuteLivingResources();
 		isDone = true;
 	}
 

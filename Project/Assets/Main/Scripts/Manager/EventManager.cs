@@ -13,6 +13,9 @@ public class EventManager : MonoBehaviour {
 	public static event SubmitV4 SendV4;
 	public static event SubmitV4 SetupResources;
 
+
+    public delegate void StoreUserData(UserData item);
+    public static event StoreUserData CreateUserData;
     public delegate void StoreItem(Item item);
     public static event StoreItem CreateStoreItem;
     public static event StoreItem BuyStoreItem;
@@ -106,6 +109,10 @@ public class EventManager : MonoBehaviour {
     public static void Create_StoreItem(Item item)
     {
         CreateStoreItem(item);
+    }
+    public static void Create_UserData(UserData userdata)
+    {
+        CreateUserData(userdata);
     }
     public static void Buy_StoreItem(Item item)
     {

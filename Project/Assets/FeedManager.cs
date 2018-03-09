@@ -25,7 +25,8 @@ public class FeedManager : MonoBehaviour {
             foreach (TempUser user in _users)
             {
                 WWWForm user_id = new WWWForm();
-                user_id.AddField("user_id", user.ID);
+                Debug.Log("user_id " + user.user_id);
+                user_id.AddField("user_id", user.user_id);
                 WWW _usernamedata = new WWW("http://81.169.177.181/olp/get_user.php", user_id);
                 yield return _usernamedata;
                 if (string.IsNullOrEmpty(_usernamedata.error))
@@ -39,7 +40,7 @@ public class FeedManager : MonoBehaviour {
                             if(item.ID == user.item)
                             {
                                 UD.text = UI.name + " has build an " + item.name;
-                                Debug.Log(UI.name + " has build an " + item.name);
+                                EventManager.Create_UserData(UD);
                             }
                         }
                     }

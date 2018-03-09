@@ -4,11 +4,6 @@ using System.Linq;
 using UnityEngine;
 
 public class ItemManager : MonoBehaviour {
-    void Start()
-    {
-        EventManager.BuyStoreItem += BuyItem;
-        StartCoroutine("RequestItems");
-    }
     public Item tempitem;
     [SerializeField]
     List<Item> _owneditems;
@@ -17,6 +12,20 @@ public class ItemManager : MonoBehaviour {
 
     [SerializeField]
     List<Item_ID> _itemid;
+
+    private void Start()
+    {
+        EventManager.BuyStoreItem += BuyItem;
+        Request_Items();
+    }
+    public void Request_Items()
+    {
+        foreach (Transform child in GetComponent<ShopManager>().ItemHolder.transform)
+        {
+            GameObject.Destroy(child.gameObject);
+        }
+        StartCoroutine("RequestItems");
+    }
     public IEnumerator RequestItems()
     {
         _items = new List<Item>();
@@ -33,7 +42,6 @@ public class ItemManager : MonoBehaviour {
 
             if (string.IsNullOrEmpty(owneditemsdata.error))
             {
-                Debug.Log("owned " + owneditemsdata.text);
                 _itemid = new List<Item_ID>();
                 _itemid = JsonHelper.getJsonArray<Item_ID>(owneditemsdata.text).ToList<Item_ID>();
                 for (int i = 0; i < _itemid.Count; i++)
@@ -64,7 +72,6 @@ public class ItemManager : MonoBehaviour {
         foreach(Item item in _items)
         {
             bool test = _owneditems.Any(x => x.ID == item.ID);
-            Debug.Log("test : " + item.ID + " exists " + test);
             if(test)
             {
                 item.owned = true;
@@ -80,7 +87,6 @@ public class ItemManager : MonoBehaviour {
     }
     public IEnumerator Buy_Item()
     {
-        Debug.Log("test");
         WWWForm user_id = new WWWForm();
         user_id.AddField("user_id", AppManager.instance.User.ID);
         user_id.AddField("item_id", tempitem.ID);
@@ -88,7 +94,6 @@ public class ItemManager : MonoBehaviour {
         yield return itemdata;
         if (string.IsNullOrEmpty(itemdata.error))
         {
-            Debug.Log("test: " + itemdata.text);
             SuccessCheck SC = JsonUtility.FromJson<SuccessCheck>(itemdata.text);
             if (SC.success)
             {
@@ -99,7 +104,6 @@ public class ItemManager : MonoBehaviour {
                 }
                 StartCoroutine("RequestItems");
                 AppManager.instance.ParseTowardsResources();
-                Debug.Log("Test");
             }
         }
         else

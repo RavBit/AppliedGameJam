@@ -5248,6 +5248,7 @@ GameObject:
   - component: {fileID: 1635043946}
   - component: {fileID: 1635043947}
   - component: {fileID: 1635043948}
+  - component: {fileID: 1635043949}
   m_Layer: 0
   m_Name: __Game_Manager__
   m_TagString: Untagged
@@ -5327,6 +5328,17 @@ MonoBehaviour:
   sheep: {fileID: 1475577188561170, guid: b3bbe078d5057ea4d8ee27b65201a35b, type: 2}
   snake: {fileID: 1926799424856690, guid: e72afaee07500324bad9621898d40786, type: 2}
   teenager: {fileID: 1583751496242948, guid: 72dc924b4042b00428adb0bd4a2f5c80, type: 2}
+--- !u!114 &1635043949
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1635043943}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4218f93a2a47924189c4a15cb90f2e2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1653804601
 GameObject:
   m_ObjectHideFlags: 0

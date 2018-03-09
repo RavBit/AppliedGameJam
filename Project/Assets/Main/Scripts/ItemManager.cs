@@ -8,7 +8,7 @@ public class ItemManager : MonoBehaviour {
     [SerializeField]
     List<Item> _owneditems;
     [SerializeField]
-    List<Item> _items;
+    public List<Item> _items;
 
     [SerializeField]
     List<Item_ID> _itemid;
@@ -29,6 +29,9 @@ public class ItemManager : MonoBehaviour {
     public IEnumerator RequestItems()
     {
         _items = new List<Item>();
+        _items.Clear();
+        _owneditems.Clear();
+        _itemid.Clear();
         WWW itemdata = new WWW("http://81.169.177.181/olp/item_list.php");
         yield return itemdata;
         if (string.IsNullOrEmpty(itemdata.error))

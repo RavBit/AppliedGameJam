@@ -4,11 +4,14 @@ using UnityEngine;
 
 public class ShopManager : MonoBehaviour {
     public GameObject ItemHolder;
+    public GameObject UserHolder;
+    public GameObject UserItem;
     public GameObject ShopItem;
     public Sprite[] shopsprites;
     void Start()
     {
         EventManager.CreateStoreItem += InitItem;
+        //TODO SET EVENT FOR CREATE USERITEM
     }
 
     void InitItem(Item _item)
@@ -20,5 +23,15 @@ public class ShopManager : MonoBehaviour {
         go.GetComponent<ShopItem>().Sprite.sprite = shopsprites[_item.sprite];
         go.GetComponent<ShopItem>().SetItem(_item);
         go.GetComponent<ShopItem>().UpdateStatus();
+    }
+
+    void InitUser(UserData _data)
+    {
+        GameObject go = Instantiate(UserItem, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
+        go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
+        go.transform.parent = UserHolder.transform;
+        go.transform.localPosition = Vector3.zero;
+        go.GetComponent<UserItem>().Sprite.sprite = shopsprites[_data._sprite];
+        go.GetComponent<UserItem>().SetUser(_data);
     }
 }

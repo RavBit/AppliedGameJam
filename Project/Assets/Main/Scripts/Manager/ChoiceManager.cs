@@ -9,7 +9,7 @@ using Newtonsoft.Json;
 public class ChoiceManager : MonoBehaviour {
     public List<Choice> Choices;
     public Choice curchoice;
-    public int choicecounter = -1;
+    public int choicecounter = 0;
     public Queue<ResourceMessage> ChoiceQueue = new Queue<ResourceMessage>();
 
 	[SerializeField]
@@ -19,6 +19,11 @@ public class ChoiceManager : MonoBehaviour {
 
 	private void Awake() {
         string url = "http://81.169.177.181/OLP/Choices.json";
+        if(PlayerPrefs.HasKey("Choice") == false)
+        {
+            PlayerPrefs.SetInt("Choice", 0);
+        }
+        choicecounter = PlayerPrefs.GetInt("Choice");
         WWW www = new WWW(url);
         StartCoroutine(WaitForRequest(www));
     }
@@ -55,9 +60,13 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.InterMission_Continue();
     }
 	private void Initialize() {
-		EventManager.Choice_Load(Choices[choicecounter]);
+        Invoke("Init", 3);
 	}
-	private void PositiveChoice() {
+    private void Init()
+    {
+        EventManager.Choice_Load(Choices[choicecounter]);
+    }
+    private void PositiveChoice() {
         curchoice.State = State.Positive;
         EventManager.Display_Choice(curchoice);
     }
@@ -72,6 +81,7 @@ public class ChoiceManager : MonoBehaviour {
 	//This function removes the current choice from the gamescene and submits all the resourceMessages to the gameManager.
     private void UnLoadChoice() {
         choicecounter++;
+        PlayerPrefs.SetInt("Choice", choicecounter);
         if (curchoice.State == State.Positive) {
             foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {
                 ChoiceQueue.Enqueue(rm);

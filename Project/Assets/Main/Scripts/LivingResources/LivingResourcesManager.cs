@@ -7,6 +7,7 @@ public class LivingResourcesManager : MonoBehaviour {
 	private List<LivingResource> livingResources;
 
 	private void Awake() {
+		livingResources = new List<LivingResource>();
 		//If you want to add a living resource
 		EventManager.AddLivingResource += AddLivingResource;
 

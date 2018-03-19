@@ -9,16 +9,22 @@ using System;
 public class ResourceMessage {
 	public Resources resourceType;
 	public int amount;
-	public int lrBaseChange;
-	public float lrModChange;
+
+	public int Amount {
+		get {
+			if(lrID >= 0) {
+				lr = LivingResourcesStorage.instance.GetLRWithID(lrID);
+			}
+			return amount;
+		}
+	}
+
+	public int lrID;
 	public LivingResource lr;
 
-	public void Initialise(Resources t, int i, int lrBase, float lrMod, LivingResource l = null) {
+	public void Initialise(Resources t, int i) {
 		resourceType = t;
 		amount = i;
-		lr = l;
-		lrBaseChange = lrBase;
-		lrModChange = lrMod;
 	}
 
 	public Resources GetResourceType() {

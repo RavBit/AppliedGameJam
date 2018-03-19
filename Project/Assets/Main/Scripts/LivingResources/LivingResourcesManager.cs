@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class LivingResourcesManager : MonoBehaviour {
 
@@ -24,13 +25,13 @@ public class LivingResourcesManager : MonoBehaviour {
 		airPMod = soilPMod = waterPMod = landUMod = biodDMod = curMod =  popMod = 1.0f;
 		airP = soilP = waterP = landU = bioD = cur = pop = new ResourceMessage();
 
-		airP.Initialise(Resources.airPollution, initAirP, 0, 0);
-		soilP.Initialise(Resources.soilPollution, initSoilP, 0, 0);
-		waterP.Initialise(Resources.waterPollution, initWaterP, 0, 0);
-		landU.Initialise(Resources.landUse, initLandU, 0, 0);
-		bioD.Initialise(Resources.biodiversity, initBiodD, 0, 0);
-		cur.Initialise(Resources.currency, initCur, 0, 0);
-		pop.Initialise(Resources.population, initPop, 0, 0);
+		airP.Initialise(Resources.airPollution, initAirP);
+		soilP.Initialise(Resources.soilPollution, initSoilP);
+		waterP.Initialise(Resources.waterPollution, initWaterP);
+		landU.Initialise(Resources.landUse, initLandU);
+		bioD.Initialise(Resources.biodiversity, initBiodD);
+		cur.Initialise(Resources.currency, initCur);
+		pop.Initialise(Resources.population, initPop);
 
 	}
 
@@ -71,13 +72,13 @@ public class LivingResourcesManager : MonoBehaviour {
 	private ResourceMessage airP, soilP, waterP, landU, bioD, cur, pop;
 
 	public void DailyResources() {
-		airP.Initialise(Resources.airPollution, (int)(airP.amount * airPMod), 0, 0);
-		soilP.Initialise(Resources.soilPollution, (int)(soilP.amount * soilPMod), 0, 0);
-		waterP.Initialise(Resources.waterPollution, (int)(waterP.amount * waterPMod), 0, 0);
-		landU.Initialise(Resources.landUse, (int)(landU.amount * landUMod), 0, 0);
-		bioD.Initialise(Resources.biodiversity, (int)(bioD.amount * biodDMod), 0, 0);
-		cur.Initialise(Resources.currency, (int)(cur.amount * curMod), 0, 0);
-		pop.Initialise(Resources.population, (int)(pop.amount * popMod), 0, 0);
+		airP.Initialise(Resources.airPollution, (int)(airP.amount * airPMod));
+		soilP.Initialise(Resources.soilPollution, (int)(soilP.amount * soilPMod));
+		waterP.Initialise(Resources.waterPollution, (int)(waterP.amount * waterPMod));
+		landU.Initialise(Resources.landUse, (int)(landU.amount * landUMod));
+		bioD.Initialise(Resources.biodiversity, (int)(bioD.amount * biodDMod));
+		cur.Initialise(Resources.currency, (int)(cur.amount * curMod));
+		pop.Initialise(Resources.population, (int)(pop.amount * popMod));
 
 		EventManager._SendResourceMessage(airP, soilP, waterP, landU, bioD, cur, pop);
 	}
@@ -135,37 +136,4 @@ public class LivingResourcesManager : MonoBehaviour {
 	}
 }
 
-public class LivingResource {
-	public int lifetime;
-	public int cooldown;
-	public int initCooldown;
-	private Resources res;
-	private int amount;
-	public bool isToBeDestroyed = false;
 
-	public LivingResource(Resources res, int amt, int life, int cd) {
-		lifetime = life;
-		cooldown = cd;
-		initCooldown = cooldown;
-		amount = amt;
-		this.res = res;
-	}
-
-	public void Act() {
-		if(lifetime <= 1) {
-			isToBeDestroyed = true;
-		}
-		else {
-			if(cooldown <= 1) {
-				ResourceMessage rm = new ResourceMessage();
-				rm.Initialise(res, amount, 0, 0);
-				EventManager._SendResourceMessage(rm);
-				lifetime--;
-				cooldown = initCooldown;
-			}
-			else {
-				cooldown--;
-			}
-		}
-	}
-}

@@ -59,6 +59,9 @@ public class EventManager : MonoBehaviour {
 	public static event LivingRes AddLivingResource;
 	public static event ChooseEvent ExecuteLivingResources;
 
+	public delegate void StringEvent(string message);
+	public static event StringEvent SendBreakingNews;
+
 	public delegate void AddBaseEvent(Resources res, int amt);
 	public static event AddBaseEvent AddBaseValueEvent;
 	public delegate void AddModEvent(Resources res, float amt);
@@ -66,6 +69,9 @@ public class EventManager : MonoBehaviour {
 
 	public delegate GameObject GetAnim(Characters ch);
 	public static event GetAnim _GetAnim;
+
+	public delegate void LREvent(Resources res, int id);
+	public delegate void LRGetEvent(LivingResource lr);
 
 	public static event ChooseEvent DayCycle;
     public static void Day_Cycle() {
@@ -190,5 +196,9 @@ public class EventManager : MonoBehaviour {
 
 	public static void _AddModifierValue(Resources res, float amt) {
 		AddModifierEvent(res, amt);
+	}
+
+	public static void _SendBreakingNews(string s) {
+		SendBreakingNews(s);
 	}
 }

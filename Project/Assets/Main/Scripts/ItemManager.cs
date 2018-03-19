@@ -100,13 +100,17 @@ public class ItemManager : MonoBehaviour {
             SuccessCheck SC = JsonUtility.FromJson<SuccessCheck>(itemdata.text);
             if (SC.success)
             {
-                AppManager.instance.User.currency -= tempitem.costs;
+                ResourceMessage rm = new ResourceMessage();
+                rm.Initialise(Resources.currency, -tempitem.costs, 0, 0);
+                
+                EventManager._SendResourceMessage(rm);
+                AppManager.instance.StartCoroutine("UpdateResources");
                 foreach (Transform child in GetComponent<ShopManager>().ItemHolder.transform)
                 {
                     GameObject.Destroy(child.gameObject);
                 }
                 StartCoroutine("RequestItems");
-                AppManager.instance.ParseTowardsResources();
+                //AppManager.instance.ParseTowardsResources();
             }
         }
         else

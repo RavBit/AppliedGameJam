@@ -44,12 +44,13 @@ public class AppManager : MonoBehaviour {
     {
         Debug.Log("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! RESOURCES UPDATE");
         RM = _RM;
+        Debug.Log("RM " + RM.currency);
 
     }
     public IEnumerator UpdateResources()
     {
         //Assigning strings from the text
-        Debug.Log("RESOURCES UPDATE " + RM.population);
+        Debug.Log("RESOURCES UPDATE " + RM.currency);
         //Init form and give them the email and password
         WWWForm form = new WWWForm();
         form.AddField("user_ID", User.ID);
@@ -81,6 +82,7 @@ public class AppManager : MonoBehaviour {
                 }
                 else
                 {
+                    Debug.Log("RM : " + RM.currency);
                     User.air_pollution = RM.airPollution;
                     User.soil_pollution = RM.soilPollution;
                     User.water_pollution = RM.waterPollution;
@@ -89,6 +91,7 @@ public class AppManager : MonoBehaviour {
                     User.currency = RM.currency;
                     User.population = RM.population;
                     User.currency = RM.currency;
+                    ParseTowardsResources();
                     //Login the user and redirect it to a new scene
                     Debug.Log("Succes!");
                 }

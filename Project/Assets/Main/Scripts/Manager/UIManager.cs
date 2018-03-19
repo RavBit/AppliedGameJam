@@ -58,19 +58,12 @@ public class UIManager : MonoBehaviour {
     }
 
     void EnableUI() {
-        Screen.SetActive(false);
-        Results.SetActive(true);
-        ResultPop.DOText("" + (resourceDeltas.population - AppManager.instance.User.population) + " people", 1, true,ScrambleMode.None);
-        ResultPol.DOText("" + (((resourceDeltas.airPollution + resourceDeltas.waterPollution + resourceDeltas.soilPollution) / 3) - (AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + " %", 1, true, ScrambleMode.None);
-        ResultLandU.DOText("" + (resourceDeltas.landUse - AppManager.instance.User.land_use) + "%", 1, true, ScrambleMode.None);
-        ResultCur.DOText("" + (resourceDeltas.currency - AppManager.instance.User.currency) + " paluta", 1, true, ScrambleMode.None);
-        ResultBio.DOText("" + (resourceDeltas.biodiversity - AppManager.instance.User.biodiversity) + "%", 1, true, ScrambleMode.None);
-        Choice.SetActive(false);
+        //Screen.SetActive(false);
 
     }
     void DisableUI() {
-        Screen.SetActive(true);
-        Results.SetActive(false);
+        //Screen.SetActive(true);
+        //Results.SetActive(false);
         Choice.SetActive(true);
     }
 
@@ -119,8 +112,8 @@ public class UIManager : MonoBehaviour {
         EventManager.Choose_Choice(state);
     }
     public void Continue() {
-        Choice.SetActive(false);
-        EventManager.Day_Cycle();
+        //EventManager.Day_Cycle();
+        Choice.SetActive(true);
         EventManager.Choice_Unload();
     }
 }

@@ -17,9 +17,9 @@ public class VHSTest : MonoBehaviour
     {
         while(true)
         {
-            _material.SetFloat("_OffsetDistortion", 250f);
-            yield return new WaitForSeconds(0.5f);
-            _material.SetFloat("_OffsetDistortion", 750f);
+            _material.SetFloat("_OffsetDistortion", 10f);
+            yield return new WaitForSeconds(0.1f);
+            _material.SetFloat("_OffsetDistortion", 1500f);
             yield return new WaitForSeconds(10);
         }
     }

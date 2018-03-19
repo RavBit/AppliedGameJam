@@ -34,6 +34,10 @@ public class ShopItem : MonoBehaviour {
             Bought.SetActive(true);
             BuyButton.SetActive(false);
         }
+        if(Item.costs > AppManager.instance.User.currency)
+        {
+            BuyButton.GetComponent<Button>().interactable = false;
+        }
         CheckResources();
     }
     private void CheckResources()

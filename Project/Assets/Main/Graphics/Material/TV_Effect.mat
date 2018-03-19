@@ -71,7 +71,7 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _OffsetColor: 0
-    - _OffsetDistortion: 750
+    - _OffsetDistortion: 1500
     - _OffsetNoiseX: 0
     - _OffsetNoiseY: 0
     - _OffsetPosY: 0

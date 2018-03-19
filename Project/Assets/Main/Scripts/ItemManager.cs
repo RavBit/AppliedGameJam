@@ -30,7 +30,7 @@ public class ItemManager : MonoBehaviour {
     {
         _items = new List<Item>();
         _items.Clear();
-        _owneditems.Clear();
+        ClearModifiers();
         _itemid.Clear();
         WWW itemdata = new WWW("http://81.169.177.181/olp/item_list.php");
         yield return itemdata;
@@ -70,6 +70,7 @@ public class ItemManager : MonoBehaviour {
         }
         StoreInit();
     }
+
     public void StoreInit()
     {
         foreach(Item item in _items)
@@ -110,6 +111,7 @@ public class ItemManager : MonoBehaviour {
                     GameObject.Destroy(child.gameObject);
                 }
                 StartCoroutine("RequestItems");
+                EventManager.Parse_MapItem(tempitem);
                 //AppManager.instance.ParseTowardsResources();
             }
         }
@@ -129,7 +131,7 @@ public class Item
     public string description;
     public int costs;
     public int days;
-    public float land_pollution;
+    public float air_pollution;
     public float water_pollution;
     public float soil_pollution;
     public float biodiversity;

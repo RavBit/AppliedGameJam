@@ -34,6 +34,10 @@ public class UIManager : MonoBehaviour {
     public Text ResultLandU;
     public Text ResultCur;
 
+    public Color LoadingColor;
+    public GameObject LoadingScreen;
+    public Image[] LoadingBar;
+    public Text LoadingText;
     //Format of: population, currency, happiness, environment
 
     private ResourceStorage resourceDeltas;
@@ -45,6 +49,25 @@ public class UIManager : MonoBehaviour {
         EventManager.UIContinue += ContinueUI;
         EventManager.SendV4 += GetDeltas;
         Screen_Sprite.transform.DOScale(0, 1);
+        StartCoroutine("Loading", 0);
+    }
+
+    public IEnumerator Loading(float seconds)
+    {
+        LoadingText.DOColor(LoadingColor, 5);
+        while (seconds <= 3)
+        {
+            seconds = seconds + 0.01f;
+            for (int i = 0; i < LoadingBar.Length; i++)
+            {
+                LoadingBar[i].fillAmount = (seconds / 3) * 1;
+            }
+            yield return new WaitForSeconds(0.01f);
+        }
+        yield return new WaitForSeconds(0.5f);
+        LoadingScreen.SetActive(false);
+
+
     }
     private void Update() {
         Population.text = "" + AppManager.instance.User.population;
@@ -52,9 +75,9 @@ public class UIManager : MonoBehaviour {
         Currency.text = "" + AppManager.instance.User.currency;
         Biodiversity.text = "" + AppManager.instance.User.biodiversity;
         Pollution.text = "" + ((AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + "%";
-        AirPollution.text = "" + AppManager.instance.User.air_pollution + "%";
-        SoilPollution.text = "" + AppManager.instance.User.soil_pollution + "%";
-        WaterPollution.text = "" + AppManager.instance.User.water_pollution + "%";
+        //AirPollution.text = "" + AppManager.instance.User.air_pollution + "%";
+        //SoilPollution.text = "" + AppManager.instance.User.soil_pollution + "%";
+        //WaterPollution.text = "" + AppManager.instance.User.water_pollution + "%";
     }
 
     void EnableUI() {

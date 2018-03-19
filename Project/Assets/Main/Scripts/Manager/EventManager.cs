@@ -38,6 +38,7 @@ public class EventManager : MonoBehaviour {
     public static event ChooseEvent UIDisable;
     public static event ChooseEvent UIContinue;
 	public static event ChooseEvent EmptyQueue;
+    public static event ChooseEvent CheckPopulationObjects;
 
 	public delegate void EndEvent(Resources r);
 	public static event EndEvent EndGame;
@@ -51,6 +52,9 @@ public class EventManager : MonoBehaviour {
 	public static event GetDel GetPopulation;
 	public static event GetDel GetCurrency;
 
+
+    public delegate void ParseItem(Item item);
+    public static event ParseItem ParseMapItem;
 	public delegate void LivingRes(params LivingResource[] res);
 	public static event LivingRes AddLivingResource;
 	public static event ChooseEvent ExecuteLivingResources;
@@ -105,7 +109,12 @@ public class EventManager : MonoBehaviour {
     public static void Choice_Unload() {
         ChoiceUnLoad();
     }
-	
+    public static void Parse_MapItem(Item item)
+    {
+        ParseMapItem(item);
+    }
+
+
     public static void Create_StoreItem(Item item)
     {
         CreateStoreItem(item);

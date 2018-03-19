@@ -44,7 +44,7 @@ public class ShopItem : MonoBehaviour {
     {
         if (Item.biodiversity != 0)
             BioDiversity.gameObject.SetActive(true);
-        if (Item.land_pollution != 0 || Item.soil_pollution != 0 || Item.water_pollution != 0)
+        if (Item.air_pollution != 0 || Item.soil_pollution != 0 || Item.water_pollution != 0)
             Pollution.gameObject.SetActive(true);
         if (Item.landuse != 0)
             LandUse.gameObject.SetActive(true);
@@ -56,6 +56,7 @@ public class ShopItem : MonoBehaviour {
     public void Buy()
     {
         EventManager.Buy_StoreItem(Item);
+       
     }
 
 }

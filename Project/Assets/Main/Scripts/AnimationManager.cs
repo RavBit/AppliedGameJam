@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum Resourcrewrewes { airPollution, soilPollution, waterPollution, landUse, biodiversity, currency, population}
 public enum Characters { alien, cook, farmer, geekyGirl, hotdog, jorji, lightBulb, octoGirl, protester, queenKing, rabbit, salesman, sheep, snake, teenager}
 
 public class AnimationManager : MonoBehaviour {

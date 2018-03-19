@@ -1,0 +1,85 @@
+{
+  "livingResources":[
+                    {
+                        "lifetime":"3",
+                        "cooldown":"3",
+                        "initCooldown":"3",
+                        "res":"0",
+                        "amount":"5",
+                        "breakingNews":"A recently built factory emits toxic gases causing air pollution to increase."
+                    },
+                    {
+                        "lifetime":"1",
+                        "cooldown":"3",
+                        "initCooldown":"3",
+                        "res":"4",
+                        "amount":"-100000",
+                        "breakingNews":"Recent increases in antibiotics in animal feed have bred a resistant bacterium. The government has paid farmers to contain this threat."
+                    },
+                    {
+                        "lifetime":"1",
+                        "cooldown":"3",
+                        "initCooldown":"3",
+                        "res":"0",
+                        "amount":"",
+                        "breakingNews":"Recent reports have shown that a rogue doctor has conducted tests on human subjects. The doctor has been prosecuted."
+                    },
+                    {
+                        "lifetime":"1",
+                        "cooldown":"3",
+                        "initCooldown":"3",
+                        "res":"6",
+                        "amount":"1000",
+                        "breakingNews":"Heart- and circulatory diseases have been greatly reduced in the past period. Researches claim that encouraging messages that have shown up in the streets are the cause of this."
+                    },
+                    {
+                        "lifetime":"3",
+                        "cooldown":"4",
+                        "initCooldown":"3",
+                        "res":"1",
+                        "amount":"5",
+                        "breakingNews":"The city's nuclear power plants are struggling with voiding their nuclear waste. The city is experiencing a backlog because of this."
+                    },
+                    {
+                        "lifetime":"3",
+                        "cooldown":"5",
+                        "initCooldown":"3",
+                        "res":"0",
+                        "amount":"5",
+                        "breakingNews":"Researchers have found that solid fuel power plants are emitting extreme amounts of carbon-dioxide gases into the atmosphere. They claim that this has caused the recent increase in respiratory diseases in the city."
+                    },
+                    {
+                        "lifetime":"1",
+                        "cooldown":"2",
+                        "initCooldown":"2",
+                        "res":"6",
+                        "amount":"-1000",
+                        "breakingNews":"Civilians living near the recently built wind turbines have filed complaints about the noise and that the turbines ruin the skyline of the city."
+                    },
+                    {
+                        "lifetime":"3",
+                        "cooldown":"5",
+                        "initCooldown":"3",
+                        "res":"0",
+                        "amount":"5",
+                        "breakingNews":"Air quality has greatly been reduced due to the emitted gases by the city's bus lines."
+                    },
+                    {
+                        "lifetime":"3",
+                        "cooldown":"5",
+                        "initCooldown":"3",
+                        "res":"5",
+                        "amount":"-100000",
+                        "breakingNews":"Increases in pesticides in agriculture initially led to increases of production but has created a backlash. The pests and weeds have become resistant to the pesticide. Huge damages have been paid."
+                    },
+      
+                    {
+                        "lifetime":"3",
+                        "cooldown":"5",
+                        "initCooldown":"3",
+                        "res":"5",
+                        "amount":"-50000",
+                        "breakingNews":"Farmers are on strike claiming that work has become impossible due to the amount of pests and weeds on their fields."
+                    }
+                ],  
+}

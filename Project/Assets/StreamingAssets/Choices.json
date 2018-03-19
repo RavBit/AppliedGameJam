@@ -357,9 +357,9 @@
       "PositiveDialog": {
         "messages": [
           {
-            "resourceType": "10",
+            "resourceType": "0",
             "isToday": "true",
-            "amount": "0"
+            "amount": "10"
           },
           {
             "resourceType": "1",

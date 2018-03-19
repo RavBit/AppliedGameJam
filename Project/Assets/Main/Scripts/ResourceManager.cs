@@ -77,7 +77,7 @@ public class ResourceManager : MonoBehaviour {
 			SavePrevious();
 			foreach(ResourceMessage i in res) {
 				Resources temp = i.GetResourceType();
-				int amt = i.amount;
+				int amt = i.Amount;
 				switch(temp) {
 					case Resources.airPollution:
 						AirPollution = AirPollution + amt;
@@ -106,12 +106,17 @@ public class ResourceManager : MonoBehaviour {
 				if(i.lr != null) {
 					EventManager._AddLivingResource(i.lr);
 				}
+				/*
 				if(i.lrBaseChange != 0) {
 					EventManager._AddBaseValue(i.resourceType, i.lrBaseChange);
 				}
 				if(i.lrModChange != 0) {
 					EventManager._AddModifierValue(i.resourceType, i.lrModChange);
 				}
+				if(i.lr.breakingNews != "" || i.lr.breakingNews.Length < 1) {
+					EventManager._SendBreakingNews(i.lr.breakingNews);
+				}
+				*/
 			}
 			EventManager._SendV4(CalculateDeltas());
 			CheckEnd();

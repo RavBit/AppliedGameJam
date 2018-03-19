@@ -93,7 +93,6 @@ public class ChoiceManager : MonoBehaviour {
             }
 
         }
-
         EventManager.Choice_Load(Choices[choicecounter]);
     }
 

@@ -1,643 +1,526 @@
 {
-  "choices": [
-    {
-      "Dilemma": "",
-      "AdvisorText": "",
-      "Name": "",
-      "character": "0",
-      "State": "0",
-      "PositiveDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      },
-      "NegativeDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      }
-    },{
-      "Dilemma": "",
-      "AdvisorText": "",
-      "Name": "",
-      "character": "0",
-      "State": "0",
-      "PositiveDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      },
-      "NegativeDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      }
-    },
-      {
-      "Dilemma": "",
-      "AdvisorText": "",
-      "Name": "",
-      "character": "0",
-      "State": "0",
-      "PositiveDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      },
-      "NegativeDialog": {
-        "messages": [
-          {
-            "resourceType": "0",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "1",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"1",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "2",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"2",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "3",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"3",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "4",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"4",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "5",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"5",
-                  "amount":"0",
-                  "isToBeDestroyed":"false"
-              }
-          },
-          {
-            "resourceType": "6",
-            "amount": "0",
-              "lrBaseChange": "0",
-              "lrModChange": "0",
-              "lr":{
-                  "lifetime":"0",
-                  "cooldown": "0",
-                  "initCooldown":"0",
-                  "res":"0",
-                  "amount":"6",
-                  "isToBeDestroyed":"false"
-              }
-          }
-        ],
-        "text": ""
-      }
-    }
-    
-  ]
+    "choices":[
+        {
+            "Dilemma":"Greetings Ruler, I propose we build a factory to generate revenue.",
+            "AdvisorText":"A factory would indeed be appropriate for generating income, but think of the consequences on the environment...",
+            "Name":"Contractor Jane",
+            "character":"3",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"10",
+                        "lrID":"0"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"150000",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"I look forward to our collaboration."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"Perhaps next time, thank you for your time."
+            }
+        },
+        {
+            "Dilemma":"A village in the woods nearby have requested for a telephone line to be laid between their village and your city. What will I tell them?",
+            "AdvisorText":"Connecting a remote village will increase general happiness of the people but the forest might suffer because of it.",
+            "Name":"Government representative",
+            "character":"11",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"They will be delighted."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"I suppose they are not part of the city after all."
+            }
+        },
+        {
+            "Dilemma":"A village in the woods nearby have asked for a road to connect them and your city. Shall I get right to it?",
+            "AdvisorText":"Connecting a remote village will increase general happiness of the people but the forest might suffer because of it.",
+            "Name":"Government representative",
+            "character":"12",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"I will get to the paperwork immediately."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"I suppose they are not part of the city after all."
+            }
+        },
+        {
+            "Dilemma":"My company is a well established chain in the industry and we ask you for a plot of land in your city to expand our horizons. Do we have your approval?",
+            "AdvisorText":"It might be a good call to make a quick bite available to the people on a late night out. It will also be a good way to generate some income for the city. It will, however, be destructive for the environment.",
+            "Name":"Company representative",
+            "character":"13",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"100000",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"A wise choice."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"Your people will be missing out."
+            }
+        },
+        {
+            "Dilemma":"Native people have contacted me to ask for them if they are allowed to continue their annual whale-hunting ritual.",
+            "AdvisorText":"They told me the ritual is holy to them so it might be appropriate to let them continue they ways. The hunt will harm the sea population though.",
+            "Name":"Assistant",
+            "character":"12",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"2000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"They will be ecstatic."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-2000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"They will be disappointed."
+            }
+        },
+        {
+            "Dilemma":"During the construction of a new residential area have uncovered ancient ruins. Do you wish cancel the construction and preserve the ruins?",
+            "AdvisorText":"the ancient ruins are a valuable find, but people have invested in the residential area and won't be pleased if their investments are for naught.",
+            "Name":"Company representative",
+            "character":"0",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"100000",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"-1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"I will notify the construction workers to stop operations."
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"1000",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"Things will proceed as planned then."
+            }
+        },
+    ]
 }

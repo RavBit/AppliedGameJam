@@ -12,7 +12,7 @@
                         "lifetime":"1",
                         "cooldown":"3",
                         "initCooldown":"3",
-                        "res":"4",
+                        "res":"5",
                         "amount":"-100000",
                         "breakingNews":"Recent increases in antibiotics in animal feed have bred a resistant bacterium. The government has paid farmers to contain this threat."
                     },
@@ -20,8 +20,8 @@
                         "lifetime":"1",
                         "cooldown":"3",
                         "initCooldown":"3",
-                        "res":"0",
-                        "amount":"",
+                        "res":"6",
+                        "amount":"-1500",
                         "breakingNews":"Recent reports have shown that a rogue doctor has conducted tests on human subjects. The doctor has been prosecuted."
                     },
                     {
@@ -29,8 +29,16 @@
                         "cooldown":"3",
                         "initCooldown":"3",
                         "res":"6",
-                        "amount":"1000",
+                        "amount":"2500",
                         "breakingNews":"Heart- and circulatory diseases have been greatly reduced in the past period. Researches claim that encouraging messages that have shown up in the streets are the cause of this."
+                    },
+                    {
+                        "lifetime":"1",
+                        "cooldown":"3",
+                        "initCooldown":"3",
+                        "res":"6",
+                        "amount":"-2500",
+                        "breakingNews":"Researchers claim that casualties to heart- and circulatory diseases have increased in the past period."
                     },
                     {
                         "lifetime":"3",

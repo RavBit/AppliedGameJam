@@ -30,7 +30,7 @@ public class ItemManager : MonoBehaviour {
     {
         _items = new List<Item>();
         _items.Clear();
-        ClearModifiers();
+        //ClearModifiers();
         _itemid.Clear();
         WWW itemdata = new WWW("http://81.169.177.181/olp/item_list.php");
         yield return itemdata;
@@ -102,7 +102,7 @@ public class ItemManager : MonoBehaviour {
             if (SC.success)
             {
                 ResourceMessage rm = new ResourceMessage();
-                rm.Initialise(Resources.currency, -tempitem.costs, 0, 0);
+                //rm.Initialise(Resources.currency, -tempitem.costs, 0, 0);
                 
                 EventManager._SendResourceMessage(rm);
                 AppManager.instance.StartCoroutine("UpdateResources");

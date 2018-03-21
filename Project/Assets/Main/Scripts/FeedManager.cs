@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
+using DG.Tweening;
 
 public class FeedManager : MonoBehaviour {
     public ItemManager itemmanager;
+    public List<GameObject> items;
     private void Start()
     {
         StartCoroutine("RequestUsers");
+        EventManager.AddFeed += AddItems;
     }
     [SerializeField]
     List<TempUser> _users;
@@ -56,7 +59,26 @@ public class FeedManager : MonoBehaviour {
         {
             Debug.LogError("ERROR FATAL");
         }
-        //StoreInit();
+        StartCoroutine("LoopThroughList");
+    }
+    public void AddItems(GameObject go)
+    {
+        items.Add(go);
+    }
+    public IEnumerator LoopThroughList()
+    {
+        while(true)
+        {
+            foreach(GameObject g in items)
+            {
+                g.transform.DOLocalMoveX(-21, 15);
+                yield return new WaitForSeconds(6);
+            }
+            foreach (GameObject g in items)
+            {
+                g.transform.localPosition = new Vector3(21, 0, 0);
+            }
+        }
     }
 }
 [System.Serializable]

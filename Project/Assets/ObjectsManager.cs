@@ -82,6 +82,7 @@ public class ObjectsManager : MonoBehaviour {
 
     void InitItem(Item item)
     {
+        Debug.Log("init item " + item.name);
         Item[item.ID].GetComponent<SpriteRenderer>().DOFade(1, 1f);
         EventManager._AddModifierValue(Resources.airPollution, item.air_pollution);
         EventManager._AddModifierValue(Resources.biodiversity, item.biodiversity);

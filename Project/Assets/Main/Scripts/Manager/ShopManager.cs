@@ -8,6 +8,7 @@ public class ShopManager : MonoBehaviour {
     public GameObject UserItem;
     public GameObject ShopItem;
     public Sprite[] shopsprites;
+    public Transform SpawnItemLocation;
     void Start()
     {
         EventManager.CreateStoreItem += InitItem;
@@ -31,8 +32,9 @@ public class ShopManager : MonoBehaviour {
         GameObject go = Instantiate(UserItem, new Vector3(0, 0, 0), Quaternion.identity) as GameObject;
         go.transform.localScale = new Vector3(0.1f, 0.1f, 0.1f);
         go.transform.parent = UserHolder.transform;
-        go.transform.localPosition = Vector3.zero;
-        go.GetComponent<UserItem>().Sprite.sprite = shopsprites[_data._sprite];
+        go.transform.position = SpawnItemLocation.position;
+        //go.GetComponent<UserItem>().Sprite.sprite = shopsprites[_data._sprite];
         go.GetComponent<UserItem>().SetUser(_data);
+        EventManager.Add_Feed(go);
     }
 }

@@ -40,6 +40,9 @@ public class EventManager : MonoBehaviour {
 	public static event ChooseEvent EmptyQueue;
     public static event ChooseEvent CheckPopulationObjects;
 
+    public delegate void FeedManager(GameObject go);
+    public static event FeedManager AddFeed;
+
 	public delegate void EndEvent(Resources r);
 	public static event EndEvent EndGame;
 
@@ -120,6 +123,10 @@ public class EventManager : MonoBehaviour {
         ParseMapItem(item);
     }
 
+    public static void Add_Feed(GameObject go)
+    {
+        AddFeed(go);
+    }
 
     public static void Create_StoreItem(Item item)
     {

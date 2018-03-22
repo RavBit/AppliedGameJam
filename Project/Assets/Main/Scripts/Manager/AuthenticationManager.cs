@@ -5,6 +5,9 @@ using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class AuthenticationManager : MonoBehaviour
 {
+    [Header("Loadingscreens: ")]
+    public GameObject LoadingScreen;
+    public Slider LoadingBar;
 
     //Gameobjects of the Text Fields
     [Header("Gameobjects Text Fields")]
@@ -44,6 +47,7 @@ public class AuthenticationManager : MonoBehaviour
     //Corountine that goes through the Login process
     public IEnumerator RequestLogin()
     {
+        LoadingScreen.SetActive(true);
         //Assigning strings from the text
         string email = TextUsername.text;
         string password = TextPassword.text;
@@ -78,13 +82,16 @@ public class AuthenticationManager : MonoBehaviour
                     //Login the user and redirect it to a new scene
                     LoginFeedback.text = "login successful.";
                     AppManager.instance.SetUser(user);
-                    SceneManager.LoadScene("Main", LoadSceneMode.Single);
+                    //LOAD LEVEL
+                    LoadLevel(1);
+                    //SceneManager.LoadScene("Main", LoadSceneMode.Single);
                 }
                 //If the JsonArary is empty return this string in the feedback
             }
             else
             {
                 LoginFeedback.text = "An error occured";
+                LoadingScreen.SetActive(false);
             }
 
             //If the string is empty return this string in the feedback
@@ -93,11 +100,26 @@ public class AuthenticationManager : MonoBehaviour
         {
             // error
             LoginFeedback.text = "An error occured.";
+            LoadingScreen.SetActive(false);
         }
 
 
     }
-
+    public void LoadLevel(int sceneindex)
+    {
+        StartCoroutine(LoadASync(sceneindex));
+    }
+    public IEnumerator LoadASync(int sceneindex)
+    {
+        AsyncOperation operation = SceneManager.LoadSceneAsync(sceneindex);
+        while(!operation.isDone)
+        {
+            float progress = Mathf.Clamp01(operation.progress / 0.9f);
+            LoadingBar.value = progress;
+            Debug.Log(progress);
+            yield return null;
+        }
+    }
     public IEnumerator RequestRegister()
     {
         string email = TextEmail.text;

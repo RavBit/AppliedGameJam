@@ -19,6 +19,7 @@ public class ChoiceManager : MonoBehaviour {
 
 	private void Awake() {
         string url = "http://81.169.177.181/OLP/Choices.json";
+        PlayerPrefs.DeleteAll();
         if(PlayerPrefs.HasKey("Choice") == false)
         {
             PlayerPrefs.SetInt("Choice", 0);

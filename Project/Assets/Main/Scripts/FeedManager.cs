@@ -67,7 +67,7 @@ public class FeedManager : MonoBehaviour {
     }
     public IEnumerator LoopThroughList()
     {
-        while(true)
+        while(items.Count > 0)
         {
             foreach(GameObject g in items)
             {

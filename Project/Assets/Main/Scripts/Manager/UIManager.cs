@@ -14,6 +14,7 @@ public class UIManager : MonoBehaviour {
     public GameObject DesicionButton;
     public GameObject ContinueButton;
     public Text Textbubble;
+    public Text Advisebubble;
     public Image Character;
 
 	private Transform currentChar;
@@ -115,6 +116,7 @@ public class UIManager : MonoBehaviour {
 		Debug.Log(_choice.Dilemma);
         //Textbubble.text = _choice.Dilemma;
         Textbubble.DOText(_choice.Dilemma, 4, true, ScrambleMode.All);
+        Advisebubble.text = _choice.AdvisorText;
         Screen_Sprite.transform.DOScale(1, 1f);
     }
 

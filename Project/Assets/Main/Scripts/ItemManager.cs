@@ -102,7 +102,9 @@ public class ItemManager : MonoBehaviour {
             if (SC.success)
             {
                 ResourceMessage rm = new ResourceMessage();
-                rm.Initialise(Resources.currency, -tempitem.costs);
+                
+                //LIVING RESOURCES
+                //rm.Initialise(Resources.currency, -tempitem.costs);
                 
                 EventManager._SendResourceMessage(rm);
                 AppManager.instance.StartCoroutine("UpdateResources");

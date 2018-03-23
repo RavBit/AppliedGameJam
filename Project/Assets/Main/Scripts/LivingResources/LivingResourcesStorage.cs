@@ -33,7 +33,7 @@ public class LivingResourcesStorage : MonoBehaviour {
 	}
 
 	public LivingResource GetLRWithID(int id) {
-		if(id > resources.livingResources.Length - 1 || id < 0)
+		if(id < 0 || id > resources.livingResources.Length - 1)
 			return null;
 		return resources.livingResources[id];
 	}
@@ -75,6 +75,7 @@ public class LivingResource {
 				EventManager._SendResourceMessage(rm);
 				lifetime--;
 				cooldown = initCooldown;
+				Debug.Log($"Executing living resource {breakingNews} with lifetime left: {lifetime}");
 			}
 			else {
 				cooldown--;

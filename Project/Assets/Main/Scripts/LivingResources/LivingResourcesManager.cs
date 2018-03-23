@@ -5,6 +5,13 @@ using System;
 
 public class LivingResourcesManager : MonoBehaviour {
 
+	[SerializeField]
+	private float airPMod, soilPMod, waterPMod, landUMod, biodDMod, curMod, popMod;
+	[SerializeField]
+	private int initAirP, initSoilP, initWaterP, initLandU, initBiodD, initCur, initPop;
+	private ResourceMessage airP, soilP, waterP, landU, bioD, cur, pop;
+
+	[SerializeField]
 	private List<LivingResource> livingResources;
 
 	private void Awake() {
@@ -48,9 +55,16 @@ public class LivingResourcesManager : MonoBehaviour {
 	}
 
 	public void AddLivingResource(params LivingResource[] res) {
+		bool canAdd;
 		if(res != null) {
 			foreach(LivingResource i in res) {
-				livingResources.Add(i);
+				canAdd = true;
+				foreach(LivingResource r in livingResources) {
+					if(i == r)
+						canAdd = false;
+				}
+				if(canAdd)
+					livingResources.Add(i);
 			}
 		}
 	}
@@ -65,11 +79,7 @@ public class LivingResourcesManager : MonoBehaviour {
 	}
 	#endregion
 
-	[SerializeField]
-	private float airPMod, soilPMod, waterPMod, landUMod, biodDMod, curMod, popMod;
-	[SerializeField]
-	private int initAirP, initSoilP, initWaterP, initLandU, initBiodD, initCur, initPop;
-	private ResourceMessage airP, soilP, waterP, landU, bioD, cur, pop;
+	
 
 	public void DailyResources() {
 		airP.Initialise(Resources.airPollution, (int)(airP.amount * airPMod));

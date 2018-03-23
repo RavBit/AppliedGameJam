@@ -20,16 +20,19 @@ public class LivingResourcesStorage : MonoBehaviour {
 		else {
 			Destroy(this);
 		}
-		dataPath = Application.streamingAssetsPath + "/LivingResources.json";
-		LoadJson();
-	}
+        dataPath = "http://81.169.177.181/OLP/LivingResources.json";
+        WWW www = new WWW(dataPath);
+        StartCoroutine(WaitForRequest(www));
+    }
+    IEnumerator WaitForRequest(WWW www)
+    {
+        yield return www;
+        LoadJson(www.text);
+    }
 
 	[ContextMenu("LoadFromJson")]
-	private void LoadJson() {
-		using(StreamReader stream = new StreamReader(dataPath)) {
-			string json = stream.ReadToEnd();
+	private void LoadJson(string json) {
 			resources = JsonConvert.DeserializeObject<LivingResourcesContainer>(json);
-		}
 	}
 
 	public LivingResource GetLRWithID(int id) {

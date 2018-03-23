@@ -106,9 +106,13 @@ public class ItemManager : MonoBehaviour {
                 ResourceMessage rm = new ResourceMessage();
 
                 //LIVING RESOURCES
-                //rm.Initialise(Resources.currency, -tempitem.costs);
+                rm.Initialise(Resources.airPollution, (int)tempitem.air_pollution);
+                rm.Initialise(Resources.soilPollution, (int)tempitem.soil_pollution);
+                rm.Initialise(Resources.waterPollution, (int)tempitem.water_pollution);
+                rm.Initialise(Resources.landUse, (int)tempitem.landuse);
+                rm.Initialise(Resources.biodiversity, (int)tempitem.biodiversity);
                 AppManager.instance.User.currency -= tempitem.costs;
-                //EventManager._SendResourceMessage(rm);
+                EventManager._SendResourceMessage(rm);
                 foreach (Transform child in GetComponent<ShopManager>().ItemHolder.transform)
                 {
                     GameObject.Destroy(child.gameObject);

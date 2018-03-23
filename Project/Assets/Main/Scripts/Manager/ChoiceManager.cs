@@ -31,6 +31,7 @@ public class ChoiceManager : MonoBehaviour {
     IEnumerator WaitForRequest(WWW www)
     {
         yield return www;
+        Debug.Log("www : " + www.text);
         LoadJson(www.text);
     }
 

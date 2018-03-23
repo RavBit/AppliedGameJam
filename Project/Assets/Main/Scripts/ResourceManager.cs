@@ -66,7 +66,7 @@ public class ResourceManager : MonoBehaviour {
 		EventManager.GetBiodiversity += GetBiodiversity;
 		EventManager.GetPopulation += GetPopulation;
 		EventManager.GetCurrency += GetCurrency;
-	#endregion
+		#endregion
 	}
 
 	//This function is made to handle all resource change subjects. It accepts both positive and negative values.

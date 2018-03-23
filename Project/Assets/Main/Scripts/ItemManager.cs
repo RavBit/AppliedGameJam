@@ -30,7 +30,7 @@ public class ItemManager : MonoBehaviour {
     {
         _items = new List<Item>();
         _items.Clear();
-        //ClearModifiers();
+        _owneditems.Clear();
         _itemid.Clear();
         WWW itemdata = new WWW("http://81.169.177.181/olp/item_list.php");
         yield return itemdata;
@@ -54,6 +54,8 @@ public class ItemManager : MonoBehaviour {
                         if(item.ID == _itemid[i].item)
                         {
                             _owneditems.Add(item);
+                            Debug.Log("item");
+                            EventManager.Parse_MapItem(item);
                         }
                     }
 
@@ -102,19 +104,20 @@ public class ItemManager : MonoBehaviour {
             if (SC.success)
             {
                 ResourceMessage rm = new ResourceMessage();
-                
+
                 //LIVING RESOURCES
                 //rm.Initialise(Resources.currency, -tempitem.costs);
-                
-                EventManager._SendResourceMessage(rm);
-                AppManager.instance.StartCoroutine("UpdateResources");
+                AppManager.instance.User.currency -= tempitem.costs;
+                //EventManager._SendResourceMessage(rm);
                 foreach (Transform child in GetComponent<ShopManager>().ItemHolder.transform)
                 {
                     GameObject.Destroy(child.gameObject);
                 }
                 StartCoroutine("RequestItems");
                 EventManager.Parse_MapItem(tempitem);
-                //AppManager.instance.ParseTowardsResources();
+                Debug.Log(tempitem.ID + " bought");
+                AppManager.instance.ParseTowardsResources();
+                AppManager.instance.StartCoroutine("UpdateResources");
             }
         }
         else

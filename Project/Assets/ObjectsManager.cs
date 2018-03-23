@@ -7,6 +7,7 @@ public class ObjectsManager : MonoBehaviour {
     public GameObject[] Houses;
     public GameObject[] Trees;
     public GameObject[] Item;
+    public List<Item> drawnitems;
     // Use this for initialization
     void Start () {
         Invoke("CheckPopulation", 2);
@@ -14,6 +15,7 @@ public class ObjectsManager : MonoBehaviour {
         EventManager.ChoiceUnLoad += CheckPopulation;
         EventManager.ChoiceUnLoad += CheckLandUse;
         EventManager.ParseMapItem += InitItem;
+        drawnitems = new List<Item>();
         DisableItems();
     }
 	
@@ -82,6 +84,14 @@ public class ObjectsManager : MonoBehaviour {
 
     void InitItem(Item item)
     {
+        foreach(Item i in drawnitems)
+        {
+            if(i.ID == item.ID)
+            {
+                return;
+            }
+        }
+        drawnitems.Add(item);
         Debug.Log("init item " + item.name);
         Item[item.ID].GetComponent<SpriteRenderer>().DOFade(1, 1f);
         EventManager._AddModifierValue(Resources.airPollution, item.air_pollution);

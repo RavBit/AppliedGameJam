@@ -1054,6 +1054,93 @@
                 "messages":[
                     {
                         "resourceType":"0",
+                        "amount":"10",
+                        "lrID":"8"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-1s0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"250000",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"0",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":""
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"0",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":""
+            }
+        },
+        {
+            "Dilemma":"We ask your perission to chop wood in a relatively ecological manner.",
+            "AdvisorText":"Chopping wood could be made ecological by replanting and/or leaving fallen branches on the ground to keep the nutrients in the local ecosystem. It will damage the environment initially, but it might improve it in the long term.",
+            "Name":"Lumberjack",
+            "character":"14",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
                         "amount":"0",
                         "lrID":"-1"
                     },
@@ -1074,12 +1161,12 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"5",
-                        "amount":"0",
+                        "amount":"100000",
                         "lrID":"-1"
                     },
                     {
@@ -1088,7 +1175,7 @@
                         "lrID":"-1"
                     }
                 ],
-                "text":""
+                "text":"We'll be careful not to damage anything unnessesary!"
             },
             "NegativeDialog":{
                 "messages":[
@@ -1128,8 +1215,95 @@
                         "lrID":"-1"
                     }
                 ],
-                "text":""
+                "text":"You just missed out on a lot of money..."
             }
         },
+        {
+            "Dilemma":"We've come here to ask your permission to start using more pesticides to rid of pests and weeds that are curently razing our crops.",
+            "AdvisorText":"Pesticides are a short term answer to problems. Initially they might seem to work, but a resistant breed will emerge among the survivors and you'll be left with poisoned land because of the poison and resistant pests and weeds. An advantage would be that we skyrocket the production of food by a lot.",
+            "Name":"Farmer",
+            "character":"2",
+            "State":"0",
+            "PositiveDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"15",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"10",
+                        "lrID":"9"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"-5",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"100000",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"0",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"Thank you very much!"
+            },
+            "NegativeDialog":{
+                "messages":[
+                    {
+                        "resourceType":"0",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"1",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"2",
+                        "amount":"-10",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"3",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"4",
+                        "amount":"0",
+                        "lrID":"-1"
+                    },
+                    {
+                        "resourceType":"5",
+                        "amount":"-50000",
+                        "lrID":"10"
+                    },
+                    {
+                        "resourceType":"6",
+                        "amount":"0",
+                        "lrID":"-1"
+                    }
+                ],
+                "text":"This won't be the last time you hear of us..."
+            }
+        }
     ]
 }

@@ -21,6 +21,7 @@ public class LivingResourcesStorage : MonoBehaviour {
 			Destroy(this);
 		}
 		dataPath = Application.streamingAssetsPath + "/LivingResources.json";
+		LoadJson();
 	}
 
 	[ContextMenu("LoadFromJson")]

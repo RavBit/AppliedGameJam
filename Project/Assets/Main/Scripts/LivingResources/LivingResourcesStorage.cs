@@ -65,7 +65,7 @@ public class LivingResource {
 	}
 
 	public void Act() {
-		if(lifetime <= 1) {
+		if(lifetime < 1) {
 			isToBeDestroyed = true;
 		}
 		else {
@@ -73,9 +73,11 @@ public class LivingResource {
 				ResourceMessage rm = new ResourceMessage();
 				rm.Initialise(res, amount);
 				EventManager._SendResourceMessage(rm);
+				EventManager._SendBreakingNews(breakingNews);
 				lifetime--;
 				cooldown = initCooldown;
 				Debug.Log($"Executing living resource {breakingNews} with lifetime left: {lifetime}");
+				cooldown--;
 			}
 			else {
 				cooldown--;

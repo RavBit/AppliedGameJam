@@ -105,6 +105,7 @@ public class ResourceManager : MonoBehaviour {
 				}
 				if(i.lr != null) {
 					EventManager._AddLivingResource(i.lr);
+					i.lr = null;
 				}
 				/*
 				if(i.lrBaseChange != 0) {

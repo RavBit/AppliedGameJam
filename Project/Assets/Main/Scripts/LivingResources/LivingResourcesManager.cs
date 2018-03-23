@@ -60,7 +60,7 @@ public class LivingResourcesManager : MonoBehaviour {
 			foreach(LivingResource i in res) {
 				canAdd = true;
 				foreach(LivingResource r in livingResources) {
-					if(i == r)
+					if(i == r || i.lifetime < 1)
 						canAdd = false;
 				}
 				if(canAdd)

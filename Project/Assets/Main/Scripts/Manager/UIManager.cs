@@ -11,7 +11,12 @@ public class UIManager : MonoBehaviour {
     public GameObject Screen_Sprite;
     public GameObject Results;
 
-    public GameObject DesicionButton;
+	public GameObject BreakingNews;
+	public Text BreakingNewsText;
+	private List<string> newsMessages;
+	private string newsMessagesString = "//////BREAKING NEWS\\\\\\ - ";
+
+	public GameObject DesicionButton;
     public GameObject ContinueButton;
     public Text Textbubble;
     public Text Advisebubble;
@@ -43,7 +48,10 @@ public class UIManager : MonoBehaviour {
 
     private ResourceStorage resourceDeltas;
     private void Start() {
-        EventManager.ChoiceLoad += LoadChoice;
+		newsMessages = new List<string>();
+		EventManager.SendBreakingNews += CatchBreakingNews;
+		EventManager.ChoiceUnLoad += ClearMessage;
+		EventManager.ChoiceLoad += LoadChoice;
         EventManager.DisplayChoice += SetChoice;
         EventManager.UIEnable += EnableUI;
         EventManager.UIDisable += DisableUI;
@@ -141,4 +149,29 @@ public class UIManager : MonoBehaviour {
         Choice.SetActive(true);
         EventManager.Choice_Unload();
     }
+
+	public void ResetMessages() {
+		ClearMessage();
+		newsMessages.Clear();
+	}
+
+	public void DisplayNews() {
+		/*
+		foreach(string s in newsMessages) {
+		
+			newsMessagesString += $"{s} - ";
+		}
+		*/
+		BreakingNewsText.text = newsMessagesString;
+		Screen.SetActive(false);
+		BreakingNews.SetActive(true);
+	}
+
+	public void CatchBreakingNews(string s) {
+		newsMessagesString += $"{s} - ";
+		DisplayNews();
+	}
+	public void ClearMessage() {
+		newsMessagesString = "//////BREAKING NEWS\\\\\\ - ";
+	}
 }

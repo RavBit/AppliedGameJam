@@ -29,7 +29,7 @@ Material:
     m_Floats:
     - _Intensity: 1
     - _OffsetColor: 0
-    - _OffsetDistortion: 1500
+    - _OffsetDistortion: 10
     - _OffsetNoiseX: 0
     - _OffsetNoiseY: 0
     - _OffsetPosY: 0

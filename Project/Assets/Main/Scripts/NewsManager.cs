@@ -6,6 +6,7 @@ using DG.Tweening;
 public class NewsManager : MonoBehaviour {
     public GameObject scrollitem;
     public Transform startpos;
+    public AudioSource BM;
     public bool scrolling = true;
 	// Use this for initialization
 	void Start () {
@@ -13,6 +14,7 @@ public class NewsManager : MonoBehaviour {
     }
     private void StartScrol(string s)
     {
+        BM.Play();
         s = "";
         scrolling = true;
         StartCoroutine("Scrollnews");

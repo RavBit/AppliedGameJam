@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AppManager : MonoBehaviour {
     public static AppManager instance;
@@ -122,6 +123,17 @@ public class AppManager : MonoBehaviour {
             Debug.LogError("An error occured.");
         }
 
+    }
+
+    public void LogOut()
+    {
+        User = null;
+        SceneManager.LoadScene(0, LoadSceneMode.Single);
+        Invoke("LoadUrl", 2);
+    }
+    public void LoadUrl()
+    {
+        Application.OpenURL("http://perspectiveworks.nl/OLP/public/#scoreboard");
     }
 }
 public class Check

@@ -44,6 +44,7 @@ public class UIManager : MonoBehaviour {
     public GameObject LoadingScreen;
     public Image[] LoadingBar;
     public Text LoadingText;
+    public GameObject EndScreen;
     //Format of: population, currency, happiness, environment
 
     private ResourceStorage resourceDeltas;
@@ -84,6 +85,7 @@ public class UIManager : MonoBehaviour {
         Currency.text = "" + AppManager.instance.User.currency;
         Biodiversity.text = "" + AppManager.instance.User.biodiversity;
         Pollution.text = "" + ((AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + "%";
+        
         //AirPollution.text = "" + AppManager.instance.User.air_pollution + "%";
         //SoilPollution.text = "" + AppManager.instance.User.soil_pollution + "%";
         //WaterPollution.text = "" + AppManager.instance.User.water_pollution + "%";
@@ -129,6 +131,10 @@ public class UIManager : MonoBehaviour {
     }
 
     void SetChoice(Choice _choice) {
+        if (PlayerPrefs.GetInt("Choice") == EventManager.Choice_Get() && EventManager.Choice_Get() != 0)
+        {
+            EndScreen.SetActive(true);
+        }
         DesicionButton.SetActive(false);
         ContinueButton.SetActive(true);
         switch (_choice.State) {
@@ -148,6 +154,12 @@ public class UIManager : MonoBehaviour {
         //EventManager.Day_Cycle();
         Choice.SetActive(true);
         EventManager.Choice_Unload();
+        Debug.Log("testend");
+    }
+
+    public void EndCheck()
+    {
+
     }
 
 	public void ResetMessages() {

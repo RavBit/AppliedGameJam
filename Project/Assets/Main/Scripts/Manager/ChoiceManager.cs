@@ -34,7 +34,10 @@ public class ChoiceManager : MonoBehaviour {
         Debug.Log("www : " + www.text);
         LoadJson(www.text);
     }
-
+    public int GetChoice()
+    {
+        return Choices.Count;
+    }
     private void Start() {
         EventManager.ChoiceLoad += LoadChoice;
         EventManager.ChoosePositive += PositiveChoice;
@@ -43,6 +46,7 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.GetQueue += Get_Queue;
         EventManager.NextDay += ResetQueue;
         EventManager.NightCycle += BeginNight;
+        EventManager.ChoiceGet += GetChoice;
         Invoke("Initialize", .000001f);
     }
 

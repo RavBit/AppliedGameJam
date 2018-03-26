@@ -8,7 +8,8 @@ public class EventManager : MonoBehaviour {
     public static event ChoiceState ChoiceLoad;
     public static event ChoiceState DisplayChoice;
     public static event ChooseEvent ChoiceUnLoad;
-
+    public delegate int GetChoice();
+    public static event GetChoice ChoiceGet;
 	public delegate void SendAudioEvent(AudioClip ac);
 	public static event SendAudioEvent SendAudio;
 
@@ -131,7 +132,10 @@ public class EventManager : MonoBehaviour {
     {
         ParseMapItem(item);
     }
-
+    public static int Choice_Get()
+    {
+        return ChoiceGet();
+    }
     public static void Add_Feed(GameObject go)
     {
         AddFeed(go);

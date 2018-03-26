@@ -51,7 +51,7 @@ public class LivingResourcesManager : MonoBehaviour {
 					livingResources[i] = null;
 			}
 		}
-		livingResources = CleanupList(livingResources);
+		livingResources = ExtensionFunctions.CleanupList(livingResources);
 	}
 
 	public void AddLivingResource(params LivingResource[] res) {
@@ -67,15 +67,6 @@ public class LivingResourcesManager : MonoBehaviour {
 					livingResources.Add(i);
 			}
 		}
-	}
-
-	private List<LivingResource> CleanupList(List<LivingResource> list) {
-		List<LivingResource> temp = new List<LivingResource>();
-		foreach(LivingResource l in list) {
-			if(l != null)
-				temp.Add(l);
-		}
-		return temp;
 	}
 	#endregion
 

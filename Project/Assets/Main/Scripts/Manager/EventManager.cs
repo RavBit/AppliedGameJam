@@ -9,6 +9,15 @@ public class EventManager : MonoBehaviour {
     public static event ChoiceState DisplayChoice;
     public static event ChooseEvent ChoiceUnLoad;
 
+	public delegate void SendAudioEvent(AudioClip ac);
+	public static event SendAudioEvent SendAudio;
+
+	public delegate void UpdateHelthEvent(HealthState hs);
+	public static event UpdateHelthEvent UpdateHealth;
+
+	public delegate void SendAudioSourceEvent(AudioSourceStorage a);
+	public static event SendAudioSourceEvent SubmitAudioSource;
+
 	public delegate void SubmitV4(ResourceStorage v4);
 	public static event SubmitV4 SendV4;
 	public static event SubmitV4 SetupResources;
@@ -207,5 +216,17 @@ public class EventManager : MonoBehaviour {
 
 	public static void _SendBreakingNews(string s) {
 		SendBreakingNews(s);
+	}
+
+	public static void _SendAudio(AudioClip ac) {
+		SendAudio(ac);
+	}
+
+	public static void _SubmitAudioSource(AudioSourceStorage a) {
+		SubmitAudioSource(a);
+	}
+
+	public static void _UpdateHealth(HealthState hs) {
+		UpdateHealth(hs);
 	}
 }

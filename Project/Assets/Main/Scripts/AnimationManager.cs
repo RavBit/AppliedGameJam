@@ -108,6 +108,7 @@ public class AnimationManager : MonoBehaviour {
 		else if(pollution > 75) {
 			hs = HealthState.ill;
 		}
+		EventManager._UpdateHealth(hs);
 	}
 
 	public void CatchResources(ResourceStorage v4) {

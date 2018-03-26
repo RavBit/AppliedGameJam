@@ -88,7 +88,7 @@ public class LivingResourcesManager : MonoBehaviour {
 		cur.Initialise(Resources.currency, (int)(cur.amount * curMod));
 		pop.Initialise(Resources.population, (int)(pop.amount * popMod));
 		ResourceMessage rm = new ResourceMessage();
-		rm.Initialise(Resources.currency, Mathf.RoundToInt(res.population * 0.1f));
+		rm.Initialise(Resources.currency, Mathf.RoundToInt(res.population * 5f));
 
 		EventManager._SendResourceMessage(airP, soilP, waterP, landU, bioD, cur, pop, rm);
 	}

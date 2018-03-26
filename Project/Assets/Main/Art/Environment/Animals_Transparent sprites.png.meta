@@ -3,12 +3,58 @@ guid: 3c78b4b04e308fe438d75f14f564e955
 timeCreated: 1521799375
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName: {}
+  fileIDToRecycleName:
+    21300000: Animals_Transparent sprites_0
+    21300002: Animals_Transparent sprites_1
+    21300004: Animals_Transparent sprites_2
+    21300006: Animals_Transparent sprites_3
+    21300008: Animals_Transparent sprites_4
+    21300010: Animals_Transparent sprites_5
+    21300012: Animals_Transparent sprites_6
+    21300014: Animals_Transparent sprites_7
+    21300016: Animals_Transparent sprites_8
+    21300018: Animals_Transparent sprites_9
+    21300020: Animals_Transparent sprites_10
+    21300022: Animals_Transparent sprites_11
+    21300024: Animals_Transparent sprites_12
+    21300026: Animals_Transparent sprites_13
+    21300028: Animals_Transparent sprites_14
+    21300030: Animals_Transparent sprites_15
+    21300032: Animals_Transparent sprites_16
+    21300034: Animals_Transparent sprites_17
+    21300036: Animals_Transparent sprites_18
+    21300038: Animals_Transparent sprites_19
+    21300040: Animals_Transparent sprites_20
+    21300042: Animals_Transparent sprites_21
+    21300044: Animals_Transparent sprites_22
+    21300046: Animals_Transparent sprites_23
+    21300048: Animals_Transparent sprites_24
+    21300050: Animals_Transparent sprites_25
+    21300052: Animals_Transparent sprites_26
+    21300054: Animals_Transparent sprites_27
+    21300056: Animals_Transparent sprites_28
+    21300058: Animals_Transparent sprites_29
+    21300060: Animals_Transparent sprites_30
+    21300062: Animals_Transparent sprites_31
+    21300064: Animals_Transparent sprites_32
+    21300066: Animals_Transparent sprites_33
+    21300068: Animals_Transparent sprites_34
+    21300070: Animals_Transparent sprites_35
+    21300072: Animals_Transparent sprites_36
+    21300074: Animals_Transparent sprites_37
+    21300076: Animals_Transparent sprites_38
+    21300078: Animals_Transparent sprites_39
+    21300080: Animals_Transparent sprites_40
+    21300082: Animals_Transparent sprites_41
+    21300084: Animals_Transparent sprites_42
+    21300086: Animals_Transparent sprites_43
+    21300088: Animals_Transparent sprites_44
+    21300090: Animals_Transparent sprites_45
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
-    enableMipMap: 1
+    enableMipMap: 0
     sRGBTexture: 1
     linearTexture: 0
     fadeOut: 0
@@ -34,13 +80,13 @@ TextureImporter:
     filterMode: -1
     aniso: -1
     mipBias: -1
-    wrapU: -1
-    wrapV: -1
+    wrapU: 1
+    wrapV: 1
     wrapW: -1
-  nPOTScale: 1
+  nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 0
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -48,9 +94,9 @@ TextureImporter:
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
   alphaUsage: 1
-  alphaIsTransparency: 0
+  alphaIsTransparency: 1
   spriteTessellationDetail: -1
-  textureType: 0
+  textureType: 8
   textureShape: 1
   maxTextureSizeSet: 0
   compressionQualitySet: 0
@@ -66,9 +112,673 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_0
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 606
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_1
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 639
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_2
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 609
+        width: 75
+        height: 71
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 639
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_4
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 606
+        width: 74
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_5
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 639
+        width: 5
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_6
+      rect:
+        serializedVersion: 2
+        x: 95
+        y: 618
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_7
+      rect:
+        serializedVersion: 2
+        x: 204
+        y: 618
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_8
+      rect:
+        serializedVersion: 2
+        x: 309
+        y: 618
+        width: 4
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 604
+        width: 5
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_10
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 596
+        width: 25
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_11
+      rect:
+        serializedVersion: 2
+        x: 155
+        y: 596
+        width: 25
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_12
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 596
+        width: 25
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_13
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 531
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_14
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 531
+        width: 71
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_15
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 531
+        width: 71
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_16
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 524
+        width: 16
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_17
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 524
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_18
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 401
+        width: 105
+        height: 126
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_19
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 524
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_20
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 401
+        width: 98
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_21
+      rect:
+        serializedVersion: 2
+        x: 268
+        y: 524
+        width: 14
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_22
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 524
+        width: 11
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_23
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 404
+        width: 105
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_24
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 399
+        width: 12
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_25
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 346
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_26
+      rect:
+        serializedVersion: 2
+        x: 12
+        y: 317
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_27
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 317
+        width: 87
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_28
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 353
+        width: 6
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_29
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 346
+        width: 9
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_30
+      rect:
+        serializedVersion: 2
+        x: 226
+        y: 317
+        width: 76
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_31
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 241
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_32
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 241
+        width: 60
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_33
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 241
+        width: 62
+        height: 63
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 176
+        width: 10
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_35
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 152
+        width: 81
+        height: 89
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_36
+      rect:
+        serializedVersion: 2
+        x: 106
+        y: 148
+        width: 90
+        height: 78
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_37
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 146
+        width: 86
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 142
+        width: 17
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_39
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 142
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_40
+      rect:
+        serializedVersion: 2
+        x: 252
+        y: 145
+        width: 7
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_41
+      rect:
+        serializedVersion: 2
+        x: 288
+        y: 142
+        width: 16
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_42
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 0
+        width: 90
+        height: 142
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_43
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 0
+        width: 93
+        height: 138
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_44
+      rect:
+        serializedVersion: 2
+        x: 238
+        y: 0
+        width: 83
+        height: 134
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Animals_Transparent sprites_45
+      rect:
+        serializedVersion: 2
+        x: 279
+        y: 126
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
     outline: []
     physicsShape: []
   spritePackingTag: 

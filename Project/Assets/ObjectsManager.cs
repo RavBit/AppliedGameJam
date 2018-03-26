@@ -6,6 +6,7 @@ using DG.Tweening;
 public class ObjectsManager : MonoBehaviour {
     public GameObject[] Houses;
     public GameObject[] Trees;
+    public GameObject[] Animals;
     public GameObject[] Item;
     public GameObject Pollution;
     public List<Item> drawnitems;
@@ -14,9 +15,11 @@ public class ObjectsManager : MonoBehaviour {
         Invoke("CheckPopulation", 2);
         Invoke("CheckLandUse", 2);
         Invoke("CheckPollution", 2);
+        Invoke("CheckBiodiversity", 2);
         EventManager.ChoiceUnLoad += CheckPopulation;
         EventManager.ChoiceUnLoad += CheckLandUse;
         EventManager.ChoiceUnLoad += CheckPollution;
+        EventManager.ChoiceUnLoad += CheckBiodiversity;
         EventManager.ParseMapItem += InitItem;
         drawnitems = new List<Item>();
         DisableItems();
@@ -85,6 +88,34 @@ public class ObjectsManager : MonoBehaviour {
             {
                 Trees[i - 1].SetActive(false);
                 Trees[i - 1].GetComponent<SpriteRenderer>().DOFade(0, 0.5f);
+            }
+
+        }
+    }
+    void CheckBiodiversity()
+    {
+        int bd = AppManager.instance.User.biodiversity;
+        int amount = bd / 20;
+        Debug.Log("Amount: " + amount + " / lu " + bd);
+        for (int i = 0; i < Animals.Length; i++)
+        {
+            Debug.Log("amount: " + amount + " / " + " bd: " + bd + " / " + Animals.Length);
+            if (i <= amount || i == 0)
+            {
+                if (i == 0)
+                {
+
+                }
+                else
+                {
+                    Animals[i - 1].SetActive(true);
+                    Animals[i - 1].GetComponent<SpriteRenderer>().DOFade(1, 2f);
+                }
+            }
+            else
+            {
+                Animals[i - 1].SetActive(false);
+                Animals[i - 1].GetComponent<SpriteRenderer>().DOFade(0, 0.5f);
             }
 
         }

@@ -8,13 +8,17 @@ public class LivingResourcesManager : MonoBehaviour {
 	[SerializeField]
 	private float airPMod, soilPMod, waterPMod, landUMod, biodDMod, curMod, popMod;
 	[SerializeField]
-	private int initAirP, initSoilP, initWaterP, initLandU, initBiodD, initCur, initPop;
+	private int initPop;
+	private int initAirP, initSoilP, initWaterP, initLandU, initBiodD, initCur;
 	private ResourceMessage airP, soilP, waterP, landU, bioD, cur, pop;
 
 	[SerializeField]
 	private List<LivingResource> livingResources;
 
+	private ResourceStorage res;
+
 	private void Awake() {
+		EventManager.SendV4 += CatchV4;
 		livingResources = new List<LivingResource>();
 		//If you want to add a living resource
 		EventManager.AddLivingResource += AddLivingResource;
@@ -39,7 +43,10 @@ public class LivingResourcesManager : MonoBehaviour {
 		bioD.Initialise(Resources.biodiversity, initBiodD);
 		cur.Initialise(Resources.currency, initCur);
 		pop.Initialise(Resources.population, initPop);
+	}
 
+	private void CatchV4(ResourceStorage r) {
+		res = r;
 	}
 
 	#region EventBased resources
@@ -80,8 +87,10 @@ public class LivingResourcesManager : MonoBehaviour {
 		bioD.Initialise(Resources.biodiversity, (int)(bioD.amount * biodDMod));
 		cur.Initialise(Resources.currency, (int)(cur.amount * curMod));
 		pop.Initialise(Resources.population, (int)(pop.amount * popMod));
+		ResourceMessage rm = new ResourceMessage();
+		rm.Initialise(Resources.currency, Mathf.RoundToInt(res.population * 0.1f));
 
-		EventManager._SendResourceMessage(airP, soilP, waterP, landU, bioD, cur, pop);
+		EventManager._SendResourceMessage(airP, soilP, waterP, landU, bioD, cur, pop, rm);
 	}
 
 	public void AddBasevalue(Resources res, int amt) {

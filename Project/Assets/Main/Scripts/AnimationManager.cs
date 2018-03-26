@@ -13,6 +13,7 @@ public class AnimationManager : MonoBehaviour {
 	public GameObject[] healthy, ill, skinny, fat;
 
 	void Start () {
+		EventManager.UpdateHealth += CatchHealth;
 		EventManager.SendV4 += CatchResources;
 		EventManager._GetAnim += GetChar;
 	}
@@ -114,5 +115,9 @@ public class AnimationManager : MonoBehaviour {
 	public void CatchResources(ResourceStorage v4) {
 		res = v4;
 		CalcHealthState();
+	}
+
+	public void CatchHealth(HealthState h) {
+		//empty func
 	}
 }

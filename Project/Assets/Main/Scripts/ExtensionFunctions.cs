@@ -16,4 +16,29 @@ public static class ExtensionFunctions {
 		}
 		return temp;
 	}
+
+	/// <summary>
+	/// A map function to move a given number from scope A to scope B.
+	/// </summary>
+	public static decimal Map(this decimal value, decimal fromSource, decimal toSource, decimal fromTarget, decimal toTarget) {
+		return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+	}
+	/// <summary>
+	/// A map function to move a given number from scope A to scope B.
+	/// </summary>
+	public static int Map(this int value, int fromSource, int toSource, int fromTarget, int toTarget) {
+		return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+	}
+	/// <summary>
+	/// A map function to move a given number from scope A to scope B.
+	/// </summary>
+	public static float Map(this float value, float fromSource, float toSource, float fromTarget, float toTarget) {
+		return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+	}
+	/// <summary>
+	/// A map function to move a given number from scope A to scope B.
+	/// </summary>
+	public static double Map(this double value, double fromSource, double toSource, double fromTarget, double toTarget) {
+		return (value - fromSource) / (toSource - fromSource) * (toTarget - fromTarget) + fromTarget;
+	}
 }

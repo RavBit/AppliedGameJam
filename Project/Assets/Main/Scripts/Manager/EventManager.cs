@@ -12,8 +12,8 @@ public class EventManager : MonoBehaviour {
 	public delegate void SendAudioEvent(AudioClip ac);
 	public static event SendAudioEvent SendAudio;
 
-	public delegate void UpdateHelthEvent(HealthState hs);
-	public static event UpdateHelthEvent UpdateHealth;
+	public delegate void UpdateHealthEvent(HealthState hs);
+	public static event UpdateHealthEvent UpdateHealth;
 
 	public delegate void SendAudioSourceEvent(AudioSourceStorage a);
 	public static event SendAudioSourceEvent SubmitAudioSource;

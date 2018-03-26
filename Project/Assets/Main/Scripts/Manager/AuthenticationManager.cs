@@ -74,6 +74,7 @@ public class AuthenticationManager : MonoBehaviour
                 //Check if there is any error in the class. If there is return the error
                 if (user.error != "")
                 {
+                    LoginFeedback.color = Color.red;
                     LoginFeedback.text = user.error;
                 }
                 else
@@ -90,7 +91,7 @@ public class AuthenticationManager : MonoBehaviour
             }
             else
             {
-                LoginFeedback.text = "An error occured";
+                LoginFeedback.text = user.error;
                 LoadingScreen.SetActive(false);
             }
 
@@ -99,6 +100,7 @@ public class AuthenticationManager : MonoBehaviour
         else
         {
             // error
+            LoginFeedback.color = Color.red;
             LoginFeedback.text = "An error occured.";
             LoadingScreen.SetActive(false);
         }
@@ -107,6 +109,7 @@ public class AuthenticationManager : MonoBehaviour
     }
     public void LoadLevel(int sceneindex)
     {
+        Debug.Log("Loadlevel");
         StartCoroutine(LoadASync(sceneindex));
     }
     public IEnumerator LoadASync(int sceneindex)
@@ -122,6 +125,7 @@ public class AuthenticationManager : MonoBehaviour
     }
     public IEnumerator RequestRegister()
     {
+        LoadingScreen.SetActive(true);
         string email = TextEmail.text;
         string username = TextUsername.text;
         string password = TextPassword.text;
@@ -153,7 +157,8 @@ public class AuthenticationManager : MonoBehaviour
             else
             {
                 Debug.Log("W: " + w.error);
-                LoginFeedback.text = "An error occured";
+                LoginFeedback.color = Color.red;
+                LoginFeedback.text = user.error;
             }
 
             // todo: launch the game (player)
@@ -161,8 +166,10 @@ public class AuthenticationManager : MonoBehaviour
         else
         {
             // error
+            LoadingScreen.SetActive(false);
             Debug.Log("error: " + w.error);
-            LoginFeedback.text = "An error occured.";
+            LoginFeedback.color = Color.red;
+            LoginFeedback.text = "An error occured";
         }
 
 
@@ -204,7 +211,7 @@ public class AuthenticationManager : MonoBehaviour
                     //Login the user and redirect it to a new scene
                     LoginFeedback.text = "login successful.";
                     AppManager.instance.SetUser(user);
-                    SceneManager.LoadScene("TutorialScene", LoadSceneMode.Single);
+                    LoadLevel(2);
                 }
                 //If the JsonArary is empty return this string in the feedback
             }

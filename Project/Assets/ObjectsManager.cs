@@ -71,7 +71,7 @@ public class ObjectsManager : MonoBehaviour {
         Debug.Log("Amount: " + amount + " / lu " + lu);
         for (int i = 0; i < Trees.Length; i++)
         {
-            if (i > amount || i == 0)
+            if (i >= amount || i == 0)
             {
                 if (i == 0)
                 {

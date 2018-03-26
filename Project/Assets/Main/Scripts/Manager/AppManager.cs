@@ -47,6 +47,17 @@ public class AppManager : MonoBehaviour {
         Debug.Log("RM " + RM.currency);
 
     }
+
+    private int GetWellbeing()
+    {
+        return Mathf.RoundToInt((RM.population * 10) + (RM.currency * 1) - (GetPollution() * 100) + (RM.biodiversity * 100));
+    }
+
+    private int GetPollution()
+    {
+        return Mathf.RoundToInt((RM.airPollution + RM.waterPollution + RM.soilPollution) / 3);
+    }
+
     public IEnumerator UpdateResources()
     {
         //Assigning strings from the text
@@ -61,6 +72,7 @@ public class AppManager : MonoBehaviour {
         form.AddField("biodiversity", RM.biodiversity);
         form.AddField("currency", RM.currency);
         form.AddField("population", RM.population);
+        form.AddField("wellbeing", GetWellbeing());
 
 
         //Login to the website and wait for a response

@@ -42,7 +42,7 @@ public class FeedManager : MonoBehaviour {
                         {
                             if(item.ID == user.item)
                             {
-                                UD.text = UI.name + " has build an " + item.name;
+                                UD.text = UI.name + " has bought: " + item.name;
                                 EventManager.Create_UserData(UD);
                             }
                         }

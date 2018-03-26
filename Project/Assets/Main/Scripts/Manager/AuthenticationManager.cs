@@ -247,4 +247,5 @@ public class User
     public int land_use;
     public int biodiversity;
     public string name;
+    public int wellbeing;
 }

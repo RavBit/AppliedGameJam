@@ -10,7 +10,9 @@ public class _AudioManager : MonoBehaviour {
 	private void Awake() {
 		DontDestroyOnLoad(this);
 		sources = new List<AudioSourceStorage>();
+		loopSources = new List<AudioSourceStorage>();
 		EventManager.SubmitAudioSource += CatchAudioSource;
+		EventManager.SendAudio += PlaySound;
 	}
 
 	private void CatchAudioSource(AudioSourceStorage a) {
@@ -54,6 +56,7 @@ public class AudioSourceStorage {
 	public AudioSourceStorage(AudioSource aS, GameObject p) {
 		parent = p;
 		source = aS;
+		source.volume = 0.8f;
 	}
 
 	public void Lock() {

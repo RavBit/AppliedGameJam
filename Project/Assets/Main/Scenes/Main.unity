@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -4861,6 +4861,7 @@ GameObject:
   - component: {fileID: 827132320}
   - component: {fileID: 827132319}
   - component: {fileID: 827132318}
+  - component: {fileID: 827132321}
   m_Layer: 5
   m_Name: NO
   m_TagString: Untagged
@@ -4936,6 +4937,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 827132321}
+        m_MethodName: _PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &827132319
@@ -4971,6 +4983,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 827132316}
+--- !u!114 &827132321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 827132316}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599871b8a4666314a9dff60076188f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 7372950b44d716043bbe3e32766c4137, type: 3}
+  useHealth: 0
+  healthyClip: {fileID: 0}
+  illClip: {fileID: 0}
+  skinnyClip: {fileID: 0}
+  fatClip: {fileID: 0}
+  playOnEnable: 0
+  isLoop: 0
+  delay: 0
 --- !u!1 &837239467
 GameObject:
   m_ObjectHideFlags: 0
@@ -10683,6 +10715,7 @@ GameObject:
   - component: {fileID: 1854241756}
   - component: {fileID: 1854241755}
   - component: {fileID: 1854241754}
+  - component: {fileID: 1854241757}
   m_Layer: 5
   m_Name: YES
   m_TagString: Untagged
@@ -10758,6 +10791,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1854241757}
+        m_MethodName: _PlayAudio
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1854241755
@@ -10793,6 +10837,26 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1854241752}
+--- !u!114 &1854241757
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1854241752}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 599871b8a4666314a9dff60076188f4e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  clip: {fileID: 8300000, guid: 0531caa2f1a5a1b439ec4c38a781a098, type: 3}
+  useHealth: 0
+  healthyClip: {fileID: 0}
+  illClip: {fileID: 0}
+  skinnyClip: {fileID: 0}
+  fatClip: {fileID: 0}
+  playOnEnable: 0
+  isLoop: 0
+  delay: 0
 --- !u!1 &1876306361
 GameObject:
   m_ObjectHideFlags: 0

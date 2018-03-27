@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
@@ -869,8 +869,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -5.86, y: 0}
-  m_SizeDelta: {x: 726.213, y: 249.29}
+  m_AnchoredPosition: {x: -5.86, y: 0.018}
+  m_SizeDelta: {x: 726.213, y: 252.915}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1881621892
 MonoBehaviour:
@@ -905,7 +905,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: You lost the planet because you had no money left to fund the planet's activities.
+  m_Text: 'You lost the planet to the atmosphere becoming too unhealthy to live in.
+
+    Game Over.'
 --- !u!222 &1881621893
 CanvasRenderer:
   m_ObjectHideFlags: 0

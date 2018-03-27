@@ -23,10 +23,10 @@ public class NewsManager : MonoBehaviour {
     {
         while (true)
         {
-            scrollitem.transform.DOLocalMoveX(-15, 15);
+            scrollitem.transform.DOLocalMoveX(0, 15);
             yield return new WaitForSeconds(15);
             Debug.Log("scrolling back");
-            scrollitem.transform.localPosition = new Vector3(50, 0, 0);
+            scrollitem.transform.localPosition = new Vector3(30, 0, 0);
         }
 
         //scrollitem.transform.position = startpos.position;

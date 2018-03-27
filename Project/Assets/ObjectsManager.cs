@@ -43,7 +43,7 @@ public class ObjectsManager : MonoBehaviour {
         int amount = pop / 1000;
         for (int i = 0; i < Houses.Length; i++)
         {
-            if(i > amount || i == 0)
+            if(i >= amount || i == 0)
             {
                 if (i == 0)
                 {

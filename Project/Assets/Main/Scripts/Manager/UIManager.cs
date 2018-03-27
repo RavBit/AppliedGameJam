@@ -85,7 +85,24 @@ public class UIManager : MonoBehaviour {
         Currency.text = "" + AppManager.instance.User.currency;
         Biodiversity.text = "" + AppManager.instance.User.biodiversity;
         Pollution.text = "" + ((AppManager.instance.User.air_pollution + AppManager.instance.User.water_pollution + AppManager.instance.User.soil_pollution) / 3) + "%";
-        
+        if (AppManager.instance.User.population < 5000)
+        {
+            Population.GetComponent<BlinkEffect>().enabled = true;
+            Population.DOColor(Color.red, 2);
+        }
+        else
+        {
+            Population.DOColor(Color.white, 2);
+        }
+        if (AppManager.instance.User.currency < 200000)
+        {
+            Currency.GetComponent<BlinkEffect>().enabled = true;
+            Currency.DOColor(Color.red, 2);
+        }
+        else
+        {
+            Currency.DOColor(Color.white, 2);
+        }
         //AirPollution.text = "" + AppManager.instance.User.air_pollution + "%";
         //SoilPollution.text = "" + AppManager.instance.User.soil_pollution + "%";
         //WaterPollution.text = "" + AppManager.instance.User.water_pollution + "%";

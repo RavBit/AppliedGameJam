@@ -115,5 +115,7 @@ public class ChoiceManager : MonoBehaviour {
         //choices = JsonUtility.FromJson<ChoicesContainer>(json);
         //Debug.Log($"Length of choices: {choices.choices.Length}");
 		Choices = choices.choices.ToList();
-	}
+        var rnd = new System.Random();
+        Choices = Choices.OrderBy(x => Random.value).ToList();
+    }
 }

@@ -107,11 +107,11 @@ public class ItemManager : MonoBehaviour {
 
                 //LIVING RESOURCES
                 LivingResource lv = new LivingResource(Resources.airPollution, (int)tempitem.air_pollution, 16, 4, tempitem.message);
-                LivingResource lv2 = new LivingResource(Resources.airPollution, (int)tempitem.soil_pollution, 2, 4, tempitem.message);
-                LivingResource lv3= new LivingResource(Resources.airPollution, (int)tempitem.water_pollution, 2, 4, tempitem.message);
-                LivingResource lv4= new LivingResource(Resources.airPollution, (int)tempitem.landuse, 2, 4, tempitem.message);
-                LivingResource lv5= new LivingResource(Resources.airPollution, (int)tempitem.biodiversity, 2, 4, tempitem.message);
-                LivingResource lv6 = new LivingResource(Resources.airPollution, (int)tempitem.currency, 2, 4, tempitem.message);
+                LivingResource lv2 = new LivingResource(Resources.soilPollution, (int)tempitem.soil_pollution, 2, 4, tempitem.message);
+                LivingResource lv3= new LivingResource(Resources.waterPollution, (int)tempitem.water_pollution, 2, 4, tempitem.message);
+                LivingResource lv4= new LivingResource(Resources.landUse, (int)tempitem.landuse, 2, 4, tempitem.message);
+                LivingResource lv5= new LivingResource(Resources.biodiversity, (int)tempitem.biodiversity, 2, 4, tempitem.message);
+                LivingResource lv6 = new LivingResource(Resources.currency, (int)tempitem.currency, 2, 4, tempitem.message);
                 EventManager._AddLivingResource(lv);
                 EventManager._AddLivingResource(lv2);
                 EventManager._AddLivingResource(lv3);

@@ -592,10 +592,10 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: 4255890cc91861841814085a3775912b, type: 3}
-    m_FontSize: 16
+    m_FontSize: 19
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 1
+    m_MinSize: 0
     m_MaxSize: 180
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -603,7 +603,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Description Data
+  m_Text: Grain comes in different varieties suitable for different seasons, meaning
+    adequate food supply all year round. A farm creates some revenue over time, but
+    potentially damages the environment.
 --- !u!114 &114088251254258450
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -727,6 +729,7 @@ MonoBehaviour:
   Item:
     ID: 0
     name: 
+    message: 
     sprite: 0
     description: 
     costs: 0

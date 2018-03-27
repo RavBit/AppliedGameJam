@@ -159,6 +159,7 @@ public class AuthenticationManager : MonoBehaviour
                 Debug.Log("W: " + w.error);
                 LoginFeedback.color = Color.red;
                 LoginFeedback.text = user.error;
+                LoadingScreen.SetActive(false);
             }
 
             // todo: launch the game (player)
@@ -170,6 +171,7 @@ public class AuthenticationManager : MonoBehaviour
             Debug.Log("error: " + w.error);
             LoginFeedback.color = Color.red;
             LoginFeedback.text = "An error occured";
+            LoadingScreen.SetActive(false);
         }
 
 
@@ -218,6 +220,7 @@ public class AuthenticationManager : MonoBehaviour
             else
             {
                 LoginFeedback.text = "An error occured";
+                LoadingScreen.SetActive(false);
             }
 
             //If the string is empty return this string in the feedback
@@ -226,6 +229,7 @@ public class AuthenticationManager : MonoBehaviour
         {
             // error
             LoginFeedback.text = "An error occured.";
+            LoadingScreen.SetActive(false);
         }
 
 

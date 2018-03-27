@@ -49,7 +49,9 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.ChoiceGet += GetChoice;
         Invoke("Initialize", .000001f);
     }
-
+    void Update()
+    {
+    }
 	private Queue<ResourceMessage> Get_Queue() {
         return ChoiceQueue;
     }
@@ -87,6 +89,11 @@ public class ChoiceManager : MonoBehaviour {
 	//This function removes the current choice from the gamescene and submits all the resourceMessages to the gameManager.
     private void UnLoadChoice() {
         choicecounter++;
+        if (choicecounter == Choices.Count && Choices.Count != 0)
+        {
+            Time.timeScale = 0;
+            Debug.Log("END GAME");
+        }
         PlayerPrefs.SetInt("Choice", choicecounter);
         if (curchoice.State == State.Positive) {
             foreach (ResourceMessage rm in curchoice.PositiveDialog.messages) {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
+using UnityEngine.SceneManagement;
 
 //This class handles the UI displaying and only that. The choiceManager gets called from here.
 public class UIManager : MonoBehaviour {
@@ -58,6 +59,7 @@ public class UIManager : MonoBehaviour {
         EventManager.UIDisable += DisableUI;
         EventManager.UIContinue += ContinueUI;
         EventManager.SendV4 += GetDeltas;
+		EventManager.GameOver += GameOver;
         Screen_Sprite.transform.DOScale(0, 1);
         StartCoroutine("Loading", 0);
     }
@@ -185,15 +187,13 @@ public class UIManager : MonoBehaviour {
 	}
 
 	public void DisplayNews() {
-		/*
-		foreach(string s in newsMessages) {
-		
-			newsMessagesString += $"{s} - ";
-		}
-		*/
 		BreakingNewsText.text = newsMessagesString;
 		Screen.SetActive(false);
 		BreakingNews.SetActive(true);
+	}
+
+	public void GameOver() {
+		SceneManager.LoadScene("GameOverScene");
 	}
 
 	public void CatchBreakingNews(string s) {

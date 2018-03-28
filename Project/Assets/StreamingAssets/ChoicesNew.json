@@ -2,7 +2,7 @@
     "choices":[
         {
             "Dilemma":"Greetings Ruler, I propose we build a factory to generate revenue.",
-            "AdvisorText":"A factory would indeed be appropriate for generating income, but think of the consequences on the environment...",
+            "AdvisorText":"A factory would indeed be appropriate for generating income, but think of the consequences for the environment...",
             "Name":"Contractor Jane",
             "character":"3",
             "State":"0",
@@ -10,17 +10,17 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"10",
+                        "amount":"15",
                         "lrID":"1"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"10",
+                        "amount":"15",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"10",
+                        "amount":"15",
                         "lrID":"-1"
                     },
                     {
@@ -30,7 +30,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
@@ -40,7 +40,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"1000",
+                        "amount":"500",
                         "lrID":"-1"
                     }
                 ],
@@ -80,7 +80,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-300",
                         "lrID":"-1"
                     }
                 ],
@@ -88,7 +88,7 @@
             }
         },
         {
-            "Dilemma":"A village in the woods nearby have requested for a telephone line to be laid between their village and your city. What will I tell them?",
+            "Dilemma":"A village in the woods nearby has requested for a telephone line to be laid between their village and your city. What will I tell them?",
             "AdvisorText":"Connecting a remote village will increase general happiness of the people but the forest might suffer because of it.",
             "Name":"Government representative",
             "character":"11",
@@ -112,7 +112,7 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -167,7 +167,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-200",
                         "lrID":"-1"
                     }
                 ],
@@ -175,7 +175,7 @@
             }
         },
         {
-            "Dilemma":"A village in the woods nearby have asked for a road to connect them and your city. Shall I get right to it?",
+            "Dilemma":"A village in the woods nearby has asked for a road to connect them and your city. Shall I get right to it?",
             "AdvisorText":"Connecting a remote village will increase general happiness of the people but the forest might suffer because of it.",
             "Name":"Government representative",
             "character":"12",
@@ -184,12 +184,12 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"10",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -199,7 +199,7 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -254,7 +254,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-200",
                         "lrID":"-1"
                     }
                 ],
@@ -286,7 +286,7 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -301,7 +301,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"1000",
+                        "amount":"200",
                         "lrID":"-1"
                     }
                 ],
@@ -341,7 +341,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-500",
                         "lrID":"-1"
                     }
                 ],
@@ -350,7 +350,7 @@
         },
         {
             "Dilemma":"Native people have contacted me to ask for them if they are allowed to continue their annual whale-hunting ritual.",
-            "AdvisorText":"They told me the ritual is holy to them so it might be appropriate to let them continue they ways. The hunt will harm the sea population though.",
+            "AdvisorText":"They told me the ritual is holy to them so it might be appropriate to let them continue their ways. The hunt will harm the marine ecosystem though.",
             "Name":"Assistant",
             "character":"12",
             "State":"0",
@@ -378,7 +378,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"-15",
                         "lrID":"-1"
                     },
                     {
@@ -388,7 +388,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"2000",
+                        "amount":"500",
                         "lrID":"-1"
                     }
                 ],
@@ -428,7 +428,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-2000",
+                        "amount":"-500",
                         "lrID":"-1"
                     }
                 ],
@@ -436,7 +436,7 @@
             }
         },
         {
-            "Dilemma":"During the construction of a new residential area have uncovered ancient ruins. Do you wish cancel the construction and preserve the ruins?",
+            "Dilemma":"During the construction of a new residential area ancient ruins have been uncovered. Do you wish cancel the construction and preserve the ruins?",
             "AdvisorText":"The ancient ruins are a valuable find, but people have invested in the residential area and won't be pleased if their investments are for naught.",
             "Name":"Company representative",
             "character":"0",
@@ -445,7 +445,7 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"-10",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
@@ -455,17 +455,17 @@
                     },
                     {
                         "resourceType":"2",
-                        "amount":"-10",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"3",
-                        "amount":"-10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -475,7 +475,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-500",
                         "lrID":"-1"
                     }
                 ],
@@ -485,22 +485,22 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"0",
+                        "amount":"10",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -532,17 +532,17 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"10",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -552,12 +552,12 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"-5",
                         "lrID":"2"
                     },
                     {
                         "resourceType":"5",
-                        "amount":"0",
+                        "amount":"50000",
                         "lrID":"-1"
                     },
                     {
@@ -587,12 +587,12 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -602,7 +602,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-50000",
+                        "amount":"-200",
                         "lrID":"-1"
                     }
                 ],
@@ -610,8 +610,8 @@
             }
         },
         {
-            "Dilemma":"We're here to ask you for perission to conduct test our experimental medicine on animals.",
-            "AdvisorText":"Testing on animals could provide valuable information on diseases and their interactions with medicine. Animals might however suffer because of it.",
+            "Dilemma":"We're here to ask you for perission to test our experimental medicine on animals.",
+            "AdvisorText":"Testing on animals could provide valuable information on diseases and their interactions with medicine. However, the test animals might suffer because of it.",
             "Name":"Doctor",
             "character":"6",
             "State":"0",
@@ -639,7 +639,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -649,7 +649,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"0",
+                        "amount":"500",
                         "lrID":"-1"
                     }
                 ],
@@ -674,12 +674,12 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"3"
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -689,7 +689,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"0",
+                        "amount":"-200",
                         "lrID":"-1"
                     }
                 ],
@@ -776,7 +776,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-600",
                         "lrID":"5"
                     }
                 ],
@@ -785,7 +785,7 @@
         },
         {
             "Dilemma":"I've come here to ask you if we can have our monthly hotdog eating contest make a grand return!",
-            "AdvisorText":"A monthly event like this can be good for the public's morale and your apporval rates. It will greatly boost the meat industry in the city aswell.",
+            "AdvisorText":"A monthly event like this can be good for the public's morale and your apporval rates. It will greatly boost the meat industry in the city aswell. This will impact the environment however",
             "Name":"Dave",
             "character":"4",
             "State":"0",
@@ -818,14 +818,14 @@
                     },
                     {
                         "resourceType":"5",
-                        "amount":"50000",
+                        "amount":"100000",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"6",
-                        "amount":"1000",
+                        "amount":"500",
                         "lrID":"5"
-                    }
+  }
                 ],
                 "text":"It will be so much fun!"
             },
@@ -863,7 +863,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1500",
+                        "amount":"-500",
                         "lrID":"-1"
                     }
                 ],
@@ -872,7 +872,7 @@
         },
         {
             "Dilemma":"We, your city council, want to replace solid-fuel power plants and replace them with nuclear power plants.",
-            "AdvisorText":"Nuclear power plants are more environmentally friendly than burning fossil fuels because they barely emit gases or waste, but do not forget the waste nuclear power plants produce.",
+            "AdvisorText":"Nuclear power plants are more environmentally friendly than burning fossil fuels because they barely emit greenhouse gases, but do not forget the waste nuclear power plants produce.",
             "Name":"City council representative",
             "character":"11",
             "State":"0",
@@ -880,7 +880,7 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"-10",
+                        "amount":"-15",
                         "lrID":"-1"
                     },
                     {
@@ -890,7 +890,7 @@
                     },
                     {
                         "resourceType":"2",
-                        "amount":"0",
+                        "amount":"-10",
                         "lrID":"-1"
                     },
                     {
@@ -900,7 +900,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -914,7 +914,7 @@
                         "lrID":"-1"
                     }
                 ],
-                "text":"We'll get planning right away."
+                "text":"We'll get on it right away."
             },
             "NegativeDialog":{
                 "messages":[
@@ -925,12 +925,12 @@
                     },
                     {
                         "resourceType":"1",
-                        "amount":"10",
+                        "amount":"5",
                         "lrID":"7"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -950,7 +950,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"-1000",
+                        "amount":"-500",
                         "lrID":"-1"
                     }
                 ],
@@ -959,7 +959,7 @@
         },
         {
             "Dilemma":"We want to build a wind turbine park in the countryside.",
-            "AdvisorText":"Wind energy is a good and reliable way to generate power. People might complain that the turbines ruin their skyline.",
+            "AdvisorText":"Wind energy is a good and reliable way to generate power. People might complain about noise pollution or that the turbines ruin their skyline though.",
             "Name":"City planner",
             "character":"5",
             "State":"0",
@@ -967,7 +967,7 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"-10",
+                        "amount":"-15",
                         "lrID":"-1"
                     },
                     {
@@ -982,7 +982,7 @@
                     },
                     {
                         "resourceType":"3",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"8"
                     },
                     {
@@ -1007,7 +1007,7 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"10",
+                        "amount":"0",
                         "lrID":"-1"
                     },
                     {
@@ -1037,7 +1037,7 @@
                     },
                     {
                         "resourceType":"6",
-                        "amount":"0",
+                        "amount":"-200",
                         "lrID":"-1"
                     }
                 ],
@@ -1054,17 +1054,17 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"10",
+                        "amount":"15",
                         "lrID":"9"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -1074,7 +1074,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-10",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
@@ -1094,17 +1094,17 @@
                 "messages":[
                     {
                         "resourceType":"0",
-                        "amount":"-10",
+                        "amount":"-15",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"1",
-                        "amount":"0",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"2",
-                        "amount":"0",
+                        "amount":"-5",
                         "lrID":"-1"
                     },
                     {
@@ -1132,8 +1132,8 @@
             }
         },
         {
-            "Dilemma":"We ask your perission to chop wood in a relatively ecological manner.",
-            "AdvisorText":"Chopping wood could be made ecological by replanting and/or leaving fallen branches on the ground to keep the nutrients in the local ecosystem. It will damage the environment initially, but it might improve it in the long term.",
+            "Dilemma":"We ask your permission to chop wood in a relatively ecological manner.",
+            "AdvisorText":"Sustainable wood production can be done by selective choping, replanting and leaving fallen branches on the ground to keep the nutrients in the local ecosystem. It will damage and change the environment a little, but not in a major way.",
             "Name":"Lumberjack",
             "character":"14",
             "State":"0",
@@ -1201,7 +1201,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
@@ -1219,8 +1219,8 @@
             }
         },
         {
-            "Dilemma":"We've come here to ask your permission to start using more pesticides to rid of pests and weeds that are curently razing our crops.",
-            "AdvisorText":"Pesticides are a short term answer to problems. Initially they might seem to work, but a resistant breed will emerge among the survivors and you'll be left with poisoned land because of the poison and resistant pests and weeds. An advantage would be that we skyrocket the production of food by a lot.",
+            "Dilemma":"We've come here to ask your permission to start using more pesticides to rid of pests that are curently razing our crops.",
+            "AdvisorText":"Heavy use of pesticides is a short term answer to problems. Initially they will work, but a resistant breed might emerge and you'll be left with degraded land because of the poison and resistant pests. An advantage would be that we increase the food production.",
             "Name":"Farmer",
             "character":"2",
             "State":"0",
@@ -1238,7 +1238,7 @@
                     },
                     {
                         "resourceType":"2",
-                        "amount":"10",
+                        "amount":"15",
                         "lrID":"10"
                     },
                     {
@@ -1248,7 +1248,7 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"-5",
+                        "amount":"-15",
                         "lrID":"-1"
                     },
                     {
@@ -1288,12 +1288,12 @@
                     },
                     {
                         "resourceType":"4",
-                        "amount":"0",
+                        "amount":"5",
                         "lrID":"-1"
                     },
                     {
                         "resourceType":"5",
-                        "amount":"-50000",
+                        "amount":"-10000",
                         "lrID":"11"
                     },
                     {

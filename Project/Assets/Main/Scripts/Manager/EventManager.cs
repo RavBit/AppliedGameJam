@@ -35,6 +35,7 @@ public class EventManager : MonoBehaviour {
 
 	public delegate void AdvanceEvent();
 	public static event AdvanceEvent NextDay;
+	public static event AdvanceEvent GameOver;
 
     public delegate int GetDel();
 
@@ -239,5 +240,9 @@ public class EventManager : MonoBehaviour {
 
 	public static void _LrSprite(int i) {
 		SetLrSprite(i);
+	}
+
+	public static void _GameOver() {
+		GameOver();
 	}
 }

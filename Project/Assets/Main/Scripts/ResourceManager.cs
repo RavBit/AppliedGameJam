@@ -109,6 +109,7 @@ public class ResourceManager : MonoBehaviour {
 				if(i.lr != null) {
 					EventManager._AddLivingResource(i.lr);
 					i.lr.lrID = i.lrID;
+					EventManager._LrSprite(i.lr.lrID);
 					i.lr = null;
 				}
 				/*
@@ -150,9 +151,6 @@ public class ResourceManager : MonoBehaviour {
 		}
 		if(waterPollution >= 100) {
 			EventManager._EndGame(Resources.waterPollution);
-		}
-		if(landUse >= 100) {
-			EventManager._EndGame(Resources.landUse);
 		}
 		if(biodiversity <= 0) {
 			EventManager._EndGame(Resources.biodiversity);

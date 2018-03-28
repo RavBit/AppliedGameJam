@@ -49,9 +49,6 @@ public class ChoiceManager : MonoBehaviour {
         EventManager.ChoiceGet += GetChoice;
         Invoke("Initialize", .000001f);
     }
-    void Update()
-    {
-    }
 	private Queue<ResourceMessage> Get_Queue() {
         return ChoiceQueue;
     }
@@ -91,8 +88,7 @@ public class ChoiceManager : MonoBehaviour {
         choicecounter++;
         if (choicecounter == Choices.Count && Choices.Count != 0)
         {
-            Time.timeScale = 0;
-            Debug.Log("END GAME");
+			EventManager._GameOver();
         }
         PlayerPrefs.SetInt("Choice", choicecounter);
         if (curchoice.State == State.Positive) {

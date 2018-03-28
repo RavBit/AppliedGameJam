@@ -26,11 +26,12 @@ public class ObjectsManager : MonoBehaviour {
 		drawnitems = new List<Item>();
         DisableItems();
     }
-
     void CheckPollution()
     {
-        int pol = AppManager.instance.User.air_pollution;
-        Pollution.GetComponent<SpriteRenderer>().DOFade((AppManager.instance.User.air_pollution / 100), 1);
+        float pol = AppManager.instance.User.air_pollution;
+        pol = Mathf.Clamp((pol / 100), 20, 100);
+        ///Mathf.Clamp()
+        Pollution.GetComponent<SpriteRenderer>().DOFade((pol / 100), 1);
     }
     void DisableItems()
     {

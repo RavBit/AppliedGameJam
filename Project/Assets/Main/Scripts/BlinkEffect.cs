@@ -20,11 +20,11 @@ public class BlinkEffect : MonoBehaviour {
     {
         while (start)
         {
-            GetComponent<Text>().DOFade(0, 1);
-            GetComponent<Image>().DOFade(0, 1);
-            yield return new WaitForSeconds(1);
-            GetComponent<Image>().DOFade(1, 1);
             GetComponent<Text>().DOFade(1, 1);
+            GetComponent<Image>().DOFade(1, 1);
+            yield return new WaitForSeconds(1);
+            GetComponent<Image>().DOFade(0, 1);
+            GetComponent<Text>().DOFade(0, 1);
             yield return new WaitForSeconds(1);
         }
     }

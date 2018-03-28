@@ -113,48 +113,44 @@ public class EffectsManager : MonoBehaviour {
     public void Change_Environment() {
         //TODO FIX ENVIRONMENT
         int pol = (AppManager.instance.User.air_pollution + AppManager.instance.User.soil_pollution + AppManager.instance.User.water_pollution / 3);
-
-        if (pol >= 10 && pol <= 20 || AppManager.instance.User.biodiversity <= 60 && AppManager.instance.User.biodiversity >= 50 || AppManager.instance.User.land_use >= 10 && AppManager.instance.User.land_use <= 20)
-        {
-            EnvironmentImage.sprite = Environment[1];
-            EnvAudio[2].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(0, 0.5f);
-            EnvAudio[1].DOFade(1, 1);
-            Debug.Log("test1");
-        }
-        if (pol > 20 && pol < 30 && AppManager.instance.User.biodiversity < 50 && AppManager.instance.User.biodiversity > 40 && AppManager.instance.User.land_use > 20 && AppManager.instance.User.land_use < 30)
-        {
-            EnvironmentImage.sprite = Environment[2];
-            EnvAudio[2].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(0, 0.5f);
-            EnvAudio[1].DOFade(1, 1);
-            Debug.Log("test2");
-        }
-        if (pol >= 30 && pol <= 80 && AppManager.instance.User.biodiversity <= 40 && AppManager.instance.User.biodiversity >= 10 && AppManager.instance.User.land_use >= 30 && AppManager.instance.User.land_use <= 80)
-        {
-            EnvironmentImage.sprite = Environment[3];
-            EnvAudio[1].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(0, 0.5f);
-            EnvAudio[2].DOFade(1, 1);
-            Debug.Log("test3");
-        }
-        if (pol > 80 && AppManager.instance.User.biodiversity < 10 && AppManager.instance.User.land_use > 80)
-        {
-            EnvironmentImage.sprite = Environment[4];
-            EnvAudio[1].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(0, 0.5f);
-            EnvAudio[2].DOFade(1, 1);
-            Debug.Log("test4");
-        }
-        if (pol < 10 && AppManager.instance.User.biodiversity > 60 && AppManager.instance.User.land_use < 10)
-        {
-            EnvironmentImage.sprite = Environment[0];
-            EnvAudio[2].DOFade(0, 0.5f);
-            EnvAudio[1].DOFade(0, 0.5f);
-            EnvAudio[0].DOFade(1, 1);
-            Debug.Log("test0");
-            return;
-        }
+		if(EnvironmentImage != null) {
+			if(pol >= 10 && pol <= 20 || AppManager.instance.User.biodiversity <= 60 && AppManager.instance.User.biodiversity >= 50 || AppManager.instance.User.land_use >= 10 && AppManager.instance.User.land_use <= 20) {
+				EnvironmentImage.sprite = Environment[1];
+				EnvAudio[2].DOFade(0, 0.5f);
+				EnvAudio[0].DOFade(0, 0.5f);
+				EnvAudio[1].DOFade(1, 1);
+				Debug.Log("test1");
+			}
+			if(pol > 20 && pol < 30 && AppManager.instance.User.biodiversity < 50 && AppManager.instance.User.biodiversity > 40 && AppManager.instance.User.land_use > 20 && AppManager.instance.User.land_use < 30) {
+				EnvironmentImage.sprite = Environment[2];
+				EnvAudio[2].DOFade(0, 0.5f);
+				EnvAudio[0].DOFade(0, 0.5f);
+				EnvAudio[1].DOFade(1, 1);
+				Debug.Log("test2");
+			}
+			if(pol >= 30 && pol <= 80 && AppManager.instance.User.biodiversity <= 40 && AppManager.instance.User.biodiversity >= 10 && AppManager.instance.User.land_use >= 30 && AppManager.instance.User.land_use <= 80) {
+				EnvironmentImage.sprite = Environment[3];
+				EnvAudio[1].DOFade(0, 0.5f);
+				EnvAudio[0].DOFade(0, 0.5f);
+				EnvAudio[2].DOFade(1, 1);
+				Debug.Log("test3");
+			}
+			if(pol > 80 && AppManager.instance.User.biodiversity < 10 && AppManager.instance.User.land_use > 80) {
+				EnvironmentImage.sprite = Environment[4];
+				EnvAudio[1].DOFade(0, 0.5f);
+				EnvAudio[0].DOFade(0, 0.5f);
+				EnvAudio[2].DOFade(1, 1);
+				Debug.Log("test4");
+			}
+			if(pol < 10 && AppManager.instance.User.biodiversity > 60 && AppManager.instance.User.land_use < 10) {
+				EnvironmentImage.sprite = Environment[0];
+				EnvAudio[2].DOFade(0, 0.5f);
+				EnvAudio[1].DOFade(0, 0.5f);
+				EnvAudio[0].DOFade(1, 1);
+				Debug.Log("test0");
+				return;
+			}
+		}
     }
 
 }

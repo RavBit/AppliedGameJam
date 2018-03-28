@@ -50,6 +50,7 @@ public class LivingResourcesContainer {
 
 [Serializable]
 public class LivingResource {
+	public int lrID;
 	public int lifetime;
 	public int cooldown;
 	public int initCooldown;
@@ -72,6 +73,7 @@ public class LivingResource {
 			isToBeDestroyed = true;
 		}
 		else {
+			EventManager._LrSprite(lrID);
 			if(cooldown <= 1) {
 				ResourceMessage rm = new ResourceMessage();
 				rm.Initialise(res, amount);

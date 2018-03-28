@@ -11,7 +11,7 @@
                     {
                         "resourceType":"0",
                         "amount":"10",
-                        "lrID":"0"
+                        "lrID":"1"
                     },
                     {
                         "resourceType":"1",
@@ -553,7 +553,7 @@
                     {
                         "resourceType":"4",
                         "amount":"-10",
-                        "lrID":"1"
+                        "lrID":"2"
                     },
                     {
                         "resourceType":"5",
@@ -675,7 +675,7 @@
                     {
                         "resourceType":"3",
                         "amount":"10",
-                        "lrID":"2"
+                        "lrID":"3"
                     },
                     {
                         "resourceType":"4",
@@ -737,7 +737,7 @@
                     {
                         "resourceType":"6",
                         "amount":"1000",
-                        "lrID":"3"
+                        "lrID":"4"
                     }
                 ],
                 "text":"We will begin right away!"
@@ -777,7 +777,7 @@
                     {
                         "resourceType":"6",
                         "amount":"-1000",
-                        "lrID":"4"
+                        "lrID":"5"
                     }
                 ],
                 "text":"I'm actually not surprised you don't care for your people's health."
@@ -824,7 +824,7 @@
                     {
                         "resourceType":"6",
                         "amount":"1000",
-                        "lrID":"4"
+                        "lrID":"5"
                     }
                 ],
                 "text":"It will be so much fun!"
@@ -886,7 +886,7 @@
                     {
                         "resourceType":"1",
                         "amount":"-10",
-                        "lrID":"5"
+                        "lrID":"6"
                     },
                     {
                         "resourceType":"2",
@@ -926,7 +926,7 @@
                     {
                         "resourceType":"1",
                         "amount":"10",
-                        "lrID":"6"
+                        "lrID":"7"
                     },
                     {
                         "resourceType":"2",
@@ -983,7 +983,7 @@
                     {
                         "resourceType":"3",
                         "amount":"10",
-                        "lrID":"7"
+                        "lrID":"8"
                     },
                     {
                         "resourceType":"4",
@@ -1055,7 +1055,7 @@
                     {
                         "resourceType":"0",
                         "amount":"10",
-                        "lrID":"8"
+                        "lrID":"9"
                     },
                     {
                         "resourceType":"1",
@@ -1239,7 +1239,7 @@
                     {
                         "resourceType":"2",
                         "amount":"10",
-                        "lrID":"9"
+                        "lrID":"10"
                     },
                     {
                         "resourceType":"3",
@@ -1294,7 +1294,7 @@
                     {
                         "resourceType":"5",
                         "amount":"-50000",
-                        "lrID":"10"
+                        "lrID":"11"
                     },
                     {
                         "resourceType":"6",

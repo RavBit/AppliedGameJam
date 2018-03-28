@@ -103,8 +103,12 @@ public class ResourceManager : MonoBehaviour {
 					default:
 						break;
 				}
+				if(i.lrID <= 0) {
+					i.lr = null;
+				}
 				if(i.lr != null) {
 					EventManager._AddLivingResource(i.lr);
+					i.lr.lrID = i.lrID;
 					i.lr = null;
 				}
 				/*

@@ -9,9 +9,10 @@ public class ObjectsManager : MonoBehaviour {
     public GameObject[] Animals;
     public GameObject[] Item;
     public GameObject Pollution;
-    public List<Item> drawnitems;
-    // Use this for initialization
-    void Start () {
+	public List<Item> drawnitems;
+	public List<GameObject> lrSprites;
+	// Use this for initialization
+	void Start () {
         Invoke("CheckPopulation", 2);
         Invoke("CheckLandUse", 2);
         Invoke("CheckPollution", 2);
@@ -21,7 +22,8 @@ public class ObjectsManager : MonoBehaviour {
         EventManager.ChoiceUnLoad += CheckPollution;
         EventManager.ChoiceUnLoad += CheckBiodiversity;
         EventManager.ParseMapItem += InitItem;
-        drawnitems = new List<Item>();
+		EventManager.SetLrSprite += CatchLrSpriteEvent;
+		drawnitems = new List<Item>();
         DisableItems();
     }
 
@@ -141,8 +143,13 @@ public class ObjectsManager : MonoBehaviour {
         EventManager._AddModifierValue(Resources.population, item.population);
         EventManager._AddModifierValue(Resources.landUse, item.landuse);
     }
-    // Update is called once per frame
-    void Update () {
-		
+   
+	private void CatchLrSpriteEvent(int i) {
+		if(i > lrSprites.Count)
+			return;
+		if(lrSprites[i] == null)
+			return;
+
+		lrSprites[i].SetActive(true);
 	}
 }

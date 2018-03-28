@@ -11,9 +11,11 @@ public class ResourceMessage {
 
 	public int Amount {
 		get {
-			if(lrID >= 0) {
+			if(lrID > 0) {
 				lr = LivingResourcesStorage.instance.GetLRWithID(lrID);
 			}
+			else
+				lr = null;
 			return amount;
 		}
 	}

@@ -86,6 +86,9 @@ public class EventManager : MonoBehaviour {
 	public delegate void LREvent(Resources res, int id);
 	public delegate void LRGetEvent(LivingResource lr);
 
+	public delegate void LrSpriteEvent(int id);
+	public static event LrSpriteEvent SetLrSprite;
+
 	public static event ChooseEvent DayCycle;
     public static void Day_Cycle() {
         DayCycle();
@@ -232,5 +235,9 @@ public class EventManager : MonoBehaviour {
 
 	public static void _UpdateHealth(HealthState hs) {
 		UpdateHealth(hs);
+	}
+
+	public static void _LrSprite(int i) {
+		SetLrSprite(i);
 	}
 }

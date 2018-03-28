@@ -1,11 +1,9 @@
 fileFormatVersion: 2
-guid: dc6f60199efcd194c9ea61a7a9e38529
-timeCreated: 1521463021
+guid: d6327cfcc6899624388520ece81dcd9b
+timeCreated: 1522240852
 licenseType: Free
 TextureImporter:
-  fileIDToRecycleName:
-    21300000: _0001s_0000s_0006_13S_0
-    21300002: _0001s_0000s_0006_13S_1
+  fileIDToRecycleName: {}
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -42,7 +40,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -110,35 +108,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
-    sprites:
-    - serializedVersion: 2
-      name: _0001s_0000s_0006_13S_0
-      rect:
-        serializedVersion: 2
-        x: 714
-        y: 378
-        width: 170
-        height: 160
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: _0001s_0000s_0006_13S_1
-      rect:
-        serializedVersion: 2
-        x: 1302
-        y: 548
-        width: 157
-        height: 164
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
+    sprites: []
     outline: []
     physicsShape: []
   spritePackingTag: 
